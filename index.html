@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <title>Style Guide</title>
+
+      <link href="css/main.css" rel="stylesheet">
+      <link href="css/grid.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <h1>Pioneer Styleguide</h1>
+
+      <nav class="nav-main box nav-overall">
+          <a class="button-nav nav-main-item box-item" href="#interactive_elements">Interactive Elements</a>
+          <a class="button-nav nav-main-item box-item" href="#text_elements"> Text Elements</a>
+          <a class="button-nav nav-main-item box-item" href="#combined_elements">Combine Elements</a>
+          <a class="button-nav nav-main-item box-item" href="#wireframes_elements">Wireframes</a>
+          <a class="button-nav nav-main-item box-item" href="citations.html">Citations</a>
+
+      </nav>
+
+
+    <!-- INTERACTIVE ELEMENTS SECTION // -->
+    <section id="interactive_elements">
+     <h2> INTERACTIVE ELEMENTS</h2>
+
+      <!-- Default Button styling section -->
+      <section id="button">
+
+          <h3>Navigation Button</h3>
+
+          <h4>CSS selector:</h4>
+            <p>.button-nav</p>
+
+          <h4>Sample code:</h4>
+
+            <div class ="code">
+             <code>&lt;a href="#" class="button-nav"&gt;Default Button&lt;/a&gt;</code>
+           </div>
+
+         <h4>Rendered element:</h4>
+         <a class="button-nav" href="#">Navigation item</a>
+
+     </section>
+
+     
+
+     <section id="in-text-link">
+        <h3>In-text link</h3>
+
+          <h4>CSS selector:</h4>
+          <p>.inline-text</p>
+
+          <h4>Sample code:</h4>
+
+          <div class ="code">
+           <code>&lt;a href="#" class="inline-text"&gt;inline-text&lt;/a&gt;</code>
+          </div>
+
+         <h4>Rendered element:</h4>
+       <a href="#" class="inline-text">Browse</a>
+    </section>
+
+
+
+      <section id="submit-button">
+        <h3>Submit/Reset Buttons</h3>
+        <h4>CSS selector:</h4>
+          <p>.buttons</p>
+
+          <h4>Sample code:</h4>
+
+          <div class ="code">
+           <code>&lt;button type="submit" value="confirm" class="buttons"&gt;Confirm&lt;/a&gt;</code>
+          </div>
+
+         <h4>Rendered element:</h4>
+            <div class="code">
+                <button type="submit" value="confirm" class="buttons"> Confirm</button>
+            </div>
+
+      </section>
+
+      <section id="text-input">
+         <h3>Text Input Field</h3>
+
+              <h4>CSS selector:</h4>
+                <p>.form-content-text</p>
+
+              <h4>Sample code:</h4>
+                <div class="code">
+                  <code>&lt;form class="form" name="form-content"&gt;<br>
+
+                    &lt;label class="label-form"&gt;Destination&lt;/label&gt;<br>
+                    &lt;input class="form-content-text" name="form-content-text" type="text" placeholder="Los Angeles"&gt;<br>
+                   &lt;/form&gt;
+                   </code>
+                </div>
+
+              <h4>Rendered element</h4>
+                 <form class="form" name="form-content">
+                   <label class="label">Destination:</label>
+                  <input class="form-content-text" name="form-content-text" type="text" placeholder=" Los Angeles"> 
+                </form> 
+
+
+      </section>
+
+    </section>
+    <!-- // INTERACTIVE ELEMENTS SECTION -->
+
+
+
+    <!-- TEXT ELEMENTS SECTION // -->
+    <section id="text_elements">
+       <h2> TEXT ELEMENTS </h2>
+
+      <section>
+        <h3>Headings</h3>
+
+        <h4>CSS selector:</h4>
+                  <p>.list.header-list</p>
+
+                   <div class="code">
+                    <h4>Sample code:</h4>
+                    <code>&lt;ul class="list"&gt;<br>
+                           &lt;li class="header-list"&gt;<br>
+                            &lt;h2&gt;Header Level 1&lt;/h2&gt;<br>
+                           &lt;/li&gt;<br>
+                           &lt;/ul&gt;
+                     </code>
+                     </div>
+
+                   <h4>Rendered element</h4>
+                  <div class="styleguide-item">
+                     
+                      
+                        <div class="header-list-content h1">
+                          <h2> Header Level 1</h2>
+                        </div>
+
+                        <div class="header-list-content h2">
+                          <h3> Header Level 2</h3>
+                        </div>
+
+
+                        <div class="header-list-content h3">
+                          <h4> Header Level 3</h4>
+                        </div>
+
+
+                  </div>
+      </section>
+
+      <section>
+
+         <h3>Paragraphs</h3>
+
+              <h4>CSS selector:</h4>
+                  <p>.p</p>
+
+              <div class="code">
+                    <h4>Sample code:</h4>
+                      <code>
+                        &lt;p&gt;This is paragraph&lt;/p&gt;
+                      </code>
+              </div>
+
+              <h4>Rendered element</h4>
+                <div class="styleguide-item">
+                  <div class="header-list-content p1">
+                    <p > This is paragraph. 18x </p>
+                  </div>
+
+                </div>
+      </section>
+
+      <section>
+        <h3>Bulleted Lists</h3>
+
+         <h4>CSS selector:</h4>
+                  <p>.list .bullet-list</p>
+         
+                
+                  <div class="code">
+                    <h4>Sample code:</h4>
+                    <code>&lt;ul class="list bullet-list"&gt;<br>
+                           &lt;li class="content"&gt;<br>
+                            &lt;h1&gt;List 1 1&lt;/h2&gt;<br>
+                           &lt;/li&gt;<br>
+                           &lt;/ul&gt;
+                     </code>
+                  </div>
+
+              <h4>Rendered element</h4>
+                <div class="styleguide-item">
+                  <ul class="list bullet-list">
+                    <li class="content-list">
+                      <div class="header-list-content b1">List 1</div>
+                      
+                    </li>
+
+                    <li class="content-list"> 
+                        <div class="header-list-content b2">List 2</div>
+                     
+                    </li>
+
+                    <li class="content-list">
+                      <div class="header-list-content b3"> List 3</div>
+                   
+                    </li>
+                  </ul>
+                </div>
+      </section>
+
+      <section>
+        <h3>Numbered Lists</h3>
+
+            <h4>CSS selector:</h4>
+                  <p>.list .numbered-list</p>
+         
+                
+                  <div class="code">
+                    <h4>Sample code:</h4>
+                    <code>&lt;ol class="list numbered-list"&gt;<br>
+                           &lt;li class="content"&gt;<br>
+                            &lt;h1&gt;List 1 1&lt;/h2&gt;<br>
+                           &lt;/li&gt;<br>
+                           &lt;/ul&gt;
+                     </code>
+                  </div>
+
+              <h4>Rendered element</h4>
+                <div class="styleguide-item">
+                   <ol class="list numbered-list">
+                      <li class="content-list">
+                        <div class="header-list-content n1">List 1</div>
+                      
+                      </li>
+
+                      <li class="content-list"> 
+                          <div class="header-list-content n2">List 2</div>
+                          
+                      </li>
+
+                      <li class="content-list">
+                        <div class="header-list-content n3"> List 3</div>
+                        
+                      </li>
+                    </ol>
+                </div>
+          </section>
+  
+    </section>
+    <!-- // TEXT ELEMENTS SECTION -->
+
+
+
+    <!-- COMBINED ELEMENTS SECTION // -->
+    <section id="combined_elements">
+    <h2> COMBINED ELEMENTS</h2>
+
+            <section id="nav" >
+              <h3>Main Navigation</h3>
+                <nav class="nav-main box">
+                  <a class="button-nav nav-main-item box-item" href="#">Home</a>
+                  <a class="button-nav nav-main-item box-item" href="#">Book</a>
+                  <a class="button-nav nav-main-item box-item" href="#">Explore</a>
+                  <a class="button-nav nav-main-item box-item" href="#">Blog</a>
+                </nav>
+            </section>
+
+            <section id="product" class="divided-section">
+              <h3>Product Listing</h3>
+                <div class="product-list box">
+                  <p class="box-item"> Hotels</p>
+                  <p class="box-item"> Flight</p>
+                  <p class="box-item"> Car</p>
+                </div>
+
+            </section>
+
+    </section>
+    <!-- // COMBINED ELEMENTS SECTION -->
+
+    <!-- WIREFRAMES SECTION//-->
+    <section id="wireframes_elements">
+          <h2> WIREFRAMES</h2>
+            
+              <h3> 1. For Smartwatch </h3>
+                <p> <a href="https://www.justinmind.com/usernote/tests/25917356/26334927/26338291/index.html" class="inline-text">Smartwatch Wireframes</a></p><br>
+
+              <h3> 2. For Phone </h3>
+                <p><a href="https://www.justinmind.com/usernote/tests/25917356/26334927/26352530/index.html#/screens/d12245cc-1680-458d-89dd-4f0d7fb22724" class="inline-text">Phone Wireframes</a></p><br>
+
+              <h3> 3. For Gameconsole</h3>
+                <p><a href="https://www.justinmind.com/usernote/tests/25917356/26334927/26337645/index.html#/screens/d12245cc-1680-458d-89dd-4f0d7fb22724" class="inline-text">Gameconsole Wireframes</a></p>
+    </section>
+
+
+        <!--// WIREFRAMES SECTION -->
+
+       
+
+
+  </body>
+</html>
