@@ -1,27 +1,32 @@
-/* grid.css*/
-*,*::after,*::before{
-	box-sizing:border-box;
-}
-
 .box{
-	display:-webkit-flex;
-	display:-ms-flex;
-	display: flex;
-
-	-webkit-flex-wrap:wrap;
-	-ms-flex-wrap:wrap;
-	flex-wrap:wrap;
-
-	justify-content: space-between;
+  font-family: "Catamaran";
+  size:1rem;
+  text-align: center;
+  padding: 1em 0;
+  border-radius: .2em;
+  display:-webkit-flex;
+  display:-ms-flex;
+  display: flex;
 }
+
+.row {
+ 	display: block;
+  width:33%;
+ 	margin: 0 0;
+
+}
+
+*,*::after,*::before{
+  box-sizing:border-box;
+}
+
 
 .box-item{
 
-	flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 
 @media (max-width: 30em) {
-
 
 
 }

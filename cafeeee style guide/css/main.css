@@ -1,0 +1,194 @@
+/*
+  STYLE GUIDE STYLING 
+  Default styling for the style guide 
+*/
+
+
+*{
+  font-family: 'Catamaran';
+  color:rgb(47,41,21);
+}
+
+body {
+  font-family: 'Catamaran';
+  padding: 2rem;
+  text-align: center;
+}
+
+section:not([id]) {
+  margin: 1em 0;
+  padding: 0.5em 0;
+  border-top: 1px solid #333;
+}
+
+h1{
+  font-family: 'Sacramento';
+  font-size:48px;
+  font-weight: lighter;
+  text-align: center; 
+}
+
+h2{
+  font-size:26px;
+  text-align: center;
+}
+
+h3{
+  font-size:22px;
+  margin-bottom:0.3em;
+  margin-top:1em;
+  display:block;
+  padding-top:0.5em;
+
+}
+
+
+h4 {
+  font-size:18px;
+  margin-bottom:0.3em;
+  margin-top:1em;
+  display:block;
+  padding-top:0.5em;
+
+}
+
+
+section p {
+  margin-top: 0;
+  font-size:18px;
+}
+
+section code {
+  background-color: rgb(240,240,240);
+  padding: 0.25em 0.5em;
+}
+
+
+
+
+/* 
+  INTERACTIVE ELEMENTS -------------------
+*/
+
+
+  .header {
+  top: 0;
+  position: fixed;
+  z-index: 5;
+  width:100vw;
+  padding:0 0;
+  background-color: white;
+  }
+
+
+.header-logo {
+  float: middle;
+  line-height: 5rem;
+  font-family: "Sacramento";
+  font-size:4rem;
+  font-weight: 50;
+  text-decoration: none;
+  color:black;
+}
+
+
+/* Styling for the navigation button */
+
+.button-sub{
+
+
+}
+.button-nav {
+  display: inline-block;
+  padding: 0.5em 0.75em;
+  color: white;
+  background-color: rgb(240,92,98);
+  border-radius: 0.25em;
+  text-decoration: none;
+  -webkit-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
+}
+
+.button-nav:hover, .button-nav:focus {
+ background-color: rgb(114,180,197);
+  color:white;
+}
+
+/* Styling for the in-text link */
+
+
+.inline-text{
+background-color: white;
+color:rgb(240,92,98);
+text-align: center;
+}
+
+.inline-text:hover {
+  color: rgb(64,194,207);
+
+}
+
+
+/* Styling for the text-input */
+.form-content-text{
+padding-top: 1em;
+padding-bottom: : 0.05em;
+border:none;
+border-bottom: 0.02em solid#f06292;
+width: 25%;
+font-size:16px;
+
+}
+
+
+.label{
+color:rgb(240,92,98);
+font-size:20px;
+
+}
+/* Styling for the Submit button */
+
+.buttons {
+  font-size:16px;
+  display: inline-block;
+  padding: 0.5em 0.75em;
+  color: white;
+  background-color: rgb(240,92,98);
+  border:none;
+  text-decoration: none;
+  -webkit-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
+
+}
+
+.buttons:hover, .buttons:focus {
+  background-color: rgb(240,92,98);
+  font-size: 22px;
+}
+
+/* 
+  TEXT ELEMENTS -------------------
+*/
+
+.header-list-content, .header-list-size{
+  display:inline;
+  width:100%;
+  color:rgb(47,41,21);
+}
+
+
+ul, ol{
+  color:rgb(100,100,100);
+  font-size:16px;
+  list-style-position: inside;
+}
+
+
+/* 
+  COMBINED ELEMENTS -------------------
+*/
+ul, ol{
+  color:rgb(100,100,100);
+  font-size:16px;
+
+}

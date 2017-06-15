@@ -1,7 +1,6 @@
-/*
-  STYLE GUIDE STYLING 
-  Default styling for the style guide 
-*/
+
+
+
 *{
   font-family: 'Catamaran';
   color:rgb(47,41,21);
@@ -13,11 +12,6 @@ body {
   text-align: center;
 }
 
-section:not([id]) {
-  margin: 1em 0;
-  padding: 0.5em 0;
-  border-top: 1px solid #333;
-}
 
 h1{
   font-family: 'Sacramento';
@@ -51,24 +45,53 @@ h4 {
 }
 
 
-section p {
-  margin-top: 0;
-  font-size:18px;
+
+/* header  -------------------*/
+
+
+  .header {
+  top: 0;
+  position: fixed;
+  z-index: 5;
+  width:100vw;
+  padding:0 0;
+  background-color: white;
+  }
+
+
+.header-logo {
+  float: middle;
+  line-height: 5rem;
+  font-family: "Sacramento";
+  font-size:4rem;
+  font-weight: 50;
+  text-decoration: none;
+  color:black;
 }
 
-section code {
-  background-color: rgb(240,240,240);
-  padding: 0.25em 0.5em;
+/*account, start order ----------*/
+.button-sub{
+
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  left:0;
+  cursor: pointer;
+  z-index: 4;
+  min-width: 120px;
+
 }
 
 
+.button-sub a{
+  text-decoration: none;
+  font-size: 0.875rem;
+  color:rgb(47,41,21);
+
+}
 
 
-/* 
-  INTERACTIVE ELEMENTS -------------------
-*/
-
-/* Styling for the navigation button */
+/*navgation----------*/
 .button-nav {
   display: inline-block;
   padding: 0.5em 0.75em;
@@ -82,84 +105,52 @@ section code {
 
 .button-nav:hover, .button-nav:focus {
  background-color: rgb(114,180,197);
-  color:white;
-}
-
-/* Styling for the in-text link */
-
-
-.inline-text{
-background-color: white;
-color:rgb(240,92,98);
-text-align: center;
-}
-
-.inline-text:hover {
-  color: rgb(64,194,207);
-
+ color:white;
 }
 
 
-/* Styling for the text-input */
-.form-content-text{
-padding-top: 1em;
-padding-bottom: : 0.05em;
-border:none;
-border-bottom: 0.02em solid#f06292;
-width: 25%;
-font-size:16px;
 
+/* 
+homepage small picture-------------------
+*/
+
+
+
+/*footer styling*/
+footer{
+  background: rgb(225,225,225);
+  height:auto;
+  position:relative;
+  right:0;
+  left:0;
+  bottom:0;
 }
 
-
-.label{
-color:rgb(240,92,98);
-font-size:20px;
-
+.footer-div{
+  padding:1% 15%;
+  width: 100%
 }
-/* Styling for the Submit button */
 
-.buttons {
-  font-size:16px;
-  display: inline-block;
-  padding: 0.5em 0.75em;
-  color: white;
-  background-color: rgb(240,92,98);
-  border:none;
+.footer-div .footer-component ul{
+  list-style:none;
+  padding-bottom: 0rem;
+  text-align: left;
+}
+
+.footer-div .footer-component ul a{
   text-decoration: none;
-  -webkit-transition: background-color 0.5s ease-out;
-  transition: background-color 0.5s ease-out;
-
+  color:#333;
 }
 
-.buttons:hover, .buttons:focus {
-  background-color: rgb(240,92,98);
-  font-size: 22px;
+.footer-div .footer-component ul a:hover{
+  color:rgb(240,92,98);
 }
 
-/* 
-  TEXT ELEMENTS -------------------
-*/
-
-.header-list-content, .header-list-size{
-  display:inline;
-  width:100%;
-  color:rgb(47,41,21);
+.footer-div .footer-component .footer-title{
+  padding-bottom: 0.8rem;
+  text-transform: uppercase;
 }
 
-
-ul, ol{
-  color:rgb(100,100,100);
-  font-size:16px;
-  list-style-position: inside;
-}
-
-
-/* 
-  COMBINED ELEMENTS -------------------
-*/
-ul, ol{
-  color:rgb(100,100,100);
-  font-size:16px;
-
+.footer-div .footer-component ul li{
+  padding-bottom: 0.4rem;
 }
