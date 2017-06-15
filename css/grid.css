@@ -4,9 +4,9 @@
   text-align: center;
   padding: 1em 0;
   border-radius: .2em;
-  display:-webkit-flex;
+/*  display:-webkit-flex;
   display:-ms-flex;
-  display: flex;
+  display: flex;*/
 }
 
 .row {
@@ -16,12 +16,28 @@
 
 }
 
-*,*::after,*::before{
-  box-sizing:border-box;
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(100px, auto);
 }
 
+.one {
+  grid-column: 3 fr;
+  grid-row: 1 / 3;
+}
 
-.box-item{
+.two { 
+  grid-column:3;
+  grid-row: 1 ;
+}
+
+/**,*::after,*::before{
+  box-sizing:border-box;
+}
+*/
+
+/*.box-item{
 
   flex: 1 1 auto;
 }
@@ -29,4 +45,4 @@
 @media (max-width: 30em) {
 
 
-}
+}*/
