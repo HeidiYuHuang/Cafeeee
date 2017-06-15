@@ -47,16 +47,15 @@
 }
 
 .frame {
-  width: 1000px;
-  min-height: 680px;
+  width: 75em;
   margin: 0 auto;
-    margin-top: 0px;
+    margin-top: 0;
     margin-right: auto;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     margin-left: auto;
 }
 
-@media (max-width: 1006px) {
+@media (max-width: 75em) {
   .frame {
     width: 100%;
   }
