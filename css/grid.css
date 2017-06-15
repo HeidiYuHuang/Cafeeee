@@ -10,7 +10,7 @@
 }
 
 .row {
- 	display: block;
+ 	display: -webkit-box;
   width:33%;
  	margin: 0 0;
 }
@@ -19,10 +19,19 @@
   box-sizing:border-box;
 }
 
-
 .box-item{
   flex: 1 1 auto;
 }
+
+[class*'grid-col-'] {
+  display: flex;
+  float: left;
+}
+
+/*.grid-col-1of3 {
+  width: 33.33333%;
+}*/
+
 
 @media (max-width: 30em) {
 
