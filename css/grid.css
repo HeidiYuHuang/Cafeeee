@@ -25,22 +25,17 @@
   grid-row: 1 / 3;
 }
 
-<<<<<<< HEAD
 .two { 
   grid-column:3;
   grid-row: 1 ;
 }
 
-/**,*::after,*::before{
+*,*::after,*::before{
   box-sizing:border-box;
 }
-*/
+
 
 .box-item{
-
-=======
-.box-item{
->>>>>>> master
   flex: 1 1 auto;
 }
 
