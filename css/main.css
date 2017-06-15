@@ -95,21 +95,22 @@ h4 {
 
 /* product-list -------------------*/
 
+
 .product-picture{
   display:block;
   position: relative;
-  margin:0;
+  margin:0 auto;
 }
 
 .product-text{
   display: block;
   position: relative;
-  float: left;
+  float:center;
 }
 
 .product-text h3 {
 font-size:1.2rem;
-text-align: left;
+text-align: center;
 }
 
 .product-text h4{
