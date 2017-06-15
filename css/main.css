@@ -5,15 +5,44 @@
 
 body {
   font-family: 'Catamaran';
-  padding: 2rem;
   text-align: center;
+  display: block;
+    margin: 8px;
+    margin-top: 8px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    margin-left: 8px;
+}
+
+a {
+  text-decoration: none;
 }
 
 h1{
-  font-family: 'Sacramento';
-  font-size:48px;
-  font-weight: lighter;
-  text-align: center; 
+  line-height: 5rem;
+  font-family: "Sacramento";
+  font-size:4rem;
+  text-decoration: none;
+  color:black;
+  text-align: center;
+  display: block;
+    -webkit-margin-before: 0.67em;
+    -webkit-margin-after: 0.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: normal;
+}
+
+nav{
+  width: 100%;
+}
+
+header{
+  display: block;
+}
+
+li{
+  list-style:none;
 }
 
 h2{
@@ -38,51 +67,12 @@ h4 {
   padding-top:0.5em;
 }
 
-/* header  -------------------*/
-.header {
-  top: 0;
-  position: fixed;
-  z-index: 5;
-  width:100;
-  padding:0 0;
-  background-color: white;
-}
-
-.header-logo {
-  float: middle;
-  line-height: 5rem;
-  font-family: "Sacramento";
-  font-size:4rem;
-  font-weight: 50;
-  text-decoration: none;
-  color:black;
-}
-
-/*account, start order ----------*/
-.button-sub{
-  box-sizing: border-box;
-  display: inline-block;
-  position: relative;
-  left:0;
-  cursor: pointer;
-  z-index: 4;
-  min-width: 120px;
-}
-
-.button-sub a{
-  text-decoration: none;
-  font-size: 0.875rem;
-  color:rgb(47,41,21);
-}
-
 /*navgation----------*/
 .button-nav {
-  display: inline-block;
   padding: 0.5em 0.75em;
-  color: white;
   background-color: rgb(240,92,98);
+  color: white;
   border-radius: 0.25em;
-  text-decoration: none;
   -webkit-transition: background-color 0.5s ease-out;
   transition: background-color 0.5s ease-out;
 }
@@ -91,7 +81,6 @@ h4 {
  background-color: rgb(114,180,197);
  color:white;
 }
-
 
 /* product-list -------------------*/
 
@@ -121,7 +110,6 @@ text-align: left;
  
 }
 
-
 /*footer styling*/
 footer{
   background: rgb(225,225,225);
@@ -130,32 +118,4 @@ footer{
   right:0;
   left:0;
   bottom:0;
-}
-
-.footer-div{
-  width: 100%
-}
-
-.footer-div .footer-component ul{
-  list-style:none;
-  padding-bottom: 0rem;
-  text-align: left;
-}
-
-.footer-div .footer-component ul a{
-  text-decoration: none;
-  color:#333;
-}
-
-.footer-div .footer-component ul a:hover{
-  color:rgb(240,92,98);
-}
-
-.footer-div .footer-component .footer-title{
-  padding-bottom: 0.8rem;
-  text-transform: uppercase;
-}
-
-.footer-div .footer-component ul li{
-  padding-bottom: 0.4rem;
 }
