@@ -20,6 +20,7 @@
 
 *,*::after,*::before{
   box-sizing:border-box;
+
 }
 
 .box-item{
@@ -39,7 +40,25 @@
   width: 25%;
 }
 
-@media (max-width: 30em) {
-
-
+@media (max-width: 55em) {
+  .grid-col-1of4 {
+    width: 100%;
+  }
 }
+
+.frame {
+  width: 1000px;
+  min-height: 680px;
+  margin: 0 auto;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+}
+
+@media (max-width: 1006px) {
+  .frame {
+    width: 100%;
+  }
+}
+
