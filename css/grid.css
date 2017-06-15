@@ -11,7 +11,6 @@
 
 .row {
  	display: -webkit-box;
-  width:33%;
  	margin: 0 0;
 }
 
@@ -28,9 +27,15 @@
   float: left;
 }
 
-/*.grid-col-1of3 {
+.grid-col-1of3 {
   width: 33.33333%;
-}*/
+}
+
+.grid-col-1of4 {
+  width: 25%;
+}
+
+
 
 
 @media (max-width: 30em) {
