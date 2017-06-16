@@ -70,6 +70,15 @@ p {
   margin: 0 auto;
 }
 
+footer{
+  background: rgb(225,225,225);
+  height:auto;
+  position:relative;
+  right:0;
+  left:0;
+  bottom:0;
+}
+
 /*whole area margin*/
 .whole-margin {
   margin: 0.5em;
@@ -79,7 +88,17 @@ p {
     margin-left: 0.5em;
 }
 
+/*header==========*/
+.logo-top-margin {
+  margin-top: 2em;
+}
+
 /*navgation----------*/
+
+.nav-top-margin {
+  margin-top: 1.5em;
+}
+
 .button-nav {
   padding: 0.5em 0.75em;
   background-color: rgb(240,92,98);
@@ -94,8 +113,12 @@ p {
  color:white;
 }
 
-/* product-list -------------------*/
+/*content==========*/
+.content-top-margin {
+  margin-top: 0.5em;
+}
 
+/* product-list -------------------*/
 
 .product-picture{
   display:block;
@@ -122,12 +145,16 @@ text-align: center;
   display: block;
 }
 
-/*footer styling*/
-footer{
-  background: rgb(225,225,225);
-  height:auto;
-  position:relative;
-  right:0;
-  left:0;
-  bottom:0;
+/*footer===========*/
+.footer-top-margin{
+  margin-top: 1em;
+}
+
+.footer-col-margin{
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.footer-list-top-margin{
+  margin-top: 1em;
 }
