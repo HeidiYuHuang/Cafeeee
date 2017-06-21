@@ -1,6 +1,7 @@
 *{
   font-family: 'Catamaran';
   color:rgb(47,41,21);
+  font-weight: lighter;
 }
 
 body {
@@ -40,6 +41,7 @@ header{
 img{
   width: 100%;
   height: auto;
+  border-radius: 0.25em;
 }
 
 ul{
@@ -55,16 +57,19 @@ h2{
   font-size:1.625em;
   text-align: center;
   margin: 0 auto;
+  font-weight: normal;
 }
 
 h3{
   font-size:1.375em;
   margin: 0 auto;
+  font-weight: normal;
 }
 
 h4 {
   font-size:1.25em;
   margin: 0 auto;
+  font-weight: normal;
 }
 
 p {
@@ -78,6 +83,7 @@ footer{
   right:0;
   left:0;
   bottom:0;
+  border-radius: 0.25em;
 }
 
 /*whole area margin*/
@@ -132,6 +138,7 @@ footer{
   padding-top: 0.8em;
   padding-bottom: 0.8em;
   background-color: #CDCDC0;
+  border-radius: 0.25em;
 }
 
 .menu-nav:hover,.menu:focus {
