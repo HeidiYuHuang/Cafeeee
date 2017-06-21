@@ -154,6 +154,10 @@ footer{
           flex: 1;
 }
 
+.menu-content-margin-left {
+  margin-left: 0.5em;
+}
+
 .img-left-padding-2of3 {
   padding-right: 0.4em;
 }
