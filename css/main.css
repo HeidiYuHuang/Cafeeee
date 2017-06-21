@@ -124,8 +124,18 @@ footer{
   display: flex;
 }
 
-.menu-nav {
+.menu-sidebar {
   width:10em;
+}
+
+.menu-nav {
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
+}
+
+.menu-nav:hover,.menu:focus {
+  background-color: #626D71;
+  color:white;
 }
 
 .menu-content {
