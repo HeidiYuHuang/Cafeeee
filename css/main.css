@@ -102,7 +102,7 @@ footer{
 
 .button-nav {
   padding: 0.5em 0.75em;
-  background-color: rgb(240,92,98);
+  background-color: #DDBC95;
   color: white;
   border-radius: 0.25em;
   -webkit-transition: background-color 0.5s ease-out;
@@ -110,7 +110,7 @@ footer{
 }
 
 .button-nav:hover, .button-nav:focus {
- background-color: rgb(114,180,197);
+ background-color: #B38867;
  color:white;
 }
 
