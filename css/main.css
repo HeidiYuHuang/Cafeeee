@@ -131,10 +131,14 @@ footer{
 .menu-nav {
   padding-top: 0.8em;
   padding-bottom: 0.8em;
+  background-color: #CDCDC0;
 }
 
 .menu-nav:hover,.menu:focus {
   background-color: #626D71;
+}
+
+.menu-nav-font {
   color:white;
 }
 
