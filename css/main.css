@@ -119,6 +119,20 @@ footer{
   margin-top: 0.5em;
 }
 
+.img-left-padding-2of3 {
+  padding-right: 0.4em;
+}
+
+.img-middle-padding-1of3 {
+  padding-right: 0.2em;
+  padding-left: 0.2em;
+}
+
+.img-right-padding-2of3 {
+  padding-left: 0.4em;
+}
+
+
 /* product-list -------------------*/
 
 .product-picture{
