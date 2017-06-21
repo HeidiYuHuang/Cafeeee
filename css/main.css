@@ -119,6 +119,20 @@ footer{
   margin-top: 0.5em;
 }
 
+.menu-container{
+  display: -webkit-flex;
+  display: flex;
+}
+
+.menu-nav {
+  width:10em;
+}
+
+.menu-content {
+  -webkit-flex: 1;
+          flex: 1;
+}
+
 .img-left-padding-2of3 {
   padding-right: 0.4em;
 }
