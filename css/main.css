@@ -219,11 +219,11 @@ footer{
 
 .menudetail-nav {
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.2em;
   display: inline-block;
   background-color: #CDCDC0;
   border-radius: 0.25em;
-  width: 6em;
+  width: 10em;
 }
 
 .img-left-padding-2of3 {
@@ -239,9 +239,24 @@ footer{
   padding-left: 0.4em;
 }
 
+.checkout-nav-margin-top{
+  margin-top: 1em;
+}
+
 .checkout-nav {
   border: 0.1em solid #626D71;
   border-radius: 0.5em;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+}
+
+.confirm-nav {
+  text-align: center;
+  font-size: 1.2em;
+  display: inline-block;
+  background-color: #CDCDC0;
+  border-radius: 0.25em;
+  width: 10em;
 }
 
 
