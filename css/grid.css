@@ -11,10 +11,14 @@
   margin: 0 0;
 }
 
-.container {
+.container{
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+}
+
+.menudetail-title {
+  display: block;
 }
 
 .bounder2 {
@@ -52,6 +56,12 @@
   float: left;
 }
 
+@media (max-width: 55em) {
+  .grid-col-1of2 {
+    width: 100%;
+  }
+}
+
 .grid-col-1of3 {
   width: 33.33333%;
 }
@@ -78,4 +88,18 @@
   }
 }
 
+.grid-col-3of4 {
+  width: 75%;
+}
 
+@media (max-width: 55em) {
+  .grid-col-3of4 {
+      width: 50%;
+    }
+}
+
+@media (max-width: 40em) {
+  .grid-col-3of4 {
+    width: 100%;
+  }
+}

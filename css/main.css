@@ -55,7 +55,6 @@ li{
 
 h2{
   font-size:1.625em;
-  text-align: center;
   margin: 0 auto;
   font-weight: normal;
 }
@@ -74,6 +73,10 @@ h4 {
 
 p {
   margin: 0 auto;
+}
+
+span {
+ text-align: left;
 }
 
 footer{
@@ -131,11 +134,11 @@ footer{
   display: flex;
 }
 
-.menu-sidebar {
+.menu-sidebar{
   width:10em;
 }
 
-.menu-nav {
+.menu-nav{
   display: block;
   color:white;
   padding-top: 0.8em;
@@ -155,6 +158,10 @@ footer{
 
 .menu-content-margin-left {
   margin-left: 0.5em;
+}
+
+.menudetail-content {
+  text-align: left;
 }
 
 .img-left-padding-2of3 {
