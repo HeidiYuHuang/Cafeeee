@@ -80,23 +80,27 @@ span {
 }
 
 button {
-  background-color: #626D71;
   font-size: 1rem;
-  font-weight: bold;
-  height: 2.5em;
-  width: 2.5em;
-  border: none;
-  color: white;
+  background-color: white;
   border-radius: 50%;
+  border: 0.1em solid #626D71;
+  color: #626D71;
+  height: 2em;
+  width: 2em;
 }
 
 label {
   font-size: 1.5em;
-  font-weight: bold;
 }
 
 .menudetail-cupsize>label {
+  font-size: 1em;
   font-weight: lighter;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+
 }
 
 input[type=radio] {
@@ -111,7 +115,7 @@ input[type=radio]:checked + label{
 }
 
 input[type=radio] + label {
-  border: solid #626D71;
+  border: 0.1em solid #626D71;
   border-radius: 0.5em;
 }
 
@@ -207,6 +211,15 @@ footer{
 .menudetail-quantity-margin-leftright {
   margin-left: 1em;
   margin-right: 1em;
+}
+
+.menudetail-nav {
+  text-align: center;
+  font-size: 1.5em;
+  display: inline-block;
+  background-color: #CDCDC0;
+  border-radius: 0.25em;
+  width: 6em;
 }
 
 .img-left-padding-2of3 {
