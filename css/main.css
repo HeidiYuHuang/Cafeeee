@@ -98,6 +98,7 @@ footer{
 /*header==========*/
 .logo-top-margin {
   margin-top: 2em;
+  display: -webkit-flex;
 }
 
 /*navgation----------*/
@@ -135,6 +136,8 @@ footer{
 }
 
 .menu-nav {
+  display: block;
+  color:white;
   padding-top: 0.8em;
   padding-bottom: 0.8em;
   background-color: #CDCDC0;
@@ -143,10 +146,6 @@ footer{
 
 .menu-nav:hover,.menu:focus {
   background-color: #626D71;
-}
-
-.menu-nav-font {
-  color:white;
 }
 
 .menu-content {
