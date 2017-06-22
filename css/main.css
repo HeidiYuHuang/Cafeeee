@@ -239,6 +239,11 @@ footer{
   padding-left: 0.4em;
 }
 
+.checkout-nav {
+  border: 0.1em solid #626D71;
+  border-radius: 0.5em;
+}
+
 
 /* product-list -------------------*/
 
