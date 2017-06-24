@@ -3,71 +3,108 @@
   <head>
     <meta charset="utf-8">
     <title>Cafeeee</title>
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link href="css/grid.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+    <script src="https://use.fontawesome.com/46831abb25.js"></script>
   </head>
-  <body class="frame">
-    <div class="whole-margin">
-      <!-- header -->
-      <div class="box">
-        <header>
-          <a href="#"></a>
-          <div class="rightbottons">
-            <a href="#">Account</a>
-            <a href="menu.html">Start Order</a>  
-          </div>   
-          <a href="home.html">
-            <div class="logo-top-margin">
-              <h1>
-                Cafeeee
-              </h1>
-            </div>
-          </a>  
-          <div class="nav-top-margin">
-            <nav class="container">
-               <a class="button-nav grid-col-1of4" href="menu.html">Menu</a>
-               <a class="button-nav grid-col-1of4" href="events.html">Events</a>
-               <a class="button-nav grid-col-1of4" href="about.html">About Us</a>
-               <a class="button-nav grid-col-1of4" href="contact.html">Contact Us</a>
-            </nav>
+  <body> 
+    <!-- header -->
+      <header>
+        <div class="header-style">
+          <div class="frame">
+            <!-- logo -->
+              <div class="header-logo">
+                <a href="home.html">
+                  <h1>
+                    Cafeeee
+                  </h1>
+                </a>
+              </div>
+            <!-- cart -->
+              <div class="header-cart-position">
+                <a href="#" class="header-cart-size">
+                  <div class="header-cart-inter-position">
+                    <i class="fa fa-shopping-cart header-cart-color" aria-hidden="true" ></i>
+                    <span class="header-cart-color">Cart</span>
+                  </div>
+                </a>
+              </div>
+            <!-- login & signup -->
+              <div class="header-account-style">
+                <!-- log in -->
+                <a href="#" class="header-account-a">
+                  <div class="header-account-inter-position">
+                    <span class="header-account-color">Log in</span>
+                  </div>
+                </a>
+                <!-- vertical line -->
+                <span class="header-account-line"></span>
+                <!-- sign up -->
+                <a href="#" class="header-account-a">
+                  <div class="header-account-inter-position">
+                    <span class="header-account-color">Sign Up</span>
+                  </div>
+                </a>
+              </div>
+            <!-- search bar -->
+              <div class="header-search">
+                <input type="text" name="searchbar" class="header-search-form" placeholder="Search this site">
+                <a href="" class="header-search-icon">
+                  <i class="fa fa-search header-search-icon-style" aria-hidden="true"></i>
+                </a>
+              </div>
+            <!-- navigation bar -->
+              <nav class="header-nav-style">
+                <a class="header-nav-size" href="home.html">Home</a>
+                <a class="header-nav-size" href="menu.html">Menu</a>
+                <a class="header-nav-size" href="">Gift Card</a>
+                <a class="header-nav-size" href="about.html">Our Story</a>
+                <a class="header-nav-size" href="contact.html">Contact Us</a>
+              </nav>
           </div>
-        </header>
-      </div>
-      <!-- content -->
+        </div>
+      </header>
+    <!-- content -->
       <div class="content-top-margin">
-        <div class="box">
+        <div class="frame">
           <div class="box">
             <img src="img/home1.jpg" alt="image of coffee">
-          </div>
-          <div class="box">
-            <div class="container">
-              <div class="grid-col-1of3">
-                <div class="img-left-padding-2of3">
-                  <a href="menu.html">
-                    <img src="img/home4.jpg" alt="image of coffee" width="100%" height="100%">
-                  </a>
-                </div>
+              <div class="box">
+                <div class="">
+                  <a href="menu.html">Start Order</a>  
+                </div>   
               </div>
-              <div class="grid-col-1of3">
-                <div class="img-middle-padding-1of3">
-                  <a href="events.html">
-                    <img src="img/event2.jpg" alt="image of coffee" width="100%" height="100%">
-                  </a>
+              <div class="box">
+                <div class="container">
+                  <div class="grid-col-1of3">
+                    <div class="img-left-padding-2of3">
+                      <a href="menu.html">
+                      <img src="img/home4.jpg" alt="image of coffee" width="100%" height="100%">
+                    </a>
+                  </div>
                 </div>
-              </div>
-              <div class="grid-col-1of3">
-                <div class="img-right-padding-2of3">
-                  <a href="about.html">
-                    <img src="img/home3.jpg" alt="image of coffee" width="100%" height="100%">
-                  </a>
+                <div class="grid-col-1of3">
+                  <div class="img-middle-padding-1of3">
+                    <a href="events.html">
+                      <img src="img/event2.jpg" alt="image of coffee" width="100%" height="100%">
+                    </a>
+                  </div>
+                </div>
+                <div class="grid-col-1of3">
+                  <div class="img-right-padding-2of3">
+                    <a href="about.html">
+                      <img src="img/home3.jpg" alt="image of coffee" width="100%" height="100%">
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- footer -->
+    <!-- footer -->
       <div class="footer-top-margin">
         <div class="box">
           <footer>
@@ -120,6 +157,5 @@
           </footer>
         </div>
       </div>
-    </div>
   </body>
 </html>
