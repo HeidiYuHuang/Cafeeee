@@ -110,6 +110,10 @@
     display: none;
   }
 
+  .header-accounticon-size:hover .header-accounticon-color{
+    color: #B38867;
+  }
+
 /*navigation bar*/
 .header-nav-size {
   color: #626D71;
@@ -190,7 +194,10 @@
     padding-left: 0.5em;
     display: none;
   }
-
+  
+  .header-searchicon-size:hover .header-searchicon-color{
+    color: #B38867;
+  }
 
 
 .header-search-icon {

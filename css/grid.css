@@ -20,61 +20,106 @@
   }
 }
 
-/*navigation bar*/
-[class*'header-col-'] {
-  display: flex;
-  float: left;
-}
-
-.header-col-1of5 {
-  width: 20%;
-}
-
-/*search bar*/
-@media (max-width: 74em) {
-  .header-searchbar{
-    width: 14em;
+/*header*/
+/*@media (max-width: 47em) {
+  .header-style {
+    height: 6em;
   }
-}
+}*/
 
-@media (max-width: 70em) {
-  .header-searchbar{
-    width: 12em;
-  }
-}
-
-@media (max-width: 68em) {
-  .header-searchbar{
-    width: 10em;
-  }
-}
-
-@media (max-width: 66em) {
-  .header-searchbar{
-    display: none;
-  }
-  .header-searchicon-size {
+  /*navigation bar*/
+  [class*'header-col-'] {
     display: flex;
-  }
-}
-
-/*account*/
-@media (max-width: 66em) {
-  .header-account-style {
-    display: none;
+    float: left;
   }
 
-  .header-accounticon-size {
-    display: flex;
+  .header-col-1of5 {
+    width: 20%;
   }
-}
 
-/*cart*/
-@media (max-width: 66em) {
-  .header-cart-color {
-    display: none;
+  @media (max-width: 66em) {
+    .header-nav-style {
+      width: 100%;
+      margin-top: 2.5em;
+      position: absolute;
+      padding-left: 5em;
+      padding-right: 5em;
+    }
+
+    .header-nav-size {
+
+    }
   }
-}
+
+  /*search bar*/
+  @media (max-width: 74em) {
+    .header-searchbar{
+      width: 14em;
+    }
+  }
+
+  @media (max-width: 70em) {
+    .header-searchbar{
+      width: 12em;
+    }
+  }
+
+  @media (max-width: 68em) {
+    .header-searchbar{
+      width: 10em;
+    }
+  }
+
+  @media (max-width: 66em) {
+    .header-searchbar{
+      width: 16em;
+    }
+  }
+
+  @media (max-width: 44em) {
+    .header-searchbar{
+      width: 14em;
+    }
+  }
+
+  @media (max-width: 42em) {
+    .header-searchbar{
+      width: 12em;
+    }
+  }
+
+  @media (max-width: 40em) {
+    .header-searchbar{
+      margin-right: 1em;
+    }
+  }
+
+  @media (max-width: 30em) {
+    .header-searchbar{
+      display: none;
+    }
+    .header-searchicon-size {
+      display: flex;
+    }
+  }
+
+  /*account*/
+  @media (max-width: 40em) {
+    .header-account-style {
+      display: none;
+    }
+
+    .header-accounticon-size {
+      display: flex;
+    }
+  }
+
+  /*cart*/
+  @media (max-width: 40em) {
+    .header-cart-color {
+      display: none;
+    }
+  }
 
 /*-----------later------------*/
 
