@@ -104,6 +104,12 @@
   font-size: 1.2em;
 }
 
+.header-nav-size:hover {
+  color: #B38867;
+  border-bottom-color: #B38867;
+  border-bottom-style: solid;
+}
+
 /*search bar*/
 .header-search{
   float: right;
@@ -134,6 +140,15 @@
   margin-top: 0.5em;
   margin-left: 0.5em;
   margin-right: 0.5em;
+}
+
+.header-search-icon:hover .header-search-icon-style {
+  color: #B38867;
+}
+
+.header-search-form:focus {
+  background: rgba(230,230,230,0.5);
+  outline: none;
 }
 
 /*later----------*/
