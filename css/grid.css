@@ -79,16 +79,12 @@
 }
 
 @media (max-width: 47em) {
-  .header-nav-style {
-    width: 100%;
-    margin-top: 2.5em;
-    position: absolute;
-    padding-left: 5em;
-    padding-right: 5em;
+  .header-nav-main {
+    display: none;
   }
 
-  .header-nav-size {
-
+  .header-nav-sub{
+    display: block;
   }
 }
 /*-----------later------------*/
