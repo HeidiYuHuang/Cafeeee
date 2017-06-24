@@ -1,9 +1,14 @@
 /*#626D71*/
 /*#B38867*/
 /*#CDCDC0*/
+/*#DDBC95*/
 /*background: rgba(255,255,255,0.94);*/
 .test {
   background-color: yellow;
+}
+
+.test1 {
+  background-color: red;
 }
 
 /*whole area margin*/
@@ -87,6 +92,23 @@
 .header-account-a:hover .header-account-color {
   color: #B38867;
 }
+  /*narrow account icon*/
+  .header-accounticon-color {
+    color: #626D71;
+  }
+
+  .header-accounticon-inter-position {
+    margin-top: 0.5em;
+  }
+
+  .header-accounticon-size {
+    float: right;
+    font-size: 1.2em;
+    height: 2.5em;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+    display: none;
+  }
 
 /*navigation bar*/
 .header-nav-size {
@@ -110,15 +132,20 @@
   border-bottom-style: solid;
 }
 
+.header-nav-size:focus {
+  color: white;
+  background-color: #B38867;
+}
+
 /*search bar*/
-.header-search{
+.header-searchbar{
   float: right;
   width: 16em;
   display: flex;
   margin-top: 0.5em;
 }
 
-.header-search-form {
+.header-searchbar-form {
   border-radius: 0.1em;
   border-width: 1px;
   background: rgba(240,240,240,0.5);
@@ -130,25 +157,53 @@
   border-color: #CDCDC0;
 }
 
-.header-search-icon {
+.header-searchbar-icon {
   font-size: 1.1em;
   margin-left: -2em;
 }
 
-.header-search-icon-style {
+.header-searchbar-icon-style {
   color: #626D71;
   margin-top: 0.5em;
   margin-left: 0.5em;
   margin-right: 0.5em;
 }
 
-.header-search-icon:hover .header-search-icon-style {
+.header-searchbar-icon:hover .header-searchbar-icon-style {
   color: #B38867;
 }
 
-.header-search-form:focus {
-  background: rgba(230,230,230,0.5);
-  outline: none;
+/*narrow search icon*/
+  .header-searchicon-color {
+    color: #626D71;
+  }
+
+  .header-searchicon-inter-position {
+    margin-top: 0.5em;
+  }
+
+  .header-searchicon-size {
+    float: right;
+    font-size: 1.2em;
+    height: 2.5em;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+    display: none;
+  }
+
+
+
+.header-search-icon {
+  float: right;
+  flex-wrap: wrap;
+  height: 2.5em;
+  font-size: 1.2em;
+  margin-left: 1em;
+  display: none;
+}
+
+.header-search-inter-position {
+  margin-top: 0.5em;
 }
 
 /*later----------*/
