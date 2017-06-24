@@ -141,6 +141,28 @@
   background-color: #B38867;
 }
 
+  /*narrow nav icon*/
+  .header-navicon-color {
+    color: #626D71;
+  }
+
+  .header-navicon-inter-position {
+    margin-top: 0.5em;
+  }
+
+  .header-navicon-size {
+    float: right;
+    font-size: 1.2em;
+    height: 2.5em;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+    display: none;
+  }
+
+  .header-navicon-size:hover .header-navicon-color{
+    color: #B38867;
+  }
+
 /*search bar*/
 .header-searchbar{
   float: right;
@@ -194,7 +216,7 @@
     padding-left: 0.5em;
     display: none;
   }
-  
+
   .header-searchicon-size:hover .header-searchicon-color{
     color: #B38867;
   }
