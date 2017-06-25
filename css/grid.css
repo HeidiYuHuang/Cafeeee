@@ -79,7 +79,7 @@
 }
 
 @media (max-width: 41em) {
-  .header-nav-main {
+  .header-nav-style {
     display: none;
   }
 
@@ -103,6 +103,33 @@
   .header-subnav-size {
     width: 100%;
   }
+
+  .header-nav-sub {
+    display: none;
+  }
+
+  .header-navicon-size {
+    display: flex;
+  }
+}
+
+/*content*/
+@media (max-width: 41em) {
+  .content-top-margin {
+    margin-top: 7.5em;
+  }
+}
+
+@media (max-width: 32em) {
+  .content-top-margin {
+    margin-top: 10em;
+  }  
+}
+
+@media (max-width: 26em) {
+  .content-top-margin {
+    margin-top: 5em;
+  } 
 }
 
 /*-----------later------------*/
