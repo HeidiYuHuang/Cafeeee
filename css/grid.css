@@ -104,12 +104,8 @@
     width: 100%;
   }
 
-  .header-nav-sub {
+  #header-subnav-dropdown {
     display: none;
-  }
-
-  .header-navicon-size {
-    display: flex;
   }
 }
 

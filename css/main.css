@@ -155,16 +155,15 @@
     height: 2.5em;
     padding-right: 0.5em;
     padding-left: 0.5em;
-    display: none;
   }
 
   .header-navicon-size:hover .header-navicon-color{
     color: #B38867;
   }
 
-.header-nav-sub{
-  display: none;
-}
+  #header-nav-icon {
+    display: none;
+  }
 
 .header-subnav-style {
   position: absolute;

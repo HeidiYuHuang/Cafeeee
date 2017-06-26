@@ -2,19 +2,21 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
     <title>Cafeeee</title>
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link href="css/grid.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
     <script src="https://use.fontawesome.com/46831abb25.js"></script>
-    <script src="js/behaviours.js" type="text/javascript"></script>
+    <script src="js/behaviours.js"></script>
   </head>
-  <body> 
+  <body onresize="widthChange()"> 
     <!-- header -->
       <header>
       <!-- sub navigation bar -->
-        <div id="header-subnav-dropdown" class="header-nav-sub">
+        <div id="header-subnav-dropdown">
           <nav class="header-subnav-style">
             <a class="header-subnav-size" href="home.html">Home</a>
             <a class="header-subnav-size" href="menu.html">Menu</a>
@@ -89,7 +91,7 @@
                     <a class="header-nav-size" href="contact.html">Contact Us</a>
                 </nav>
                 <!-- icon -->
-                  <a onclick="dropdownSubnav()" href="#" class="header-navicon-size">
+                  <a href="#" class="header-navicon-size" id="header-nav-icon" onclick="dropdownSubnav()">
                     <div class="header-navicon-inter-position">
                       <i class="fa fa-bars header-navicon-color" aria-hidden="true" ></i>
                     </div>
