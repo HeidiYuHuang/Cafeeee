@@ -97,16 +97,6 @@ label {
   font-size: 1.5em;
 }
 
-.menudetail-cupsize>label {
-  font-size: 1em;
-  font-weight: lighter;
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-top: 0.1em;
-  padding-bottom: 0.1em;
-
-}
-
 input[type=radio] {
   position: absolute;
   visibility: hidden;

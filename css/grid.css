@@ -128,6 +128,31 @@
   } 
 }
 
+/*menu*/
+@media (max-width: 60em) {
+  .content-product {
+    width: 25%;
+  }
+}
+
+@media (max-width: 48em) {
+  .content-product {
+    width: 33.3333%;
+  }
+}
+
+@media (max-width: 37em) {
+  .content-product {
+    width: 50%;
+  }
+}
+
+@media (max-width: 26em) {
+  .content-product {
+    width: 100%;
+  }
+}
+
 /*-----------later------------*/
 
 .box{

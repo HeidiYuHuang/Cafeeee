@@ -2,6 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
     <title>Cafeeee</title>
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
@@ -9,12 +11,11 @@
     <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
     <script src="https://use.fontawesome.com/46831abb25.js"></script>
   </head>
-  <body class="frame">
-    <div class="whole-margin">
-      <!-- header -->
-        <header>
+  <body onload="widthChange()" onresize="widthChange()"> 
+    <!-- header -->
+      <header>
         <!-- sub navigation bar -->
-          <div class="header-nav-sub">
+          <div id="header-subnav-dropdown">
             <nav class="header-subnav-style">
               <a class="header-subnav-size" href="home.html">Home</a>
               <a class="header-subnav-size" href="menu.html">Menu</a>
@@ -89,7 +90,7 @@
                       <a class="header-nav-size" href="contact.html">Contact Us</a>
                   </nav>
                   <!-- icon -->
-                    <a href="#" class="header-navicon-size">
+                    <a href="#" class="header-navicon-size" id="header-nav-icon" onclick="dropdownSubnav()">
                       <div class="header-navicon-inter-position">
                         <i class="fa fa-bars header-navicon-color" aria-hidden="true" ></i>
                       </div>
@@ -97,125 +98,1020 @@
                 </div>
             </div>
           </div>
-        </header>
-      <!-- content -->
+      </header>
+    <!-- content -->
       <div class="content-top-margin">
-        <div class="menu-container">
-          <div class="menu-sidebar">
-            <ul>
-              <li>
-                <a class="menu-nav" href="menu.html">
-                    Coffee
-                </a>
-              </li>
-              <li>
-                <a class="menu-nav" href="menu1.html">
-                    Drink
-                </a>
-              </li>
-              <li>
-                <a class="menu-nav" href="menu2.html">
-                    Bakery
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="menu-content-margin-left">
-            <div class="menu-content">
-              <div class="box"> 
-                <div class="box">
-                  <div class="container">
-                    <div class=" grid-col-1of3">
-                      <div class="img-left-padding-2of3">
-                        <div class="bounder2">
-                          <div id="coffee-picture"  class="product-picture">
-                            <a href="detail.html">
-                              <img src="img/latte.jpg" alt="image of coffee">
-                            </a>
-                          </div>
-                          <div class="product-text">
-                            <h3><a href="detail.html">Latte</a></h3>
-                            <h4><a class="price">CAD3.25</a></h4>
-                          </div>
-                        </div>
+        <div class="frame">
+          <div class="content-horizontal-margin">
+            <div class="content-submenu">
+              <div id="Coffee" class="content-submenutitle">
+                <div class="content-submenutitle-container">
+                  <div class="content-submenutitle-content">
+                    <div class="content-submenutitle-coffee-image">
+                      <div class="content-submenutitle-text">
+                        <h2>Coffee</h2>
                       </div>
                     </div>
-                    <div class="grid-col-1of3">
-                      <div class="img-middle-padding-1of3">
-                        <div class="bounder2">
-                          <div id="coffee-picture"  class="product-picture">
-                            <a href="detail.html">
-                            <img src="img/mocha.jpg" alt="image of coffee">
-                            </a>
-                          </div>
-                          <div class="product-text">
-                            <h3><a href="detail.html">Mocha</a></h3>
-                            <h4><a class="price">CAD3.25</a></h4>
+                  </div>
+                </div>
+              </div>
+              <div id="Drink" class="content-submenutitle">
+                <div class="content-submenutitle-container">
+                  <div class="content-submenutitle-content">
+                    <div class="content-submenutitle-drink-image">
+                      <div class="content-submenutitle-text">
+                        <h2>Drink</h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="Bakery" class="content-submenutitle">
+                <div class="content-submenutitle-container">
+                  <div class="content-submenutitle-content">
+                    <div class="content-submenutitle-bakery-image">
+                      <div class="content-submenutitle-text">
+                        <h2>Bakery</h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="content-submenulinks" onclick="openSubmenu(event, 'Coffee','Coffee-Content')" id="content-submenu-default">Coffee</button>
+              <button class="content-submenulinks" onclick="openSubmenu(event, 'Drink','Drink-Content')">Drink</button>
+              <button class="content-submenulinks" onclick="openSubmenu(event, 'Bakery','Bakery-Content')">Bakery</button>
+            </div>
+            <div id="Coffee-Content" class="content-submenucontent">
+              <div class="box">
+                <div class="content-submenucontent-container">
+                  <div class="content-product">
+                    <div class="content-product-card">
+                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-content">
+                        <div class="content-product-title">
+                          <h2 class="content-product-title-cell">Latte</h2>
+                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="container">
+                            <button>-</button>
+                            <label>1</label>
+                            <button>+</button>
                           </div>
                         </div>
-                      </div>
-                    </div> 
-                    <div class="grid-col-1of3">
-                      <div class="img-right-padding-2of3">
-                        <div class="bounder2">
-                          <div id="coffee-picture"  class="product-picture">
-                            <a href="detail.html">
-                            <img src="img/americano.jpg" alt="image of coffee">
-                            </a>
+                        <div class="content-product-box">
+                          <div class="content-product-cupsize container">
+                            <input type="radio" name="cupsize" id="cupsize-small">
+                            <label for="cupsize-small">S</label>
+                            <input type="radio" name="cupsize" id="cupsize-medium">
+                            <label for="cupsize-medium">M</label>
+                            <input type="radio" name="cupsize" id="cupsize-large">
+                            <label for="cupsize-large">L</label>
                           </div>
-                          <div class="product-text">
-                            <h3><a href="detail.html">Americano</a></h3>
-                            <h4><a class="price">CAD3.75</a></h4>
-                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <a href="cart.html" class="content-product-button">Buy Now</a>
+                          <a href="cart.html" class="content-product-button">Add To Cart</a>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>        
-                <div class="box">
-                  <div class="container">
-                    <div class="grid-col-1of3">
-                      <div class="img-left-padding-2of3">
-                        <div class="bounder2">
-                          <div id="coffee-picture"  class="product-picture">
-                            <a href="detail.html">
-                            <img src="img/macchiato.jpg" alt="image of coffee">
-                            </a>
+                  <div class="content-product">
+                    <div class="content-product-card">
+                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-content">
+                        <div class="content-product-title">
+                          <h2 class="content-product-title-cell">Latte</h2>
+                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="container">
+                            <button>-</button>
+                            <label>1</label>
+                            <button>+</button>
                           </div>
-                          <div class="product-text">
-                            <h3><a href="detail.html">Macchiato</a></h3>
-                            <h4><a class="price">CAD4.25</a></h4>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="content-product-cupsize container">
+                            <input type="radio" name="cupsize" id="cupsize-small">
+                            <label for="cupsize-small">S</label>
+                            <input type="radio" name="cupsize" id="cupsize-medium">
+                            <label for="cupsize-medium">M</label>
+                            <input type="radio" name="cupsize" id="cupsize-large">
+                            <label for="cupsize-large">L</label>
                           </div>
+                        </div>
+                        <div class="content-product-box">
+                          <a href="cart.html" class="content-product-button">Buy Now</a>
+                          <a href="cart.html" class="content-product-button">Add To Cart</a>
                         </div>
                       </div>
                     </div>
-                    <div class="grid-col-1of3">
-                      <div class="img-middle-padding-1of3">
-                        <div class="bounder2">
-                          <div id="coffee-picture"  class="product-picture">
-                            <a href="detail.html">
-                            <img src="img/cappuccino.jpg" alt="image of coffee">
-                            </a>
+                  </div>
+                  <div class="content-product">
+                    <div class="content-product-card">
+                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-content">
+                        <div class="content-product-title">
+                          <h2 class="content-product-title-cell">Latte</h2>
+                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="container">
+                            <button>-</button>
+                            <label>1</label>
+                            <button>+</button>
                           </div>
-                          <div class="product-text">
-                            <h3><a href="detail.html">Cappuccino</a></h3>
-                            <h4><a class="price">CAD4.25</a></h4>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="content-product-cupsize container">
+                            <input type="radio" name="cupsize" id="cupsize-small">
+                            <label for="cupsize-small">S</label>
+                            <input type="radio" name="cupsize" id="cupsize-medium">
+                            <label for="cupsize-medium">M</label>
+                            <input type="radio" name="cupsize" id="cupsize-large">
+                            <label for="cupsize-large">L</label>
                           </div>
+                        </div>
+                        <div class="content-product-box">
+                          <a href="cart.html" class="content-product-button">Buy Now</a>
+                          <a href="cart.html" class="content-product-button">Add To Cart</a>
                         </div>
                       </div>
                     </div>
-                    <div class="grid-col-1of3">
-                      <div class="img-right-padding-2of3">
-                        <div class="bounder2">
-                          <div id="coffee-picture"  class="product-picture">
-                            <a href="detail.html">
-                            <img src="img/coconut.jpg" alt="image of coffee">
-                            </a>
+                  </div>
+                  <div class="content-product">
+                    <div class="content-product-card">
+                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-content">
+                        <div class="content-product-title">
+                          <h2 class="content-product-title-cell">Latte</h2>
+                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="container">
+                            <button>-</button>
+                            <label>1</label>
+                            <button>+</button>
                           </div>
-                          <div class="product-text">
-                            <h3><a href="detail.html">Coconut mocchiato</a></h3>
-                            <h4><a class="price">CAD3.25</a></h4>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="content-product-cupsize container">
+                            <input type="radio" name="cupsize" id="cupsize-small">
+                            <label for="cupsize-small">S</label>
+                            <input type="radio" name="cupsize" id="cupsize-medium">
+                            <label for="cupsize-medium">M</label>
+                            <input type="radio" name="cupsize" id="cupsize-large">
+                            <label for="cupsize-large">L</label>
                           </div>
+                        </div>
+                        <div class="content-product-box">
+                          <a href="cart.html" class="content-product-button">Buy Now</a>
+                          <a href="cart.html" class="content-product-button">Add To Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content-product">
+                    <div class="content-product-card">
+                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-content">
+                        <div class="content-product-title">
+                          <h2 class="content-product-title-cell">Latte</h2>
+                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="container">
+                            <button>-</button>
+                            <label>1</label>
+                            <button>+</button>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="content-product-cupsize container">
+                            <input type="radio" name="cupsize" id="cupsize-small">
+                            <label for="cupsize-small">S</label>
+                            <input type="radio" name="cupsize" id="cupsize-medium">
+                            <label for="cupsize-medium">M</label>
+                            <input type="radio" name="cupsize" id="cupsize-large">
+                            <label for="cupsize-large">L</label>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <a href="cart.html" class="content-product-button">Buy Now</a>
+                          <a href="cart.html" class="content-product-button">Add To Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content-product">
+                    <div class="content-product-card">
+                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-content">
+                        <div class="content-product-title">
+                          <h2 class="content-product-title-cell">Latte</h2>
+                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="container">
+                            <button>-</button>
+                            <label>1</label>
+                            <button>+</button>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="content-product-cupsize container">
+                            <input type="radio" name="cupsize" id="cupsize-small">
+                            <label for="cupsize-small">S</label>
+                            <input type="radio" name="cupsize" id="cupsize-medium">
+                            <label for="cupsize-medium">M</label>
+                            <input type="radio" name="cupsize" id="cupsize-large">
+                            <label for="cupsize-large">L</label>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <a href="cart.html" class="content-product-button">Buy Now</a>
+                          <a href="cart.html" class="content-product-button">Add To Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content-product">
+                    <div class="content-product-card">
+                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-content">
+                        <div class="content-product-title">
+                          <h2 class="content-product-title-cell">Latte</h2>
+                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="container">
+                            <button>-</button>
+                            <label>1</label>
+                            <button>+</button>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="content-product-cupsize container">
+                            <input type="radio" name="cupsize" id="cupsize-small">
+                            <label for="cupsize-small">S</label>
+                            <input type="radio" name="cupsize" id="cupsize-medium">
+                            <label for="cupsize-medium">M</label>
+                            <input type="radio" name="cupsize" id="cupsize-large">
+                            <label for="cupsize-large">L</label>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <a href="cart.html" class="content-product-button">Buy Now</a>
+                          <a href="cart.html" class="content-product-button">Add To Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content-product">
+                    <div class="content-product-card">
+                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-content">
+                        <div class="content-product-title">
+                          <h2 class="content-product-title-cell">Latte</h2>
+                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="container">
+                            <button>-</button>
+                            <label>1</label>
+                            <button>+</button>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="content-product-cupsize container">
+                            <input type="radio" name="cupsize" id="cupsize-small">
+                            <label for="cupsize-small">S</label>
+                            <input type="radio" name="cupsize" id="cupsize-medium">
+                            <label for="cupsize-medium">M</label>
+                            <input type="radio" name="cupsize" id="cupsize-large">
+                            <label for="cupsize-large">L</label>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <a href="cart.html" class="content-product-button">Buy Now</a>
+                          <a href="cart.html" class="content-product-button">Add To Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content-product">
+                    <div class="content-product-card">
+                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-content">
+                        <div class="content-product-title">
+                          <h2 class="content-product-title-cell">Latte</h2>
+                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="container">
+                            <button>-</button>
+                            <label>1</label>
+                            <button>+</button>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="content-product-cupsize container">
+                            <input type="radio" name="cupsize" id="cupsize-small">
+                            <label for="cupsize-small">S</label>
+                            <input type="radio" name="cupsize" id="cupsize-medium">
+                            <label for="cupsize-medium">M</label>
+                            <input type="radio" name="cupsize" id="cupsize-large">
+                            <label for="cupsize-large">L</label>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <a href="cart.html" class="content-product-button">Buy Now</a>
+                          <a href="cart.html" class="content-product-button">Add To Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content-product">
+                    <div class="content-product-card">
+                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-content">
+                        <div class="content-product-title">
+                          <h2 class="content-product-title-cell">Latte</h2>
+                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="container">
+                            <button>-</button>
+                            <label>1</label>
+                            <button>+</button>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="content-product-cupsize container">
+                            <input type="radio" name="cupsize" id="cupsize-small">
+                            <label for="cupsize-small">S</label>
+                            <input type="radio" name="cupsize" id="cupsize-medium">
+                            <label for="cupsize-medium">M</label>
+                            <input type="radio" name="cupsize" id="cupsize-large">
+                            <label for="cupsize-large">L</label>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <a href="cart.html" class="content-product-button">Buy Now</a>
+                          <a href="cart.html" class="content-product-button">Add To Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="Drink-Content" class="content-submenucontent">
+              <div class="box">
+                <div class="content-submenucontent-container">
+                  <div class="content-product">
+                    <div class="content-product-card">
+                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-content">
+                        <div class="content-product-title">
+                          <h2 class="content-product-title-cell">Latte</h2>
+                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="container">
+                            <button>-</button>
+                            <label>1</label>
+                            <button>+</button>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="content-product-cupsize container">
+                            <input type="radio" name="cupsize" id="cupsize-small">
+                            <label for="cupsize-small">S</label>
+                            <input type="radio" name="cupsize" id="cupsize-medium">
+                            <label for="cupsize-medium">M</label>
+                            <input type="radio" name="cupsize" id="cupsize-large">
+                            <label for="cupsize-large">L</label>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <a href="cart.html" class="content-product-button">Buy Now</a>
+                          <a href="cart.html" class="content-product-button">Add To Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content-product">
+                    <div class="content-product-card">
+                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-content">
+                        <div class="content-product-title">
+                          <h2 class="content-product-title-cell">Latte</h2>
+                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="container">
+                            <button>-</button>
+                            <label>1</label>
+                            <button>+</button>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="content-product-cupsize container">
+                            <input type="radio" name="cupsize" id="cupsize-small">
+                            <label for="cupsize-small">S</label>
+                            <input type="radio" name="cupsize" id="cupsize-medium">
+                            <label for="cupsize-medium">M</label>
+                            <input type="radio" name="cupsize" id="cupsize-large">
+                            <label for="cupsize-large">L</label>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <a href="cart.html" class="content-product-button">Buy Now</a>
+                          <a href="cart.html" class="content-product-button">Add To Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content-product">
+                    <div class="content-product-card">
+                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-content">
+                        <div class="content-product-title">
+                          <h2 class="content-product-title-cell">Latte</h2>
+                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="container">
+                            <button>-</button>
+                            <label>1</label>
+                            <button>+</button>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="content-product-cupsize container">
+                            <input type="radio" name="cupsize" id="cupsize-small">
+                            <label for="cupsize-small">S</label>
+                            <input type="radio" name="cupsize" id="cupsize-medium">
+                            <label for="cupsize-medium">M</label>
+                            <input type="radio" name="cupsize" id="cupsize-large">
+                            <label for="cupsize-large">L</label>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <a href="cart.html" class="content-product-button">Buy Now</a>
+                          <a href="cart.html" class="content-product-button">Add To Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content-product">
+                    <div class="content-product-card">
+                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-content">
+                        <div class="content-product-title">
+                          <h2 class="content-product-title-cell">Latte</h2>
+                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="container">
+                            <button>-</button>
+                            <label>1</label>
+                            <button>+</button>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="content-product-cupsize container">
+                            <input type="radio" name="cupsize" id="cupsize-small">
+                            <label for="cupsize-small">S</label>
+                            <input type="radio" name="cupsize" id="cupsize-medium">
+                            <label for="cupsize-medium">M</label>
+                            <input type="radio" name="cupsize" id="cupsize-large">
+                            <label for="cupsize-large">L</label>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <a href="cart.html" class="content-product-button">Buy Now</a>
+                          <a href="cart.html" class="content-product-button">Add To Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content-product">
+                    <div class="content-product-card">
+                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-content">
+                        <div class="content-product-title">
+                          <h2 class="content-product-title-cell">Latte</h2>
+                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="container">
+                            <button>-</button>
+                            <label>1</label>
+                            <button>+</button>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="content-product-cupsize container">
+                            <input type="radio" name="cupsize" id="cupsize-small">
+                            <label for="cupsize-small">S</label>
+                            <input type="radio" name="cupsize" id="cupsize-medium">
+                            <label for="cupsize-medium">M</label>
+                            <input type="radio" name="cupsize" id="cupsize-large">
+                            <label for="cupsize-large">L</label>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <a href="cart.html" class="content-product-button">Buy Now</a>
+                          <a href="cart.html" class="content-product-button">Add To Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content-product">
+                    <div class="content-product-card">
+                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-content">
+                        <div class="content-product-title">
+                          <h2 class="content-product-title-cell">Latte</h2>
+                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="container">
+                            <button>-</button>
+                            <label>1</label>
+                            <button>+</button>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="content-product-cupsize container">
+                            <input type="radio" name="cupsize" id="cupsize-small">
+                            <label for="cupsize-small">S</label>
+                            <input type="radio" name="cupsize" id="cupsize-medium">
+                            <label for="cupsize-medium">M</label>
+                            <input type="radio" name="cupsize" id="cupsize-large">
+                            <label for="cupsize-large">L</label>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <a href="cart.html" class="content-product-button">Buy Now</a>
+                          <a href="cart.html" class="content-product-button">Add To Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content-product">
+                    <div class="content-product-card">
+                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-content">
+                        <div class="content-product-title">
+                          <h2 class="content-product-title-cell">Latte</h2>
+                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="container">
+                            <button>-</button>
+                            <label>1</label>
+                            <button>+</button>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="content-product-cupsize container">
+                            <input type="radio" name="cupsize" id="cupsize-small">
+                            <label for="cupsize-small">S</label>
+                            <input type="radio" name="cupsize" id="cupsize-medium">
+                            <label for="cupsize-medium">M</label>
+                            <input type="radio" name="cupsize" id="cupsize-large">
+                            <label for="cupsize-large">L</label>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <a href="cart.html" class="content-product-button">Buy Now</a>
+                          <a href="cart.html" class="content-product-button">Add To Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content-product">
+                    <div class="content-product-card">
+                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-content">
+                        <div class="content-product-title">
+                          <h2 class="content-product-title-cell">Latte</h2>
+                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="container">
+                            <button>-</button>
+                            <label>1</label>
+                            <button>+</button>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="content-product-cupsize container">
+                            <input type="radio" name="cupsize" id="cupsize-small">
+                            <label for="cupsize-small">S</label>
+                            <input type="radio" name="cupsize" id="cupsize-medium">
+                            <label for="cupsize-medium">M</label>
+                            <input type="radio" name="cupsize" id="cupsize-large">
+                            <label for="cupsize-large">L</label>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <a href="cart.html" class="content-product-button">Buy Now</a>
+                          <a href="cart.html" class="content-product-button">Add To Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content-product">
+                    <div class="content-product-card">
+                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-content">
+                        <div class="content-product-title">
+                          <h2 class="content-product-title-cell">Latte</h2>
+                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="container">
+                            <button>-</button>
+                            <label>1</label>
+                            <button>+</button>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="content-product-cupsize container">
+                            <input type="radio" name="cupsize" id="cupsize-small">
+                            <label for="cupsize-small">S</label>
+                            <input type="radio" name="cupsize" id="cupsize-medium">
+                            <label for="cupsize-medium">M</label>
+                            <input type="radio" name="cupsize" id="cupsize-large">
+                            <label for="cupsize-large">L</label>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <a href="cart.html" class="content-product-button">Buy Now</a>
+                          <a href="cart.html" class="content-product-button">Add To Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content-product">
+                    <div class="content-product-card">
+                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-content">
+                        <div class="content-product-title">
+                          <h2 class="content-product-title-cell">Latte</h2>
+                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="container">
+                            <button>-</button>
+                            <label>1</label>
+                            <button>+</button>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="content-product-cupsize container">
+                            <input type="radio" name="cupsize" id="cupsize-small">
+                            <label for="cupsize-small">S</label>
+                            <input type="radio" name="cupsize" id="cupsize-medium">
+                            <label for="cupsize-medium">M</label>
+                            <input type="radio" name="cupsize" id="cupsize-large">
+                            <label for="cupsize-large">L</label>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <a href="cart.html" class="content-product-button">Buy Now</a>
+                          <a href="cart.html" class="content-product-button">Add To Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="Bakery-Content" class="content-submenucontent">
+              <div class="box">
+                <div class="content-submenucontent-container">
+                  <div class="content-product">
+                    <div class="content-product-card">
+                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-content">
+                        <div class="content-product-title">
+                          <h2 class="content-product-title-cell">Latte</h2>
+                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="container">
+                            <button>-</button>
+                            <label>1</label>
+                            <button>+</button>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="content-product-cupsize container">
+                            <input type="radio" name="cupsize" id="cupsize-small">
+                            <label for="cupsize-small">S</label>
+                            <input type="radio" name="cupsize" id="cupsize-medium">
+                            <label for="cupsize-medium">M</label>
+                            <input type="radio" name="cupsize" id="cupsize-large">
+                            <label for="cupsize-large">L</label>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <a href="cart.html" class="content-product-button">Buy Now</a>
+                          <a href="cart.html" class="content-product-button">Add To Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content-product">
+                    <div class="content-product-card">
+                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-content">
+                        <div class="content-product-title">
+                          <h2 class="content-product-title-cell">Latte</h2>
+                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="container">
+                            <button>-</button>
+                            <label>1</label>
+                            <button>+</button>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="content-product-cupsize container">
+                            <input type="radio" name="cupsize" id="cupsize-small">
+                            <label for="cupsize-small">S</label>
+                            <input type="radio" name="cupsize" id="cupsize-medium">
+                            <label for="cupsize-medium">M</label>
+                            <input type="radio" name="cupsize" id="cupsize-large">
+                            <label for="cupsize-large">L</label>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <a href="cart.html" class="content-product-button">Buy Now</a>
+                          <a href="cart.html" class="content-product-button">Add To Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content-product">
+                    <div class="content-product-card">
+                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-content">
+                        <div class="content-product-title">
+                          <h2 class="content-product-title-cell">Latte</h2>
+                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="container">
+                            <button>-</button>
+                            <label>1</label>
+                            <button>+</button>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="content-product-cupsize container">
+                            <input type="radio" name="cupsize" id="cupsize-small">
+                            <label for="cupsize-small">S</label>
+                            <input type="radio" name="cupsize" id="cupsize-medium">
+                            <label for="cupsize-medium">M</label>
+                            <input type="radio" name="cupsize" id="cupsize-large">
+                            <label for="cupsize-large">L</label>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <a href="cart.html" class="content-product-button">Buy Now</a>
+                          <a href="cart.html" class="content-product-button">Add To Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content-product">
+                    <div class="content-product-card">
+                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-content">
+                        <div class="content-product-title">
+                          <h2 class="content-product-title-cell">Latte</h2>
+                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="container">
+                            <button>-</button>
+                            <label>1</label>
+                            <button>+</button>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="content-product-cupsize container">
+                            <input type="radio" name="cupsize" id="cupsize-small">
+                            <label for="cupsize-small">S</label>
+                            <input type="radio" name="cupsize" id="cupsize-medium">
+                            <label for="cupsize-medium">M</label>
+                            <input type="radio" name="cupsize" id="cupsize-large">
+                            <label for="cupsize-large">L</label>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <a href="cart.html" class="content-product-button">Buy Now</a>
+                          <a href="cart.html" class="content-product-button">Add To Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content-product">
+                    <div class="content-product-card">
+                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-content">
+                        <div class="content-product-title">
+                          <h2 class="content-product-title-cell">Latte</h2>
+                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="container">
+                            <button>-</button>
+                            <label>1</label>
+                            <button>+</button>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="content-product-cupsize container">
+                            <input type="radio" name="cupsize" id="cupsize-small">
+                            <label for="cupsize-small">S</label>
+                            <input type="radio" name="cupsize" id="cupsize-medium">
+                            <label for="cupsize-medium">M</label>
+                            <input type="radio" name="cupsize" id="cupsize-large">
+                            <label for="cupsize-large">L</label>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <a href="cart.html" class="content-product-button">Buy Now</a>
+                          <a href="cart.html" class="content-product-button">Add To Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content-product">
+                    <div class="content-product-card">
+                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-content">
+                        <div class="content-product-title">
+                          <h2 class="content-product-title-cell">Latte</h2>
+                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="container">
+                            <button>-</button>
+                            <label>1</label>
+                            <button>+</button>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="content-product-cupsize container">
+                            <input type="radio" name="cupsize" id="cupsize-small">
+                            <label for="cupsize-small">S</label>
+                            <input type="radio" name="cupsize" id="cupsize-medium">
+                            <label for="cupsize-medium">M</label>
+                            <input type="radio" name="cupsize" id="cupsize-large">
+                            <label for="cupsize-large">L</label>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <a href="cart.html" class="content-product-button">Buy Now</a>
+                          <a href="cart.html" class="content-product-button">Add To Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content-product">
+                    <div class="content-product-card">
+                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-content">
+                        <div class="content-product-title">
+                          <h2 class="content-product-title-cell">Latte</h2>
+                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="container">
+                            <button>-</button>
+                            <label>1</label>
+                            <button>+</button>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="content-product-cupsize container">
+                            <input type="radio" name="cupsize" id="cupsize-small">
+                            <label for="cupsize-small">S</label>
+                            <input type="radio" name="cupsize" id="cupsize-medium">
+                            <label for="cupsize-medium">M</label>
+                            <input type="radio" name="cupsize" id="cupsize-large">
+                            <label for="cupsize-large">L</label>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <a href="cart.html" class="content-product-button">Buy Now</a>
+                          <a href="cart.html" class="content-product-button">Add To Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content-product">
+                    <div class="content-product-card">
+                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-content">
+                        <div class="content-product-title">
+                          <h2 class="content-product-title-cell">Latte</h2>
+                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="container">
+                            <button>-</button>
+                            <label>1</label>
+                            <button>+</button>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="content-product-cupsize container">
+                            <input type="radio" name="cupsize" id="cupsize-small">
+                            <label for="cupsize-small">S</label>
+                            <input type="radio" name="cupsize" id="cupsize-medium">
+                            <label for="cupsize-medium">M</label>
+                            <input type="radio" name="cupsize" id="cupsize-large">
+                            <label for="cupsize-large">L</label>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <a href="cart.html" class="content-product-button">Buy Now</a>
+                          <a href="cart.html" class="content-product-button">Add To Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content-product">
+                    <div class="content-product-card">
+                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-content">
+                        <div class="content-product-title">
+                          <h2 class="content-product-title-cell">Latte</h2>
+                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="container">
+                            <button>-</button>
+                            <label>1</label>
+                            <button>+</button>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="content-product-cupsize container">
+                            <input type="radio" name="cupsize" id="cupsize-small">
+                            <label for="cupsize-small">S</label>
+                            <input type="radio" name="cupsize" id="cupsize-medium">
+                            <label for="cupsize-medium">M</label>
+                            <input type="radio" name="cupsize" id="cupsize-large">
+                            <label for="cupsize-large">L</label>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <a href="cart.html" class="content-product-button">Buy Now</a>
+                          <a href="cart.html" class="content-product-button">Add To Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content-product">
+                    <div class="content-product-card">
+                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-content">
+                        <div class="content-product-title">
+                          <h2 class="content-product-title-cell">Latte</h2>
+                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="container">
+                            <button>-</button>
+                            <label>1</label>
+                            <button>+</button>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <div class="content-product-cupsize container">
+                            <input type="radio" name="cupsize" id="cupsize-small">
+                            <label for="cupsize-small">S</label>
+                            <input type="radio" name="cupsize" id="cupsize-medium">
+                            <label for="cupsize-medium">M</label>
+                            <input type="radio" name="cupsize" id="cupsize-large">
+                            <label for="cupsize-large">L</label>
+                          </div>
+                        </div>
+                        <div class="content-product-box">
+                          <a href="cart.html" class="content-product-button">Buy Now</a>
+                          <a href="cart.html" class="content-product-button">Add To Cart</a>
                         </div>
                       </div>
                     </div>
@@ -226,57 +1122,62 @@
           </div>
         </div>
       </div>
-      <!-- footer -->
+    <!-- footer -->
       <div class="footer-top-margin">
         <div class="box">
           <footer>
-            <div class="container">
-              <div class="grid-col-1of4">
-                <div class="footer-col-margin">
-                  <ul>
-                    <li><a href="#">QUICK LINKS</a></li>
-                    <li><a href="#">My Account</a></li>
-                    <li><a href="#">Terms &amp; Conditions</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">FAQ</a></li>
-                 </ul>
-               </div>
-              </div>        
-              <div class="grid-col-1of4">
-                <div class="footer-col-margin">
-                  <ul>
+            <div class="frame">
+              <div class="container">
+                <div class="grid-col-1of4">
+                  <div class="footer-col-margin">
+                    <ul>
+                      <div class="footer-list-top-margin">
+                        <li><a href="#">QUICK LINKS</a></li>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Terms &amp; Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">FAQ</a></li>
+                      </div>
+                    </ul>
+                  </div>
+                </div>        
+                <div class="grid-col-1of4">
+                  <div class="footer-col-margin">
+                    <ul>
                     <li><a href="#">CONTACT US</a></li>
                     <li><a href="#">Store Locator</a></li>
                     <li><a href="#">Customer Care</a></li>
                     <li><a href="#">Food Service</a></li>
                     <li><a href="#">Working at Cafeeee</a></li>
-                  </ul>
+                    </ul>
+                  </div>
+                </div>         
+                <div class="grid-col-1of4">
+                  <div class="footer-col-margin">
+                    <ul>
+                      <li><a href="#">ONLINE COMMUNITY</a></li>
+                      <li><a href="#">Twitter</a></li>
+                      <li><a href="#">Facebook</a></li>
+                      <li><a href="#">Instagram</a></li>
+                    </ul>  
+                  </div>
+                </div>          
+                <div class="grid-col-1of4">
+                  <div class="footer-col-margin">
+                    <ul>
+                      <li><a href="#">ABOUT US</a></li>
+                      <li><a href="#">Our Heritage</a></li>
+                      <li><a href="#">Our Company</a></li>
+                      <li><a href="#">Newsletter</a></li>
+                    </ul>  
+                  </div>     
                 </div>
-              </div>         
-              <div class="grid-col-1of4">
-                <div class="footer-col-margin">
-                  <ul>
-                    <li><a href="#">ONLINE COMMUNITY</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Instagram</a></li>
-                  </ul>  
-                </div>
-              </div>          
-              <div class="grid-col-1of4">
-                <div class="footer-col-margin">
-                  <ul>
-                    <li><a href="#">ABOUT US</a></li>
-                    <li><a href="#">Our Heritage</a></li>
-                    <li><a href="#">Our Company</a></li>
-                    <li><a href="#">Newsletter</a></li>
-                  </ul>   
-                </div>    
-              </div>
+              </div> 
             </div>
           </footer>
         </div>
       </div>
-    </div>
+    <script src="js/behaviours.js"></script>
+    <script src="js/menuBehaviours.js"></script>
   </body>
 </html>

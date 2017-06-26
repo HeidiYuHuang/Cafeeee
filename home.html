@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -10,138 +10,139 @@
     <link href="css/grid.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
     <script src="https://use.fontawesome.com/46831abb25.js"></script>
-    <script src="js/behaviours.js"></script>
   </head>
   <body onload="widthChange()" onresize="widthChange()"> 
     <!-- header -->
       <header>
-      <!-- sub navigation bar -->
-        <div id="header-subnav-dropdown">
-          <nav class="header-subnav-style">
-            <a class="header-subnav-size" href="home.html">Home</a>
-            <a class="header-subnav-size" href="menu.html">Menu</a>
-            <a class="header-subnav-size" href="about.html">Our Story</a>
-            <a class="header-subnav-size" href="contact.html">Contact Us</a>
-          </nav>
-        </div>
-      <!-- main header -->
-        <div class="header-style">
-          <div class="frame">
-            <!-- logo -->
-              <div class="header-logo">
-                <a href="home.html">
-                  <h1>
-                    Cafeeee
-                  </h1>
-                </a>
-              </div>
-            <!-- cart -->
-              <div class="header-cart-position">
-                <a href="#" class="header-cart-size">
-                  <div class="header-cart-inter-position">
-                    <i class="fa fa-shopping-cart header-cart-color" aria-hidden="true" ></i>
-                    <span class="header-cart-color">Cart</span>
+        <!-- sub navigation bar -->
+          <div id="header-subnav-dropdown">
+            <nav class="header-subnav-style">
+              <a class="header-subnav-size" href="home.html">Home</a>
+              <a class="header-subnav-size" href="menu.html">Menu</a>
+              <a class="header-subnav-size" href="about.html">Our Story</a>
+              <a class="header-subnav-size" href="contact.html">Contact Us</a>
+            </nav>
+          </div>
+        <!-- main header -->
+          <div class="header-style">
+            <div class="frame">
+              <!-- logo -->
+                <div class="header-logo">
+                  <a href="home.html">
+                    <h1>
+                      Cafeeee
+                    </h1>
+                  </a>
+                </div>
+              <!-- cart -->
+                <div class="header-cart-position">
+                  <a href="#" class="header-cart-size">
+                    <div class="header-cart-inter-position">
+                      <i class="fa fa-shopping-cart header-cart-color" aria-hidden="true" ></i>
+                      <span class="header-cart-color">Cart</span>
+                    </div>
+                  </a>
+                </div>
+              <!-- account -->
+                <!-- login & signup -->
+                  <div class="header-account-style">
+                    <!-- log in -->
+                      <a href="#" class="header-account-a header-account-text">
+                        <div class="header-account-inter-position">
+                          <span class="header-account-color">Log in</span>
+                        </div>
+                      </a>
+                    <!-- vertical line -->
+                      <span class="header-account-line header-account-text"></span>
+                    <!-- sign up -->
+                      <a href="#" class="header-account-a header-account-text">
+                        <div class="header-account-inter-position">
+                          <span class="header-account-color">Sign Up</span>
+                        </div>
+                      </a>
                   </div>
-                </a>
-              </div>
-            <!-- account -->
-              <!-- login & signup -->
-                <div class="header-account-style">
-                  <!-- log in -->
-                    <a href="#" class="header-account-a header-account-text">
-                      <div class="header-account-inter-position">
-                        <span class="header-account-color">Log in</span>
-                      </div>
-                    </a>
-                  <!-- vertical line -->
-                    <span class="header-account-line header-account-text"></span>
-                  <!-- sign up -->
-                    <a href="#" class="header-account-a header-account-text">
-                      <div class="header-account-inter-position">
-                        <span class="header-account-color">Sign Up</span>
+                <!-- icon -->
+                  <a href="#" class="header-accounticon-size">
+                    <div class="header-accounticon-inter-position">
+                      <i class="fa fa-user header-accounticon-color" aria-hidden="true" ></i>
+                      <span class="header-accounticon-color">Account</span>
+                    </div>
+                  </a>
+              <!-- search bar -->
+                <div class="header-searchbar">
+                  <input type="text" name="searchbar" class="header-searchbar-form" placeholder="Search this site">
+                  <a href="" class="header-searchbar-icon">
+                    <i class="fa fa-search header-searchbar-icon-style" aria-hidden="true"></i>
+                  </a>
+                </div>
+                <!-- icon -->
+                  <a href="#" class="header-searchicon-size">
+                    <div class="header-searchicon-inter-position">
+                      <i class="fa fa-search header-searchicon-color" aria-hidden="true" ></i>
+                    </div>
+                  </a>
+              <!-- navigation bar -->
+                <div class="header-nav-main">
+                  <nav class="header-nav-style">
+                      <a class="header-nav-size" href="home.html">Home</a>
+                      <a class="header-nav-size" href="menu.html">Menu</a>
+                      <a class="header-nav-size" href="about.html">Our Story</a>
+                      <a class="header-nav-size" href="contact.html">Contact Us</a>
+                  </nav>
+                  <!-- icon -->
+                    <a href="#" class="header-navicon-size" id="header-nav-icon" onclick="dropdownSubnav()">
+                      <div class="header-navicon-inter-position">
+                        <i class="fa fa-bars header-navicon-color" aria-hidden="true" ></i>
                       </div>
                     </a>
                 </div>
-              <!-- icon -->
-                <a href="#" class="header-accounticon-size">
-                  <div class="header-accounticon-inter-position">
-                    <i class="fa fa-user header-accounticon-color" aria-hidden="true" ></i>
-                    <span class="header-accounticon-color">Account</span>
-                  </div>
-                </a>
-            <!-- search bar -->
-              <div class="header-searchbar">
-                <input type="text" name="searchbar" class="header-searchbar-form" placeholder="Search this site">
-                <a href="" class="header-searchbar-icon">
-                  <i class="fa fa-search header-searchbar-icon-style" aria-hidden="true"></i>
-                </a>
-              </div>
-              <!-- icon -->
-                <a href="#" class="header-searchicon-size">
-                  <div class="header-searchicon-inter-position">
-                    <i class="fa fa-search header-searchicon-color" aria-hidden="true" ></i>
-                  </div>
-                </a>
-            <!-- navigation bar -->
-              <div class="header-nav-main">
-                <nav class="header-nav-style">
-                    <a class="header-nav-size" href="home.html">Home</a>
-                    <a class="header-nav-size" href="menu.html">Menu</a>
-                    <a class="header-nav-size" href="about.html">Our Story</a>
-                    <a class="header-nav-size" href="contact.html">Contact Us</a>
-                </nav>
-                <!-- icon -->
-                  <a href="#" class="header-navicon-size" id="header-nav-icon" onclick="dropdownSubnav()">
-                    <div class="header-navicon-inter-position">
-                      <i class="fa fa-bars header-navicon-color" aria-hidden="true" ></i>
-                    </div>
-                  </a>
-              </div>
+            </div>
           </div>
-        </div>
       </header>
     <!-- content -->
       <div class="content-top-margin">
         <div class="frame">
-          <div class="box">
-            <div class="content-welcome-container">
-              <div class="content-welcome">
-                <div class="content-welcome-image">
-                  <div class="content-welcome-text">
-                    <h2>Welcome</h2>
-                    <h1>Cafeeee</h1>
+          <div class="content-horizontal-margin">
+            <!-- welcome image -->
+              <div class="content-welcome-container">
+                <div class="content-welcome">
+                  <div class="content-welcome-image">
+                    <div class="content-welcome-text">
+                      <h2>Welcome</h2>
+                      <h1>Cafeeee</h1>
+                    </div>
+                  </div>
+                  <div class="content-welcome-overlay">
+                    <a href="menu.html" class="content-welcome-opacity-text">Start Order</a>
                   </div>
                 </div>
-                <div class="content-welcome-overlay">
-                  <a href="menu.html" class="content-welcome-opacity-text">Start Order</a>
-                </div>
               </div>
-            </div>
-              <div class="box content-top-margin">
+            <!-- Today's Special -->
+              <div class="content-special-top-margin">
                 <div class="container">
                   <div class="grid-col-1of3">
                     <div class="img-left-padding-2of3">
                       <a href="menu.html">
-                      <img src="img/home4.jpg" alt="image of coffee" width="100%" height="100%">
-                    </a>
+                        <img src="img/home4.jpg" alt="image of coffee" width="100%" height="100%">
+                      </a>
+                    </div>
                   </div>
-                </div>
-                <div class="grid-col-1of3">
-                  <div class="img-middle-padding-1of3">
-                    <a href="events.html">
-                      <img src="img/event2.jpg" alt="image of coffee" width="100%" height="100%">
-                    </a>
+                  <div class="grid-col-1of3">
+                    <div class="img-middle-padding-1of3">
+                      <a href="events.html">
+                        <img src="img/event2.jpg" alt="image of coffee" width="100%" height="100%">
+                      </a>
+                    </div>
                   </div>
-                </div>
-                <div class="grid-col-1of3">
-                  <div class="img-right-padding-2of3">
-                    <a href="about.html">
-                      <img src="img/home3.jpg" alt="image of coffee" width="100%" height="100%">
-                    </a>
+                  <div class="grid-col-1of3">
+                    <div class="img-right-padding-2of3">
+                      <a href="about.html">
+                        <img src="img/home3.jpg" alt="image of coffee" width="100%" height="100%">
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
           </div>
         </div>
       </div>
@@ -149,54 +150,57 @@
       <div class="footer-top-margin">
         <div class="box">
           <footer>
-            <div class="container">
-              <div class="grid-col-1of4">
-                <div class="footer-col-margin">
-                  <ul>
-                    <div class="footer-list-top-margin">
-                      <li><a href="#">QUICK LINKS</a></li>
-                      <li><a href="#">My Account</a></li>
-                      <li><a href="#">Terms &amp; Conditions</a></li>
-                      <li><a href="#">Privacy Policy</a></li>
-                      <li><a href="#">FAQ</a></li>
-                    </div>
-                  </ul>
+            <div class="frame">
+              <div class="container">
+                <div class="grid-col-1of4">
+                  <div class="footer-col-margin">
+                    <ul>
+                      <div class="footer-list-top-margin">
+                        <li><a href="#">QUICK LINKS</a></li>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Terms &amp; Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">FAQ</a></li>
+                      </div>
+                    </ul>
+                  </div>
+                </div>        
+                <div class="grid-col-1of4">
+                  <div class="footer-col-margin">
+                    <ul>
+                    <li><a href="#">CONTACT US</a></li>
+                    <li><a href="#">Store Locator</a></li>
+                    <li><a href="#">Customer Care</a></li>
+                    <li><a href="#">Food Service</a></li>
+                    <li><a href="#">Working at Cafeeee</a></li>
+                    </ul>
+                  </div>
+                </div>         
+                <div class="grid-col-1of4">
+                  <div class="footer-col-margin">
+                    <ul>
+                      <li><a href="#">ONLINE COMMUNITY</a></li>
+                      <li><a href="#">Twitter</a></li>
+                      <li><a href="#">Facebook</a></li>
+                      <li><a href="#">Instagram</a></li>
+                    </ul>  
+                  </div>
+                </div>          
+                <div class="grid-col-1of4">
+                  <div class="footer-col-margin">
+                    <ul>
+                      <li><a href="#">ABOUT US</a></li>
+                      <li><a href="#">Our Heritage</a></li>
+                      <li><a href="#">Our Company</a></li>
+                      <li><a href="#">Newsletter</a></li>
+                    </ul>  
+                  </div>     
                 </div>
-              </div>        
-              <div class="grid-col-1of4">
-                <div class="footer-col-margin">
-                  <ul>
-                  <li><a href="#">CONTACT US</a></li>
-                  <li><a href="#">Store Locator</a></li>
-                  <li><a href="#">Customer Care</a></li>
-                  <li><a href="#">Food Service</a></li>
-                  <li><a href="#">Working at Cafeeee</a></li>
-                  </ul>
-                </div>
-              </div>         
-              <div class="grid-col-1of4">
-                <div class="footer-col-margin">
-                  <ul>
-                    <li><a href="#">ONLINE COMMUNITY</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Instagram</a></li>
-                  </ul>  
-                </div>
-              </div>          
-              <div class="grid-col-1of4">
-                <div class="footer-col-margin">
-                  <ul>
-                    <li><a href="#">ABOUT US</a></li>
-                    <li><a href="#">Our Heritage</a></li>
-                    <li><a href="#">Our Company</a></li>
-                    <li><a href="#">Newsletter</a></li>
-                  </ul>  
-                </div>     
-              </div>
-            </div> 
+              </div> 
+            </div>
           </footer>
         </div>
       </div>
+    <script src="js/behaviours.js"></script>
   </body>
 </html>
