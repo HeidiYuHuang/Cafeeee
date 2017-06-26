@@ -12,7 +12,7 @@
     <script src="https://use.fontawesome.com/46831abb25.js"></script>
     <script src="js/behaviours.js"></script>
   </head>
-  <body onresize="widthChange()"> 
+  <body onload="widthChange()" onresize="widthChange()"> 
     <!-- header -->
       <header>
       <!-- sub navigation bar -->
@@ -104,13 +104,20 @@
       <div class="content-top-margin">
         <div class="frame">
           <div class="box">
-            <img src="img/home1.jpg" alt="image of coffee">
-              <div class="box">
-                <div class="">
-                  <a href="menu.html">Start Order</a>  
-                </div>   
+            <div class="content-welcome-container">
+              <div class="content-welcome">
+                <div class="content-welcome-image">
+                  <div class="content-welcome-text">
+                    <h2>Welcome</h2>
+                    <h1>Cafeeee</h1>
+                  </div>
+                </div>
+                <div class="content-welcome-overlay">
+                  <a href="menu.html" class="content-welcome-opacity-text">Start Order</a>
+                </div>
               </div>
-              <div class="box">
+            </div>
+              <div class="box content-top-margin">
                 <div class="container">
                   <div class="grid-col-1of3">
                     <div class="img-left-padding-2of3">
