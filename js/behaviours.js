@@ -20,4 +20,18 @@ function dropdownSubnav () {
 	}
 }
 
+// login
+function closeLogin() {
+	document.getElementById('login').style.display='none';
+}
 
+function openLogin() {
+	document.getElementById('login').style.display='block';
+}
+
+var account = document.getElementById('login');
+window.onclick = function(event) {
+    if (event.target == account) {
+        modal.style.display = "none";
+    }
+}

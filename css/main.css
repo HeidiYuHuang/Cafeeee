@@ -11,6 +11,103 @@
   background-color: red;
 }
 
+/*filter: blur(.1em);*/
+/*login*/
+.account {
+  display: none;
+  position: fixed;
+  z-index: 99999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7);
+  padding-top: 10em;
+}
+
+.account-content {
+  background-color: rgba(255,255,255,0.7);
+  margin: 5% auto 15% auto; 
+  width: 80%; 
+  padding: 2em;
+}
+
+.account-closeicon {
+  position: relative;
+  top: 0;
+  font-size: 3em;
+}
+
+.account-closeicon-color {
+  color: #626D71;
+  float: right;
+}
+
+.account-closeicon-color:hover, .account-closeicon-color:focus {
+  color: #B38867;
+  cursor: pointer;
+}
+
+.account-main {
+  width: 100%;
+  display: block;
+  text-align: left;
+}
+
+.account-main>input {
+  font-size: 1.2em;
+}
+
+.account-main>button {
+  text-align: center;
+  border-radius: 0%;
+  width: 20%;
+  font-size: 1.2em;
+  display: block;
+  background-color: #626D71;
+  color: white;
+  margin-top: 1em;
+  margin-bottom: 0.2em;
+}
+
+.account-main>button:hover {
+  opacity: 0.8;
+}
+
+.account-main>input[type=checkbox] {
+  margin-top: 0.3em;
+  width: 1em;
+  height: 1em;
+}
+
+.account-main>input[type=checkbox]:checked {
+  outline: none;
+}
+
+.account-forgot {
+  float: right;
+}
+
+.account-forgot>a{
+  text-decoration: underline;
+}
+
+.account-box-animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
 /*whole area margin*/
 .whole-margin {
   margin-right: 1em;
@@ -358,7 +455,7 @@
   margin-top: 5em;
 }
 
-/*==========================================menu page==================================================*/
+/*==menu page==*/
 
 div.content-submenu {
   overflow: hidden;

@@ -12,6 +12,25 @@
     <script src="https://use.fontawesome.com/46831abb25.js"></script>
   </head>
   <body onload="widthChange()" onresize="widthChange()"> 
+    <!-- log in -->
+      <div id="login" class="account">
+        <form class="frame">
+          <div class="account-content account-box-animate">
+            <div class="account-closeicon">
+              <i onclick="closeLogin()" class="fa fa-times account-closeicon-color" aria-hidden="true"></i>
+            </div>
+            <div class="account-main">
+              <label><b>Username</b></label>
+              <input type="text" name="username">
+              <label><b>Password</b></label>
+              <input type="text" name="password">
+              <button type="submit">Login</button>
+              <input type="checkbox" checked="checked">Remember me
+              <span class="account-forgot">Forgot <a href="#">password?</a></span>
+            </div>
+          </div>
+        </form>
+      </div>
     <!-- header -->
       <header>
         <!-- sub navigation bar -->
@@ -49,7 +68,7 @@
                     <!-- log in -->
                       <a href="#" class="header-account-a header-account-text">
                         <div class="header-account-inter-position">
-                          <span class="header-account-color">Log in</span>
+                          <span onclick="openLogin()" class="header-account-color">Log in</span>
                         </div>
                       </a>
                     <!-- vertical line -->
@@ -62,7 +81,7 @@
                       </a>
                   </div>
                 <!-- icon -->
-                  <a href="#" class="header-accounticon-size">
+                  <a onclick="openLogin()" href="#" class="header-accounticon-size">
                     <div class="header-accounticon-inter-position">
                       <i class="fa fa-user header-accounticon-color" aria-hidden="true" ></i>
                       <span class="header-accounticon-color">Account</span>
