@@ -238,9 +238,9 @@
                           <h4 class="content-product-title-cell">$ 3.25</h4>
                         </div>
                         <div class="content-product-box">
-                          <div class="container">
+                          <div class="content-product-quantity">
                             <button>-</button>
-                            <label>1</label>
+                            <input type="text" name="quantity" value="1" disabled>
                             <button>+</button>
                           </div>
                         </div>
@@ -555,44 +555,44 @@
             <div id="Drink-Content" class="content-submenucontent">
               <div class="box">
                 <div class="content-submenucontent-container">
-                  <div class="content-product">
+                  <!-- product 1 -->
+                  <div class="content-product" data-index="Latte">
                     <div class="content-product-card">
-                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-image">
+                        <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      </div>
                       <div class="content-product-card-content">
-                        <div class="content-product-title">
-                          <h2 class="content-product-title-cell">Latte</h2>
-                          <h4 class="content-product-title-cell">$ 3.25</h4>
-                        </div>
-                        <div class="content-product-box">
-                          <div class="container">
-                            <button>-</button>
-                            <label>1</label>
-                            <button>+</button>
-                          </div>
-                        </div>
-                        <div class="content-product-box">
-                          <div class="content-product-cupsize container">
-                            <input type="radio" name="cupsize" id="cupsize-small">
-                            <label for="cupsize-small">S</label>
-                            <input type="radio" name="cupsize" id="cupsize-medium">
-                            <label for="cupsize-medium">M</label>
-                            <input type="radio" name="cupsize" id="cupsize-large">
-                            <label for="cupsize-large">L</label>
-                          </div>
-                        </div>
-                        <div class="content-product-box">
-                          <a href="cart.html" class="content-product-button">Buy Now</a>
-                          <a href="cart.html" class="content-product-button">Add To Cart</a>
-                        </div>
+                        <h2 class="content-product-title-cell">Latte</h2>
+                        <h4 class="content-product-title-cell">$ 3.25</h4>
+                      </div>
+                      <div class="content-product-quantity">
+                        <button>-</button>
+                        <input type="text" name="quantity" value="1" disabled>
+                        <button>+</button>
+                      </div>
+                      <div class="content-product-cupsize">
+                        <input type="radio" name="Latte" id="cupsize-small">
+                        <label for="cupsize-small">S</label>
+                        <input type="radio" name="Latte" id="cupsize-medium">
+                        <label for="cupsize-medium">M</label>
+                        <input type="radio" name="Latte" id="cupsize-large">
+                        <label for="cupsize-large">L</label>
+                      </div>
+                      <div class="content-product-buttons">
+                        <a href="cart.html" class="content-product-button">View More</a>
+                        <a href="cart.html" class="content-product-button">Add To Cart</a>
                       </div>
                     </div>
                   </div>
-                  <div class="content-product">
+
+
+
+                  <div class="content-product" data-index="Mocha">
                     <div class="content-product-card">
                       <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
                       <div class="content-product-card-content">
                         <div class="content-product-title">
-                          <h2 class="content-product-title-cell">Latte</h2>
+                          <h2 class="content-product-title-cell">Mocha</h2>
                           <h4 class="content-product-title-cell">$ 3.25</h4>
                         </div>
                         <div class="content-product-box">
