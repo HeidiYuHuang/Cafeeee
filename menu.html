@@ -12,6 +12,54 @@
     <script src="https://use.fontawesome.com/46831abb25.js"></script>
   </head>
   <body onload="widthChange()" onresize="widthChange()"> 
+    <!-- log in -->
+      <div id="login" class="account">
+        <form class="frame">
+          <div class="account-content account-box-animate">
+            <div class="account-closeicon">
+              <i onclick="closeLogin()" class="fa fa-times account-closeicon-color" aria-hidden="true"></i>
+            </div>
+            <div class="account-main">
+              <h2>Log In</h2>
+              <label><b>Username</b></label>
+              <input type="text" placeholder="Enter Username" name="username" required>
+              <label><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="password" required>
+              <button type="submit" onclick="checkEmpty()">Log In</button>
+              <input type="checkbox" checked="checked">Remember me
+              <span class="account-switch">Forgot <a href="#">password?</a></span>
+              <span class="account-switch">Don't have an account? <a onclick="closeLogin();openSignup()" href="#">Sign up here</a></span>
+              <a href="#" class="fa fa-facebook"></a>
+              <a href="#" class="fa fa-twitter"></a>
+              <a href="#" class="fa fa-weibo"></a>
+              <a href="#" class="fa fa-weixin"></a>
+            </div>
+          </div>
+        </form>
+      </div>
+    <!-- sign up -->
+      <div id="signup" class="account">
+        <form class="frame">
+          <div class="account-content account-box-animate">
+            <div class="account-closeicon">
+              <i onclick="closeSignup()" class="fa fa-times account-closeicon-color" aria-hidden="true"></i>
+            </div>
+            <div class="account-main">
+              <h2>Sign Up</h2>
+              <label><b>Email</b></label>
+              <input type="text" placeholder="Enter Email" name="email" required>
+              <label><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="password" required>
+              <label><b>Repeat Password</b></label>
+              <input type="password" placeholder="Repeat Password" name="repeat-password" required>
+              <input type="checkbox" checked="checked">Remember me
+              <p class="account-switch">By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+              <button type="submit">Sign Up</button>
+              <span class="account-switch">Have an account with us? <a onclick="closeSignup();openLogin()" href="#">Log in here</a></span>
+            </div>
+          </div>
+        </form>
+      </div>
     <!-- header -->
       <header>
         <!-- sub navigation bar -->
@@ -36,12 +84,49 @@
                 </div>
               <!-- cart -->
                 <div class="header-cart-position">
-                  <a href="#" class="header-cart-size">
+                  <a onclick="toggleCart()" href="#" class="header-cart-size">
                     <div class="header-cart-inter-position">
                       <i class="fa fa-shopping-cart header-cart-color" aria-hidden="true" ></i>
                       <span class="header-cart-color">Cart</span>
                     </div>
                   </a>
+                  <!-- cart dropdown -->
+                    <div class="frame">
+                      <ul id="cart" class="cart-dropdown-box cart-dropdown-box-frame">
+                        <li class="cart-dropdown-card">
+                          <div class="cart-dropdown-card-container">
+                            <img src="img/latte.jpg" alt="image company">
+                            <div class="cart-dropdown-card-content">
+                              <p>Latte $ 3.25</p>
+                              <p>Size: Small</p>
+                              <p>Quantity:1</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="cart-dropdown-card">
+                          <div class="cart-dropdown-card-container">
+                            <img src="img/latte.jpg" alt="image company">
+                            <div class="cart-dropdown-card-content">
+                              <p>Latte $ 3.25</p>
+                              <p>Size: Small</p>
+                              <p>Quantity:1</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="cart-dropdown-card">
+                          <div class="cart-dropdown-card-container">
+                            <img src="img/latte.jpg" alt="image company">
+                            <div class="cart-dropdown-card-content">
+                              <p>Latte $ 3.25</p>
+                              <p>Size: Small</p>
+                              <p>Quantity:1</p>
+                            </div>
+                          </div>
+                        </li>
+                        <a href="cart.html" class="cart-dropdown-button">Edit</a>
+                        <a href="payment.html" class="cart-dropdown-button">Check Out</a>
+                      </ul>
+                    </div>
                 </div>
               <!-- account -->
                 <!-- login & signup -->
@@ -49,7 +134,7 @@
                     <!-- log in -->
                       <a href="#" class="header-account-a header-account-text">
                         <div class="header-account-inter-position">
-                          <span class="header-account-color">Log in</span>
+                          <span onclick="openLogin()" class="header-account-color">Log in</span>
                         </div>
                       </a>
                     <!-- vertical line -->
@@ -57,12 +142,12 @@
                     <!-- sign up -->
                       <a href="#" class="header-account-a header-account-text">
                         <div class="header-account-inter-position">
-                          <span class="header-account-color">Sign Up</span>
+                          <span onclick="openSignup()" class="header-account-color">Sign Up</span>
                         </div>
                       </a>
                   </div>
                 <!-- icon -->
-                  <a href="#" class="header-accounticon-size">
+                  <a onclick="openLogin()" href="#" class="header-accounticon-size">
                     <div class="header-accounticon-inter-position">
                       <i class="fa fa-user header-accounticon-color" aria-hidden="true" ></i>
                       <span class="header-accounticon-color">Account</span>
