@@ -32,6 +32,22 @@ function openLogin() {
 var account = document.getElementById('login');
 window.onclick = function(event) {
     if (event.target == account) {
-        modal.style.display = "none";
+        account.style.display = "none";
+    }
+}
+
+// signup
+function closeSignup() {
+	document.getElementById('signup').style.display='none';
+}
+
+function openSignup() {
+	document.getElementById('signup').style.display='block';
+}
+
+var accountsign = document.getElementById('signup');
+window.onclick = function(event) {
+    if (event.target == accountsign) {
+        account.style.display = "none";
     }
 }

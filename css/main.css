@@ -93,6 +93,15 @@
   text-decoration: underline;
 }
 
+.account-switch>a {
+  text-decoration: underline;
+}
+
+.account-switch {
+  width: 100%;
+  display: block;
+}
+
 .account-box-animate {
   -webkit-animation: animatezoom 0.6s;
   animation: animatezoom 0.6s
@@ -106,6 +115,11 @@
 @keyframes animatezoom {
     from {transform: scale(0)} 
     to {transform: scale(1)}
+}
+
+input:required:focus {
+  border: 1px solid red;
+  outline: none;
 }
 
 /*whole area margin*/
