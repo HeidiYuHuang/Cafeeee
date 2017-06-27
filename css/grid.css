@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+/*account*/
+@media (max-width: 55em) {
+  .account-main>button {
+    width: 100%;
+  }
+}
+
 /*navigation bar*/
 [class*'header-col-'] {
   display: flex;
@@ -27,6 +34,11 @@
 @media (max-width: 75em) {
   .frame {
     width: 100%;
+  }
+
+  .cart-dropdown-box-frame {
+    right: 1em;
+    margin-left: 0;
   }
 }
 

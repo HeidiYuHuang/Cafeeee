@@ -51,3 +51,8 @@ window.onclick = function(event) {
         account.style.display = "none";
     }
 }
+
+//cart drop down
+function toggleCart() {
+	document.getElementById("cart").classList.toggle("show");
+}

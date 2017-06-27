@@ -29,6 +29,10 @@
               <input type="checkbox" checked="checked">Remember me
               <span class="account-switch">Forgot <a href="#">password?</a></span>
               <span class="account-switch">Don't have an account? <a onclick="closeLogin();openSignup()" href="#">Sign up here</a></span>
+              <a href="#" class="fa fa-facebook"></a>
+              <a href="#" class="fa fa-twitter"></a>
+              <a href="#" class="fa fa-weibo"></a>
+              <a href="#" class="fa fa-weixin"></a>
             </div>
           </div>
         </form>
@@ -80,12 +84,47 @@
                 </div>
               <!-- cart -->
                 <div class="header-cart-position">
-                  <a href="#" class="header-cart-size">
+                  <a onclick="toggleCart()" href="#" class="header-cart-size">
                     <div class="header-cart-inter-position">
                       <i class="fa fa-shopping-cart header-cart-color" aria-hidden="true" ></i>
                       <span class="header-cart-color">Cart</span>
                     </div>
                   </a>
+                  <!-- cart dropdown -->
+                    <div class="frame">
+                      <ul id="cart" class="cart-dropdown-box cart-dropdown-box-frame">
+                        <li class="cart-dropdown-card">
+                          <div class="cart-dropdown-card-container">
+                            <img src="img/latte.jpg" alt="image company">
+                            <div class="cart-dropdown-card-content">
+                              <p>Latte $ 3.25</p>
+                              <p>Size: Small</p>
+                              <p>Quantity:1</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="cart-dropdown-card">
+                          <div class="cart-dropdown-card-container">
+                            <img src="img/latte.jpg" alt="image company">
+                            <div class="cart-dropdown-card-content">
+                              <p>Latte $ 3.25</p>
+                              <p>Size: Small</p>
+                              <p>Quantity:1</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="cart-dropdown-card">
+                          <div class="cart-dropdown-card-container">
+                            <img src="img/latte.jpg" alt="image company">
+                            <div class="cart-dropdown-card-content">
+                              <p>Latte $ 3.25</p>
+                              <p>Size: Small</p>
+                              <p>Quantity:1</p>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
                 </div>
               <!-- account -->
                 <!-- login & signup -->
