@@ -17,3 +17,30 @@ function openSubmenu(event, subtitle, subcontent) {
     event.currentTarget.className += " active";
 }
 document.getElementById("content-submenu-default").click();
+
+// add to chart
+// function addToCart() {
+//   var li = document.createElement("li");
+//   var inputValue = document.getElementById("product").value;
+//   var t = document.createTextNode(inputValue);
+//   li.appendChild(t);
+//   if (inputValue === '') {
+//     alert("You must write something!");
+//   } else {
+//     document.getElementById("cart").appendChild(li);
+//   }
+//   document.getElementById("product").value = "";
+
+//   var span = document.createElement("SPAN");
+//   var txt = document.createTextNode("\u00D7");
+//   span.className = "close";
+//   span.appendChild(txt);
+//   li.appendChild(span);
+
+//   for (i = 0; i < close.length; i++) {
+//     close[i].onclick = function() {
+//       var div = this.parentElement;
+//       div.style.display = "none";
+//     }
+//   }
+// }
