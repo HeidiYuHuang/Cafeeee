@@ -40,6 +40,11 @@
     right: 1em;
     margin-left: 0;
   }
+
+
+  .about-content-height {
+    height: 226em;
+  }
 }
 
 /*header*/
@@ -58,6 +63,10 @@
 @media (max-width: 62em) {
   .header-searchbar{
     width: 10em;
+  }
+
+  .about-content-height {
+    height: 229em;
   }
 }
 
@@ -79,6 +88,10 @@
   .header-accounticon-color {
     display: none;
   }
+
+  .about-content-height {
+    height: 233em;
+  }
 }
 
 @media (max-width: 49em) {
@@ -87,6 +100,10 @@
   }
   .header-searchicon-size {
     display: flex;
+  }
+
+  .about-content-height {
+    height: 238em;
   }
 }
 
@@ -97,6 +114,10 @@
 
   .header-nav-sub{
     display: block;
+  }
+
+  .about-content-height {
+    height: 251em;
   }
 }
 
@@ -109,6 +130,10 @@
   .header-subnav-size {
     width: 50%;
   }
+
+  .about-content-height {
+    height: 265em;
+  }
 }
 
 @media (max-width: 26em) {
@@ -118,6 +143,10 @@
 
   #header-subnav-dropdown {
     display: none;
+  }
+
+  .about-content-height {
+    height: 282em;
   }
 }
 
