@@ -17,3 +17,19 @@ function openSubmenu(event, subtitle, subcontent) {
     event.currentTarget.className += " active";
 }
 document.getElementById("content-submenu-default").click();
+
+function quantityAdd(btn) {
+  var currentQuantity = document.getElementsByName(btn.value + "-quantity")[0].value;
+  if(currentQuantity<10){
+    currentQuantity ++;
+  }
+  document.getElementsByName(btn.value + "-quantity")[0].value = currentQuantity;
+}
+
+function quantityMin(btn) {
+  var currentQuantity = document.getElementsByName(btn.value + "-quantity")[0].value;
+  if(currentQuantity>1){
+    currentQuantity --;
+  }
+  document.getElementsByName(btn.value + "-quantity")[0].value = currentQuantity;
+}

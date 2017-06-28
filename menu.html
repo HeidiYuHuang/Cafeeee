@@ -97,31 +97,12 @@
                         <a href="cart.html" class="cart-dropdown-button">Edit</a>
                         <li class="cart-dropdown-card">
                           <div class="cart-dropdown-card-container">
-                            <img src="img/latte.jpg" alt="image company">
+                            <img src="img/coffee/latte.jpg" name="0-img" width="100%" height="100%" alt="image company">
                             <div class="cart-dropdown-card-content">
-                              <p>Latte $ 3.25</p>
+                              <p>Latte</p>
                               <p>Size: Small</p>
                               <p>Quantity:1</p>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="cart-dropdown-card">
-                          <div class="cart-dropdown-card-container">
-                            <img src="img/latte.jpg" alt="image company">
-                            <div class="cart-dropdown-card-content">
-                              <p>Latte $ 3.25</p>
-                              <p>Size: Small</p>
-                              <p>Quantity:1</p>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="cart-dropdown-card">
-                          <div class="cart-dropdown-card-container">
-                            <img src="img/latte.jpg" alt="image company">
-                            <div class="cart-dropdown-card-content">
-                              <p>Latte $ 3.25</p>
-                              <p>Size: Small</p>
-                              <p>Quantity:1</p>
+                              <p>Price: $ 3.25</p>
                             </div>
                           </div>
                         </li>
@@ -240,9 +221,9 @@
                           <h4 class="content-product-title-cell" name="0-price">$ 3.25</h4>
                         </div>
                         <div class="content-product-quantity">
-                          <button>-</button>
+                          <button value="0" onclick="quantityMin(this)">-</button>
                           <input type="text" name="0-quantity" value="1" disabled>
-                          <button>+</button>
+                          <button value="0" onclick="quantityAdd(this)">+</button>
                         </div>
                         <div class="content-product-cupsize container">
                           <input type="radio" name="0-size" id="0-small" value="Small">
@@ -254,35 +235,277 @@
                         </div>
                         <div class="content-product-box">
                           <a href="detail.html" class="content-product-button">View Detail</a>
-                          <button value="0" id="addtocart" onclick="addToCart()" class="content-product-button">Add To Cart</button>
+                          <button value="0" id="addtocart" onclick="addToCart(this)" class="content-product-button">Add To Cart</button>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="content-product" data-index="1">
+                  <div class="content-product">
                     <div class="content-product-card">
-                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-img">
+                        <img src="img/coffee/mocha.jpg" name="1-img" width="100%" height="100%" alt="image company">
+                      </div>
                       <div class="content-product-card-content">
                         <div class="content-product-title">
-                          <h2 class="content-product-title-cell">Latte</h2>
-                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                          <h2 class="content-product-title-cell" name="1-title">Mocha</h2>
+                          <h4 class="content-product-title-cell" name="1-price">$ 3.25</h4>
                         </div>
                         <div class="content-product-quantity">
-                          <button>-</button>
-                          <input type="text" name="1" value="1" disabled>
-                          <button>+</button>
+                          <button value="1" onclick="quantityMin(this)">-</button>
+                          <input type="text" name="1-quantity" value="1" disabled>
+                          <button value="1" onclick="quantityAdd(this)">+</button>
                         </div>
                         <div class="content-product-cupsize container">
-                          <input type="radio" name="1" id="1-small">
+                          <input type="radio" name="1-size" id="1-small" value="Small">
                           <label for="1-small">S</label>
-                          <input type="radio" name="1" id="1-medium">
+                          <input type="radio" name="1-size" id="1-medium" value="Medium">
                           <label for="1-medium">M</label>
-                          <input type="radio" name="1" id="1-large">
+                          <input type="radio" checked="checked" name="1-size" id="1-large" value="Large">
                           <label for="1-large">L</label>
                         </div>
                         <div class="content-product-box">
                           <a href="detail.html" class="content-product-button">View Detail</a>
-                          <a href="" value="Latte" onclick="addToCart()" class="content-product-button">Add To Cart</a>
+                          <button value="1" id="addtocart" onclick="addToCart(this)" class="content-product-button">Add To Cart</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content-product">
+                    <div class="content-product-card">
+                      <div class="content-product-card-img">
+                        <img src="img/coffee/latte.jpg" name="2-img" width="100%" height="100%" alt="image company">
+                      </div>
+                      <div class="content-product-card-content">
+                        <div class="content-product-title">
+                          <h2 class="content-product-title-cell" name="2-title">Latte</h2>
+                          <h4 class="content-product-title-cell" name="2-price">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-quantity">
+                          <button value="2" onclick="quantityMin(this)">-</button>
+                          <input type="text" name="2-quantity" value="1" disabled>
+                          <button value="2" onclick="quantityAdd(this)">+</button>
+                        </div>
+                        <div class="content-product-cupsize container">
+                          <input type="radio" name="2-size" id="2-small" value="Small">
+                          <label for="2-small">S</label>
+                          <input type="radio" name="2-size" id="2-medium" value="Medium">
+                          <label for="2-medium">M</label>
+                          <input type="radio" checked="checked" name="2-size" id="2-large" value="Large">
+                          <label for="2-large">L</label>
+                        </div>
+                        <div class="content-product-box">
+                          <a href="detail.html" class="content-product-button">View Detail</a>
+                          <button value="2" id="addtocart" onclick="addToCart(this)" class="content-product-button">Add To Cart</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content-product">
+                    <div class="content-product-card">
+                      <div class="content-product-card-img">
+                        <img src="img/coffee/latte.jpg" name="3-img" width="100%" height="100%" alt="image company">
+                      </div>
+                      <div class="content-product-card-content">
+                        <div class="content-product-title">
+                          <h2 class="content-product-title-cell" name="3-title">Latte</h2>
+                          <h4 class="content-product-title-cell" name="3-price">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-quantity">
+                          <button value="3" onclick="quantityMin(this)">-</button>
+                          <input type="text" name="3-quantity" value="1" disabled>
+                          <button value="3" onclick="quantityAdd(this)">+</button>
+                        </div>
+                        <div class="content-product-cupsize container">
+                          <input type="radio" name="3-size" id="3-small" value="Small">
+                          <label for="3-small">S</label>
+                          <input type="radio" name="3-size" id="3-medium" value="Medium">
+                          <label for="3-medium">M</label>
+                          <input type="radio" checked="checked" name="3-size" id="3-large" value="Large">
+                          <label for="3-large">L</label>
+                        </div>
+                        <div class="content-product-box">
+                          <a href="detail.html" class="content-product-button">View Detail</a>
+                          <button value="3" id="addtocart" onclick="addToCart(this)" class="content-product-button">Add To Cart</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content-product">
+                    <div class="content-product-card">
+                      <div class="content-product-card-img">
+                        <img src="img/coffee/latte.jpg" name="4-img" width="100%" height="100%" alt="image company">
+                      </div>
+                      <div class="content-product-card-content">
+                        <div class="content-product-title">
+                          <h2 class="content-product-title-cell" name="4-title">Latte</h2>
+                          <h4 class="content-product-title-cell" name="4-price">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-quantity">
+                          <button value="4" onclick="quantityMin(this)">-</button>
+                          <input type="text" name="4-quantity" value="1" disabled>
+                          <button value="4" onclick="quantityAdd(this)">+</button>
+                        </div>
+                        <div class="content-product-cupsize container">
+                          <input type="radio" name="4-size" id="4-small" value="Small">
+                          <label for="4-small">S</label>
+                          <input type="radio" name="4-size" id="4-medium" value="Medium">
+                          <label for="4-medium">M</label>
+                          <input type="radio" checked="checked" name="4-size" id="4-large" value="Large">
+                          <label for="4-large">L</label>
+                        </div>
+                        <div class="content-product-box">
+                          <a href="detail.html" class="content-product-button">View Detail</a>
+                          <button value="4" id="addtocart" onclick="addToCart(this)" class="content-product-button">Add To Cart</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content-product">
+                    <div class="content-product-card">
+                      <div class="content-product-card-img">
+                        <img src="img/coffee/latte.jpg" name="5-img" width="100%" height="100%" alt="image company">
+                      </div>
+                      <div class="content-product-card-content">
+                        <div class="content-product-title">
+                          <h2 class="content-product-title-cell" name="5-title">Latte</h2>
+                          <h4 class="content-product-title-cell" name="5-price">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-quantity">
+                          <button value="5" onclick="quantityMin(this)">-</button>
+                          <input type="text" name="5-quantity" value="1" disabled>
+                          <button value="5" onclick="quantityAdd(this)">+</button>
+                        </div>
+                        <div class="content-product-cupsize container">
+                          <input type="radio" name="5-size" id="5-small" value="Small">
+                          <label for="5-small">S</label>
+                          <input type="radio" name="5-size" id="5-medium" value="Medium">
+                          <label for="5-medium">M</label>
+                          <input type="radio" checked="checked" name="5-size" id="5-large" value="Large">
+                          <label for="5-large">L</label>
+                        </div>
+                        <div class="content-product-box">
+                          <a href="detail.html" class="content-product-button">View Detail</a>
+                          <button value="5" id="addtocart" onclick="addToCart(this)" class="content-product-button">Add To Cart</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content-product">
+                    <div class="content-product-card">
+                      <div class="content-product-card-img">
+                        <img src="img/coffee/latte.jpg" name="6-img" width="100%" height="100%" alt="image company">
+                      </div>
+                      <div class="content-product-card-content">
+                        <div class="content-product-title">
+                          <h2 class="content-product-title-cell" name="6-title">Latte</h2>
+                          <h4 class="content-product-title-cell" name="6-price">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-quantity">
+                          <button value="6" onclick="quantityMin(this)">-</button>
+                          <input type="text" name="6-quantity" value="1" disabled>
+                          <button value="6" onclick="quantityAdd(this)">+</button>
+                        </div>
+                        <div class="content-product-cupsize container">
+                          <input type="radio" name="6-size" id="6-small" value="Small">
+                          <label for="6-small">S</label>
+                          <input type="radio" name="6-size" id="6-medium" value="Medium">
+                          <label for="6-medium">M</label>
+                          <input type="radio" checked="checked" name="6-size" id="6-large" value="Large">
+                          <label for="6-large">L</label>
+                        </div>
+                        <div class="content-product-box">
+                          <a href="detail.html" class="content-product-button">View Detail</a>
+                          <button value="6" id="addtocart" onclick="addToCart(this)" class="content-product-button">Add To Cart</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content-product">
+                    <div class="content-product-card">
+                      <div class="content-product-card-img">
+                        <img src="img/coffee/latte.jpg" name="7-img" width="100%" height="100%" alt="image company">
+                      </div>
+                      <div class="content-product-card-content">
+                        <div class="content-product-title">
+                          <h2 class="content-product-title-cell" name="7-title">Latte</h2>
+                          <h4 class="content-product-title-cell" name="7-price">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-quantity">
+                          <button value="7" onclick="quantityMin(this)">-</button>
+                          <input type="text" name="7-quantity" value="1" disabled>
+                          <button value="7" onclick="quantityAdd(this)">+</button>
+                        </div>
+                        <div class="content-product-cupsize container">
+                          <input type="radio" name="7-size" id="7-small" value="Small">
+                          <label for="7-small">S</label>
+                          <input type="radio" name="7-size" id="7-medium" value="Medium">
+                          <label for="7-medium">M</label>
+                          <input type="radio" checked="checked" name="7-size" id="7-large" value="Large">
+                          <label for="7-large">L</label>
+                        </div>
+                        <div class="content-product-box">
+                          <a href="detail.html" class="content-product-button">View Detail</a>
+                          <button value="7" id="addtocart" onclick="addToCart(this)" class="content-product-button">Add To Cart</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content-product">
+                    <div class="content-product-card">
+                      <div class="content-product-card-img">
+                        <img src="img/coffee/latte.jpg" name="8-img" width="100%" height="100%" alt="image company">
+                      </div>
+                      <div class="content-product-card-content">
+                        <div class="content-product-title">
+                          <h2 class="content-product-title-cell" name="8-title">Latte</h2>
+                          <h4 class="content-product-title-cell" name="8-price">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-quantity">
+                          <button value="8" onclick="quantityMin(this)">-</button>
+                          <input type="text" name="8-quantity" value="1" disabled>
+                          <button value="8" onclick="quantityAdd(this)">+</button>
+                        </div>
+                        <div class="content-product-cupsize container">
+                          <input type="radio" name="8-size" id="8-small" value="Small">
+                          <label for="8-small">S</label>
+                          <input type="radio" name="8-size" id="8-medium" value="Medium">
+                          <label for="8-medium">M</label>
+                          <input type="radio" checked="checked" name="8-size" id="8-large" value="Large">
+                          <label for="8-large">L</label>
+                        </div>
+                        <div class="content-product-box">
+                          <a href="detail.html" class="content-product-button">View Detail</a>
+                          <button value="8" id="addtocart" onclick="addToCart(this)" class="content-product-button">Add To Cart</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content-product">
+                    <div class="content-product-card">
+                      <div class="content-product-card-img">
+                        <img src="img/coffee/latte.jpg" name="9-img" width="100%" height="100%" alt="image company">
+                      </div>
+                      <div class="content-product-card-content">
+                        <div class="content-product-title">
+                          <h2 class="content-product-title-cell" name="9-title">Latte</h2>
+                          <h4 class="content-product-title-cell" name="9-price">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-quantity">
+                          <button value="9" onclick="quantityMin(this)">-</button>
+                          <input type="text" name="9-quantity" value="1" disabled>
+                          <button value="9" onclick="quantityAdd(this)">+</button>
+                        </div>
+                        <div class="content-product-cupsize container">
+                          <input type="radio" name="9-size" id="9-small" value="Small">
+                          <label for="9-small">S</label>
+                          <input type="radio" name="9-size" id="9-medium" value="Medium">
+                          <label for="9-medium">M</label>
+                          <input type="radio" checked="checked" name="9-size" id="9-large" value="Large">
+                          <label for="9-large">L</label>
+                        </div>
+                        <div class="content-product-box">
+                          <a href="detail.html" class="content-product-button">View Detail</a>
+                          <button value="9" id="addtocart" onclick="addToCart(this)" class="content-product-button">Add To Cart</button>
                         </div>
                       </div>
                     </div>
@@ -293,322 +516,302 @@
             <div id="Drink-Content" class="content-submenucontent">
               <div class="box">
                 <div class="content-submenucontent-container">
-                  <!-- product 1 -->
-                  <div class="content-product" data-index="Latte">
+                  <div class="content-product">
                     <div class="content-product-card">
-                      <div class="content-product-image">
-                        <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-img">
+                        <img src="img/coffee/latte.jpg" name="10-img" width="100%" height="100%" alt="image company">
                       </div>
-                      <div class="content-product-card-content">
-                        <h2 class="content-product-title-cell">Latte</h2>
-                        <h4 class="content-product-title-cell">$ 3.25</h4>
-                      </div>
-                      <div class="content-product-quantity">
-                        <button>-</button>
-                        <input type="text" name="quantity" value="1" disabled>
-                        <button>+</button>
-                      </div>
-                      <div class="content-product-cupsize">
-                        <input type="radio" name="Latte" id="cupsize-small">
-                        <label for="cupsize-small">S</label>
-                        <input type="radio" name="Latte" id="cupsize-medium">
-                        <label for="cupsize-medium">M</label>
-                        <input type="radio" name="Latte" id="cupsize-large">
-                        <label for="cupsize-large">L</label>
-                      </div>
-                      <div class="content-product-buttons">
-                        <a href="cart.html" class="content-product-button">View More</a>
-                        <a href="cart.html" class="content-product-button">Add To Cart</a>
-                      </div>
-                    </div>
-                  </div>
-
-
-
-                  <div class="content-product" data-index="Mocha">
-                    <div class="content-product-card">
-                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
                       <div class="content-product-card-content">
                         <div class="content-product-title">
-                          <h2 class="content-product-title-cell">Mocha</h2>
-                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                          <h2 class="content-product-title-cell" name="10-title">Latte</h2>
+                          <h4 class="content-product-title-cell" name="10-price">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-quantity">
+                          <button value="10" onclick="quantityMin(this)">-</button>
+                          <input type="text" name="10-quantity" value="1" disabled>
+                          <button value="10" onclick="quantityAdd(this)">+</button>
+                        </div>
+                        <div class="content-product-cupsize container">
+                          <input type="radio" name="10-size" id="10-small" value="Small">
+                          <label for="10-small">S</label>
+                          <input type="radio" name="10-size" id="10-medium" value="Medium">
+                          <label for="10-medium">M</label>
+                          <input type="radio" checked="checked" name="10-size" id="10-large" value="Large">
+                          <label for="10-large">L</label>
                         </div>
                         <div class="content-product-box">
-                          <div class="container">
-                            <button>-</button>
-                            <label>1</label>
-                            <button>+</button>
-                          </div>
-                        </div>
-                        <div class="content-product-box">
-                          <div class="content-product-cupsize container">
-                            <input type="radio" name="cupsize" id="cupsize-small">
-                            <label for="cupsize-small">S</label>
-                            <input type="radio" name="cupsize" id="cupsize-medium">
-                            <label for="cupsize-medium">M</label>
-                            <input type="radio" name="cupsize" id="cupsize-large">
-                            <label for="cupsize-large">L</label>
-                          </div>
-                        </div>
-                        <div class="content-product-box">
-                          <a href="cart.html" class="content-product-button">Buy Now</a>
-                          <a href="cart.html" class="content-product-button">Add To Cart</a>
+                          <a href="detail.html" class="content-product-button">View Detail</a>
+                          <button value="10" id="addtocart" onclick="addToCart(this)" class="content-product-button">Add To Cart</button>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="content-product">
                     <div class="content-product-card">
-                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-img">
+                        <img src="img/coffee/latte.jpg" name="11-img" width="100%" height="100%" alt="image company">
+                      </div>
                       <div class="content-product-card-content">
                         <div class="content-product-title">
-                          <h2 class="content-product-title-cell">Latte</h2>
-                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                          <h2 class="content-product-title-cell" name="11-title">Latte</h2>
+                          <h4 class="content-product-title-cell" name="11-price">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-quantity">
+                          <button value="11" onclick="quantityMin(this)">-</button>
+                          <input type="text" name="11-quantity" value="1" disabled>
+                          <button value="11" onclick="quantityAdd(this)">+</button>
+                        </div>
+                        <div class="content-product-cupsize container">
+                          <input type="radio" name="11-size" id="11-small" value="Small">
+                          <label for="11-small">S</label>
+                          <input type="radio" name="11-size" id="11-medium" value="Medium">
+                          <label for="11-medium">M</label>
+                          <input type="radio" checked="checked" name="11-size" id="11-large" value="Large">
+                          <label for="11-large">L</label>
                         </div>
                         <div class="content-product-box">
-                          <div class="container">
-                            <button>-</button>
-                            <label>1</label>
-                            <button>+</button>
-                          </div>
-                        </div>
-                        <div class="content-product-box">
-                          <div class="content-product-cupsize container">
-                            <input type="radio" name="cupsize" id="cupsize-small">
-                            <label for="cupsize-small">S</label>
-                            <input type="radio" name="cupsize" id="cupsize-medium">
-                            <label for="cupsize-medium">M</label>
-                            <input type="radio" name="cupsize" id="cupsize-large">
-                            <label for="cupsize-large">L</label>
-                          </div>
-                        </div>
-                        <div class="content-product-box">
-                          <a href="cart.html" class="content-product-button">Buy Now</a>
-                          <a href="cart.html" class="content-product-button">Add To Cart</a>
+                          <a href="detail.html" class="content-product-button">View Detail</a>
+                          <button value="11" id="addtocart" onclick="addToCart(this)" class="content-product-button">Add To Cart</button>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="content-product">
                     <div class="content-product-card">
-                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-img">
+                        <img src="img/coffee/latte.jpg" name="12-img" width="100%" height="100%" alt="image company">
+                      </div>
                       <div class="content-product-card-content">
                         <div class="content-product-title">
-                          <h2 class="content-product-title-cell">Latte</h2>
-                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                          <h2 class="content-product-title-cell" name="12-title">Latte</h2>
+                          <h4 class="content-product-title-cell" name="12-price">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-quantity">
+                          <button value="12" onclick="quantityMin(this)">-</button>
+                          <input type="text" name="12-quantity" value="1" disabled>
+                          <button value="12" onclick="quantityAdd(this)">+</button>
+                        </div>
+                        <div class="content-product-cupsize container">
+                          <input type="radio" name="12-size" id="12-small" value="Small">
+                          <label for="12-small">S</label>
+                          <input type="radio" name="12-size" id="12-medium" value="Medium">
+                          <label for="12-medium">M</label>
+                          <input type="radio" checked="checked" name="12-size" id="12-large" value="Large">
+                          <label for="12-large">L</label>
                         </div>
                         <div class="content-product-box">
-                          <div class="container">
-                            <button>-</button>
-                            <label>1</label>
-                            <button>+</button>
-                          </div>
-                        </div>
-                        <div class="content-product-box">
-                          <div class="content-product-cupsize container">
-                            <input type="radio" name="cupsize" id="cupsize-small">
-                            <label for="cupsize-small">S</label>
-                            <input type="radio" name="cupsize" id="cupsize-medium">
-                            <label for="cupsize-medium">M</label>
-                            <input type="radio" name="cupsize" id="cupsize-large">
-                            <label for="cupsize-large">L</label>
-                          </div>
-                        </div>
-                        <div class="content-product-box">
-                          <a href="cart.html" class="content-product-button">Buy Now</a>
-                          <a href="cart.html" class="content-product-button">Add To Cart</a>
+                          <a href="detail.html" class="content-product-button">View Detail</a>
+                          <button value="12" id="addtocart" onclick="addToCart(this)" class="content-product-button">Add To Cart</button>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="content-product">
                     <div class="content-product-card">
-                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-img">
+                        <img src="img/coffee/latte.jpg" name="13-img" width="100%" height="100%" alt="image company">
+                      </div>
                       <div class="content-product-card-content">
                         <div class="content-product-title">
-                          <h2 class="content-product-title-cell">Latte</h2>
-                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                          <h2 class="content-product-title-cell" name="13-title">Latte</h2>
+                          <h4 class="content-product-title-cell" name="13-price">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-quantity">
+                          <button value="13" onclick="quantityMin(this)">-</button>
+                          <input type="text" name="13-quantity" value="1" disabled>
+                          <button value="13" onclick="quantityAdd(this)">+</button>
+                        </div>
+                        <div class="content-product-cupsize container">
+                          <input type="radio" name="13-size" id="13-small" value="Small">
+                          <label for="13-small">S</label>
+                          <input type="radio" name="13-size" id="13-medium" value="Medium">
+                          <label for="13-medium">M</label>
+                          <input type="radio" checked="checked" name="13-size" id="13-large" value="Large">
+                          <label for="13-large">L</label>
                         </div>
                         <div class="content-product-box">
-                          <div class="container">
-                            <button>-</button>
-                            <label>1</label>
-                            <button>+</button>
-                          </div>
-                        </div>
-                        <div class="content-product-box">
-                          <div class="content-product-cupsize container">
-                            <input type="radio" name="cupsize" id="cupsize-small">
-                            <label for="cupsize-small">S</label>
-                            <input type="radio" name="cupsize" id="cupsize-medium">
-                            <label for="cupsize-medium">M</label>
-                            <input type="radio" name="cupsize" id="cupsize-large">
-                            <label for="cupsize-large">L</label>
-                          </div>
-                        </div>
-                        <div class="content-product-box">
-                          <a href="cart.html" class="content-product-button">Buy Now</a>
-                          <a href="cart.html" class="content-product-button">Add To Cart</a>
+                          <a href="detail.html" class="content-product-button">View Detail</a>
+                          <button value="13" id="addtocart" onclick="addToCart(this)" class="content-product-button">Add To Cart</button>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="content-product">
                     <div class="content-product-card">
-                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-img">
+                        <img src="img/coffee/latte.jpg" name="14-img" width="100%" height="100%" alt="image company">
+                      </div>
                       <div class="content-product-card-content">
                         <div class="content-product-title">
-                          <h2 class="content-product-title-cell">Latte</h2>
-                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                          <h2 class="content-product-title-cell" name="14-title">Latte</h2>
+                          <h4 class="content-product-title-cell" name="14-price">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-quantity">
+                          <button value="14" onclick="quantityMin(this)">-</button>
+                          <input type="text" name="14-quantity" value="1" disabled>
+                          <button value="14" onclick="quantityAdd(this)">+</button>
+                        </div>
+                        <div class="content-product-cupsize container">
+                          <input type="radio" name="14-size" id="14-small" value="Small">
+                          <label for="14-small">S</label>
+                          <input type="radio" name="14-size" id="14-medium" value="Medium">
+                          <label for="14-medium">M</label>
+                          <input type="radio" checked="checked" name="14-size" id="14-large" value="Large">
+                          <label for="14-large">L</label>
                         </div>
                         <div class="content-product-box">
-                          <div class="container">
-                            <button>-</button>
-                            <label>1</label>
-                            <button>+</button>
-                          </div>
-                        </div>
-                        <div class="content-product-box">
-                          <div class="content-product-cupsize container">
-                            <input type="radio" name="cupsize" id="cupsize-small">
-                            <label for="cupsize-small">S</label>
-                            <input type="radio" name="cupsize" id="cupsize-medium">
-                            <label for="cupsize-medium">M</label>
-                            <input type="radio" name="cupsize" id="cupsize-large">
-                            <label for="cupsize-large">L</label>
-                          </div>
-                        </div>
-                        <div class="content-product-box">
-                          <a href="cart.html" class="content-product-button">Buy Now</a>
-                          <a href="cart.html" class="content-product-button">Add To Cart</a>
+                          <a href="detail.html" class="content-product-button">View Detail</a>
+                          <button value="14" id="addtocart" onclick="addToCart(this)" class="content-product-button">Add To Cart</button>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="content-product">
                     <div class="content-product-card">
-                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-img">
+                        <img src="img/coffee/latte.jpg" name="15-img" width="100%" height="100%" alt="image company">
+                      </div>
                       <div class="content-product-card-content">
                         <div class="content-product-title">
-                          <h2 class="content-product-title-cell">Latte</h2>
-                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                          <h2 class="content-product-title-cell" name="15-title">Latte</h2>
+                          <h4 class="content-product-title-cell" name="15-price">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-quantity">
+                          <button value="15" onclick="quantityMin(this)">-</button>
+                          <input type="text" name="15-quantity" value="1" disabled>
+                          <button value="15" onclick="quantityAdd(this)">+</button>
+                        </div>
+                        <div class="content-product-cupsize container">
+                          <input type="radio" name="15-size" id="15-small" value="Small">
+                          <label for="15-small">S</label>
+                          <input type="radio" name="15-size" id="15-medium" value="Medium">
+                          <label for="15-medium">M</label>
+                          <input type="radio" checked="checked" name="15-size" id="15-large" value="Large">
+                          <label for="15-large">L</label>
                         </div>
                         <div class="content-product-box">
-                          <div class="container">
-                            <button>-</button>
-                            <label>1</label>
-                            <button>+</button>
-                          </div>
-                        </div>
-                        <div class="content-product-box">
-                          <div class="content-product-cupsize container">
-                            <input type="radio" name="cupsize" id="cupsize-small">
-                            <label for="cupsize-small">S</label>
-                            <input type="radio" name="cupsize" id="cupsize-medium">
-                            <label for="cupsize-medium">M</label>
-                            <input type="radio" name="cupsize" id="cupsize-large">
-                            <label for="cupsize-large">L</label>
-                          </div>
-                        </div>
-                        <div class="content-product-box">
-                          <a href="cart.html" class="content-product-button">Buy Now</a>
-                          <a href="cart.html" class="content-product-button">Add To Cart</a>
+                          <a href="detail.html" class="content-product-button">View Detail</a>
+                          <button value="15" id="addtocart" onclick="addToCart(this)" class="content-product-button">Add To Cart</button>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="content-product">
                     <div class="content-product-card">
-                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-img">
+                        <img src="img/coffee/latte.jpg" name="16-img" width="100%" height="100%" alt="image company">
+                      </div>
                       <div class="content-product-card-content">
                         <div class="content-product-title">
-                          <h2 class="content-product-title-cell">Latte</h2>
-                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                          <h2 class="content-product-title-cell" name="16-title">Latte</h2>
+                          <h4 class="content-product-title-cell" name="16-price">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-quantity">
+                          <button value="16" onclick="quantityMin(this)">-</button>
+                          <input type="text" name="16-quantity" value="1" disabled>
+                          <button value="16" onclick="quantityAdd(this)">+</button>
+                        </div>
+                        <div class="content-product-cupsize container">
+                          <input type="radio" name="16-size" id="16-small" value="Small">
+                          <label for="16-small">S</label>
+                          <input type="radio" name="16-size" id="16-medium" value="Medium">
+                          <label for="16-medium">M</label>
+                          <input type="radio" checked="checked" name="16-size" id="16-large" value="Large">
+                          <label for="16-large">L</label>
                         </div>
                         <div class="content-product-box">
-                          <div class="container">
-                            <button>-</button>
-                            <label>1</label>
-                            <button>+</button>
-                          </div>
-                        </div>
-                        <div class="content-product-box">
-                          <div class="content-product-cupsize container">
-                            <input type="radio" name="cupsize" id="cupsize-small">
-                            <label for="cupsize-small">S</label>
-                            <input type="radio" name="cupsize" id="cupsize-medium">
-                            <label for="cupsize-medium">M</label>
-                            <input type="radio" name="cupsize" id="cupsize-large">
-                            <label for="cupsize-large">L</label>
-                          </div>
-                        </div>
-                        <div class="content-product-box">
-                          <a href="cart.html" class="content-product-button">Buy Now</a>
-                          <a href="cart.html" class="content-product-button">Add To Cart</a>
+                          <a href="detail.html" class="content-product-button">View Detail</a>
+                          <button value="16" id="addtocart" onclick="addToCart(this)" class="content-product-button">Add To Cart</button>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="content-product">
                     <div class="content-product-card">
-                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-img">
+                        <img src="img/coffee/latte.jpg" name="17-img" width="100%" height="100%" alt="image company">
+                      </div>
                       <div class="content-product-card-content">
                         <div class="content-product-title">
-                          <h2 class="content-product-title-cell">Latte</h2>
-                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                          <h2 class="content-product-title-cell" name="17-title">Latte</h2>
+                          <h4 class="content-product-title-cell" name="17-price">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-quantity">
+                          <button value="17" onclick="quantityMin(this)">-</button>
+                          <input type="text" name="17-quantity" value="1" disabled>
+                          <button value="17" onclick="quantityAdd(this)">+</button>
+                        </div>
+                        <div class="content-product-cupsize container">
+                          <input type="radio" name="17-size" id="17-small" value="Small">
+                          <label for="17-small">S</label>
+                          <input type="radio" name="17-size" id="17-medium" value="Medium">
+                          <label for="17-medium">M</label>
+                          <input type="radio" checked="checked" name="17-size" id="17-large" value="Large">
+                          <label for="17-large">L</label>
                         </div>
                         <div class="content-product-box">
-                          <div class="container">
-                            <button>-</button>
-                            <label>1</label>
-                            <button>+</button>
-                          </div>
-                        </div>
-                        <div class="content-product-box">
-                          <div class="content-product-cupsize container">
-                            <input type="radio" name="cupsize" id="cupsize-small">
-                            <label for="cupsize-small">S</label>
-                            <input type="radio" name="cupsize" id="cupsize-medium">
-                            <label for="cupsize-medium">M</label>
-                            <input type="radio" name="cupsize" id="cupsize-large">
-                            <label for="cupsize-large">L</label>
-                          </div>
-                        </div>
-                        <div class="content-product-box">
-                          <a href="cart.html" class="content-product-button">Buy Now</a>
-                          <a href="cart.html" class="content-product-button">Add To Cart</a>
+                          <a href="detail.html" class="content-product-button">View Detail</a>
+                          <button value="17" id="addtocart" onclick="addToCart(this)" class="content-product-button">Add To Cart</button>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="content-product">
                     <div class="content-product-card">
-                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-img">
+                        <img src="img/coffee/latte.jpg" name="18-img" width="100%" height="100%" alt="image company">
+                      </div>
                       <div class="content-product-card-content">
                         <div class="content-product-title">
-                          <h2 class="content-product-title-cell">Latte</h2>
-                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                          <h2 class="content-product-title-cell" name="18-title">Latte</h2>
+                          <h4 class="content-product-title-cell" name="18-price">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-quantity">
+                          <button value="18" onclick="quantityMin(this)">-</button>
+                          <input type="text" name="18-quantity" value="1" disabled>
+                          <button value="18" onclick="quantityAdd(this)">+</button>
+                        </div>
+                        <div class="content-product-cupsize container">
+                          <input type="radio" name="18-size" id="18-small" value="Small">
+                          <label for="18-small">S</label>
+                          <input type="radio" name="18-size" id="18-medium" value="Medium">
+                          <label for="18-medium">M</label>
+                          <input type="radio" checked="checked" name="18-size" id="18-large" value="Large">
+                          <label for="18-large">L</label>
                         </div>
                         <div class="content-product-box">
-                          <div class="container">
-                            <button>-</button>
-                            <label>1</label>
-                            <button>+</button>
-                          </div>
+                          <a href="detail.html" class="content-product-button">View Detail</a>
+                          <button value="18" id="addtocart" onclick="addToCart(this)" class="content-product-button">Add To Cart</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content-product">
+                    <div class="content-product-card">
+                      <div class="content-product-card-img">
+                        <img src="img/coffee/latte.jpg" name="19-img" width="100%" height="100%" alt="image company">
+                      </div>
+                      <div class="content-product-card-content">
+                        <div class="content-product-title">
+                          <h2 class="content-product-title-cell" name="19-title">Latte</h2>
+                          <h4 class="content-product-title-cell" name="19-price">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-quantity">
+                          <button value="19" onclick="quantityMin(this)">-</button>
+                          <input type="text" name="19-quantity" value="1" disabled>
+                          <button value="19" onclick="quantityAdd(this)">+</button>
+                        </div>
+                        <div class="content-product-cupsize container">
+                          <input type="radio" name="19-size" id="19-small" value="Small">
+                          <label for="19-small">S</label>
+                          <input type="radio" name="19-size" id="19-medium" value="Medium">
+                          <label for="19-medium">M</label>
+                          <input type="radio" checked="checked" name="19-size" id="19-large" value="Large">
+                          <label for="19-large">L</label>
                         </div>
                         <div class="content-product-box">
-                          <div class="content-product-cupsize container">
-                            <input type="radio" name="cupsize" id="cupsize-small">
-                            <label for="cupsize-small">S</label>
-                            <input type="radio" name="cupsize" id="cupsize-medium">
-                            <label for="cupsize-medium">M</label>
-                            <input type="radio" name="cupsize" id="cupsize-large">
-                            <label for="cupsize-large">L</label>
-                          </div>
-                        </div>
-                        <div class="content-product-box">
-                          <a href="cart.html" class="content-product-button">Buy Now</a>
-                          <a href="cart.html" class="content-product-button">Add To Cart</a>
+                          <a href="detail.html" class="content-product-button">View Detail</a>
+                          <button value="19" id="addtocart" onclick="addToCart(this)" class="content-product-button">Add To Cart</button>
                         </div>
                       </div>
                     </div>
@@ -621,320 +824,300 @@
                 <div class="content-submenucontent-container">
                   <div class="content-product">
                     <div class="content-product-card">
-                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-img">
+                        <img src="img/bakery/almond cookie.jpg" name="20-img" width="100%" height="100%" alt="image company">
+                      </div>
                       <div class="content-product-card-content">
                         <div class="content-product-title">
-                          <h2 class="content-product-title-cell">Latte</h2>
-                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                          <h2 class="content-product-title-cell" name="20-title">Almond Cookie</h2>
+                          <h4 class="content-product-title-cell" name="20-price">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-quantity">
+                          <button value="20" onclick="quantityMin(this)">-</button>
+                          <input type="text" name="20-quantity" value="1" disabled>
+                          <button value="20" onclick="quantityAdd(this)">+</button>
+                        </div>
+                        <div class="content-product-cupsize container">
+                          <input type="radio" name="20-size" id="20-small" value="1Pc">
+                          <label for="20-small">1Pc</label>
+                          <input type="radio" name="20-size" id="20-medium" value="3Pc" style="display: none;" disabled>
+                          <label for="20-medium" style="display: none;">3Pc</label>
+                          <input type="radio" checked="checked" name="20-size" id="20-large" value="6Pc">
+                          <label for="20-large">6Pc</label>
                         </div>
                         <div class="content-product-box">
-                          <div class="container">
-                            <button>-</button>
-                            <label>1</label>
-                            <button>+</button>
-                          </div>
-                        </div>
-                        <div class="content-product-box">
-                          <div class="content-product-cupsize container">
-                            <input type="radio" name="cupsize" id="cupsize-small">
-                            <label for="cupsize-small">S</label>
-                            <input type="radio" name="cupsize" id="cupsize-medium">
-                            <label for="cupsize-medium">M</label>
-                            <input type="radio" name="cupsize" id="cupsize-large">
-                            <label for="cupsize-large">L</label>
-                          </div>
-                        </div>
-                        <div class="content-product-box">
-                          <a href="cart.html" class="content-product-button">Buy Now</a>
-                          <a href="cart.html" class="content-product-button">Add To Cart</a>
+                          <a href="detail.html" class="content-product-button">View Detail</a>
+                          <button value="20" id="addtocart" onclick="addToCart(this)" class="content-product-button">Add To Cart</button>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="content-product">
                     <div class="content-product-card">
-                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-img">
+                        <img src="img/bakery/sour cream cake.jpg" name="21-img" width="100%" height="100%" alt="image company">
+                      </div>
                       <div class="content-product-card-content">
                         <div class="content-product-title">
-                          <h2 class="content-product-title-cell">Latte</h2>
-                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                          <h2 class="content-product-title-cell" name="21-title">Sour Cream Cake</h2>
+                          <h4 class="content-product-title-cell" name="21-price">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-quantity">
+                          <button value="21" onclick="quantityMin(this)">-</button>
+                          <input type="text" name="21-quantity" value="1" disabled>
+                          <button value="21" onclick="quantityAdd(this)">+</button>
+                        </div>
+                        <div class="content-product-cupsize container">
+                          <input type="radio" name="21-size" id="21-small" value="1Pc">
+                          <label for="21-small">1Pc</label>
+                          <input type="radio" name="21-size" id="21-medium" value="3Pc" style="display: none;" disabled>
+                          <label for="21-medium" style="display: none;">3Pc</label>
+                          <input type="radio" checked="checked" name="21-size" id="21-large" value="6Pc">
+                          <label for="21-large">6Pc</label>
                         </div>
                         <div class="content-product-box">
-                          <div class="container">
-                            <button>-</button>
-                            <label>1</label>
-                            <button>+</button>
-                          </div>
-                        </div>
-                        <div class="content-product-box">
-                          <div class="content-product-cupsize container">
-                            <input type="radio" name="cupsize" id="cupsize-small">
-                            <label for="cupsize-small">S</label>
-                            <input type="radio" name="cupsize" id="cupsize-medium">
-                            <label for="cupsize-medium">M</label>
-                            <input type="radio" name="cupsize" id="cupsize-large">
-                            <label for="cupsize-large">L</label>
-                          </div>
-                        </div>
-                        <div class="content-product-box">
-                          <a href="cart.html" class="content-product-button">Buy Now</a>
-                          <a href="cart.html" class="content-product-button">Add To Cart</a>
+                          <a href="detail.html" class="content-product-button">View Detail</a>
+                          <button value="21" id="addtocart" onclick="addToCart(this)" class="content-product-button">Add To Cart</button>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="content-product">
                     <div class="content-product-card">
-                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-img">
+                        <img src="img/bakery/sour cream cake.jpg" name="22-img" width="100%" height="100%" alt="image company">
+                      </div>
                       <div class="content-product-card-content">
                         <div class="content-product-title">
-                          <h2 class="content-product-title-cell">Latte</h2>
-                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                          <h2 class="content-product-title-cell" name="22-title">Sour Cream Cake</h2>
+                          <h4 class="content-product-title-cell" name="22-price">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-quantity">
+                          <button value="22" onclick="quantityMin(this)">-</button>
+                          <input type="text" name="22-quantity" value="1" disabled>
+                          <button value="22" onclick="quantityAdd(this)">+</button>
+                        </div>
+                        <div class="content-product-cupsize container">
+                          <input type="radio" name="22-size" id="22-small" value="1Pc">
+                          <label for="22-small">1Pc</label>
+                          <input type="radio" name="22-size" id="22-medium" value="3Pc" style="display: none;" disabled>
+                          <label for="22-medium" style="display: none;">3Pc</label>
+                          <input type="radio" checked="checked" name="22-size" id="22-large" value="6Pc">
+                          <label for="22-large">6Pc</label>
                         </div>
                         <div class="content-product-box">
-                          <div class="container">
-                            <button>-</button>
-                            <label>1</label>
-                            <button>+</button>
-                          </div>
-                        </div>
-                        <div class="content-product-box">
-                          <div class="content-product-cupsize container">
-                            <input type="radio" name="cupsize" id="cupsize-small">
-                            <label for="cupsize-small">S</label>
-                            <input type="radio" name="cupsize" id="cupsize-medium">
-                            <label for="cupsize-medium">M</label>
-                            <input type="radio" name="cupsize" id="cupsize-large">
-                            <label for="cupsize-large">L</label>
-                          </div>
-                        </div>
-                        <div class="content-product-box">
-                          <a href="cart.html" class="content-product-button">Buy Now</a>
-                          <a href="cart.html" class="content-product-button">Add To Cart</a>
+                          <a href="detail.html" class="content-product-button">View Detail</a>
+                          <button value="22" id="addtocart" onclick="addToCart(this)" class="content-product-button">Add To Cart</button>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="content-product">
                     <div class="content-product-card">
-                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-img">
+                        <img src="img/bakery/sour cream cake.jpg" name="23-img" width="100%" height="100%" alt="image company">
+                      </div>
                       <div class="content-product-card-content">
                         <div class="content-product-title">
-                          <h2 class="content-product-title-cell">Latte</h2>
-                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                          <h2 class="content-product-title-cell" name="23-title">Sour Cream Cake</h2>
+                          <h4 class="content-product-title-cell" name="23-price">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-quantity">
+                          <button value="23" onclick="quantityMin(this)">-</button>
+                          <input type="text" name="23-quantity" value="1" disabled>
+                          <button value="23" onclick="quantityAdd(this)">+</button>
+                        </div>
+                        <div class="content-product-cupsize container">
+                          <input type="radio" name="23-size" id="23-small" value="1Pc">
+                          <label for="23-small">1Pc</label>
+                          <input type="radio" name="23-size" id="23-medium" value="3Pc" style="display: none;" disabled>
+                          <label for="23-medium" style="display: none;">3Pc</label>
+                          <input type="radio" checked="checked" name="23-size" id="23-large" value="6Pc">
+                          <label for="23-large">6Pc</label>
                         </div>
                         <div class="content-product-box">
-                          <div class="container">
-                            <button>-</button>
-                            <label>1</label>
-                            <button>+</button>
-                          </div>
-                        </div>
-                        <div class="content-product-box">
-                          <div class="content-product-cupsize container">
-                            <input type="radio" name="cupsize" id="cupsize-small">
-                            <label for="cupsize-small">S</label>
-                            <input type="radio" name="cupsize" id="cupsize-medium">
-                            <label for="cupsize-medium">M</label>
-                            <input type="radio" name="cupsize" id="cupsize-large">
-                            <label for="cupsize-large">L</label>
-                          </div>
-                        </div>
-                        <div class="content-product-box">
-                          <a href="cart.html" class="content-product-button">Buy Now</a>
-                          <a href="cart.html" class="content-product-button">Add To Cart</a>
+                          <a href="detail.html" class="content-product-button">View Detail</a>
+                          <button value="23" id="addtocart" onclick="addToCart(this)" class="content-product-button">Add To Cart</button>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="content-product">
                     <div class="content-product-card">
-                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-img">
+                        <img src="img/bakery/sour cream cake.jpg" name="24-img" width="100%" height="100%" alt="image company">
+                      </div>
                       <div class="content-product-card-content">
                         <div class="content-product-title">
-                          <h2 class="content-product-title-cell">Latte</h2>
-                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                          <h2 class="content-product-title-cell" name="24-title">Sour Cream Cake</h2>
+                          <h4 class="content-product-title-cell" name="24-price">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-quantity">
+                          <button value="24" onclick="quantityMin(this)">-</button>
+                          <input type="text" name="24-quantity" value="1" disabled>
+                          <button value="24" onclick="quantityAdd(this)">+</button>
+                        </div>
+                        <div class="content-product-cupsize container">
+                          <input type="radio" name="24-size" id="24-small" value="1Pc">
+                          <label for="24-small">1Pc</label>
+                          <input type="radio" name="24-size" id="24-medium" value="3Pc" style="display: none;" disabled>
+                          <label for="24-medium" style="display: none;">3Pc</label>
+                          <input type="radio" checked="checked" name="24-size" id="24-large" value="6Pc">
+                          <label for="24-large">6Pc</label>
                         </div>
                         <div class="content-product-box">
-                          <div class="container">
-                            <button>-</button>
-                            <label>1</label>
-                            <button>+</button>
-                          </div>
-                        </div>
-                        <div class="content-product-box">
-                          <div class="content-product-cupsize container">
-                            <input type="radio" name="cupsize" id="cupsize-small">
-                            <label for="cupsize-small">S</label>
-                            <input type="radio" name="cupsize" id="cupsize-medium">
-                            <label for="cupsize-medium">M</label>
-                            <input type="radio" name="cupsize" id="cupsize-large">
-                            <label for="cupsize-large">L</label>
-                          </div>
-                        </div>
-                        <div class="content-product-box">
-                          <a href="cart.html" class="content-product-button">Buy Now</a>
-                          <a href="cart.html" class="content-product-button">Add To Cart</a>
+                          <a href="detail.html" class="content-product-button">View Detail</a>
+                          <button value="24" id="addtocart" onclick="addToCart(this)" class="content-product-button">Add To Cart</button>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="content-product">
                     <div class="content-product-card">
-                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-img">
+                        <img src="img/bakery/sour cream cake.jpg" name="25-img" width="100%" height="100%" alt="image company">
+                      </div>
                       <div class="content-product-card-content">
                         <div class="content-product-title">
-                          <h2 class="content-product-title-cell">Latte</h2>
-                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                          <h2 class="content-product-title-cell" name="25-title">Sour Cream Cake</h2>
+                          <h4 class="content-product-title-cell" name="25-price">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-quantity">
+                          <button value="25" onclick="quantityMin(this)">-</button>
+                          <input type="text" name="25-quantity" value="1" disabled>
+                          <button value="25" onclick="quantityAdd(this)">+</button>
+                        </div>
+                        <div class="content-product-cupsize container">
+                          <input type="radio" name="25-size" id="25-small" value="1Pc">
+                          <label for="25-small">1Pc</label>
+                          <input type="radio" name="25-size" id="25-medium" value="3Pc" style="display: none;" disabled>
+                          <label for="25-medium" style="display: none;">3Pc</label>
+                          <input type="radio" checked="checked" name="25-size" id="25-large" value="6Pc">
+                          <label for="25-large">6Pc</label>
                         </div>
                         <div class="content-product-box">
-                          <div class="container">
-                            <button>-</button>
-                            <label>1</label>
-                            <button>+</button>
-                          </div>
-                        </div>
-                        <div class="content-product-box">
-                          <div class="content-product-cupsize container">
-                            <input type="radio" name="cupsize" id="cupsize-small">
-                            <label for="cupsize-small">S</label>
-                            <input type="radio" name="cupsize" id="cupsize-medium">
-                            <label for="cupsize-medium">M</label>
-                            <input type="radio" name="cupsize" id="cupsize-large">
-                            <label for="cupsize-large">L</label>
-                          </div>
-                        </div>
-                        <div class="content-product-box">
-                          <a href="cart.html" class="content-product-button">Buy Now</a>
-                          <a href="cart.html" class="content-product-button">Add To Cart</a>
+                          <a href="detail.html" class="content-product-button">View Detail</a>
+                          <button value="25" id="addtocart" onclick="addToCart(this)" class="content-product-button">Add To Cart</button>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="content-product">
                     <div class="content-product-card">
-                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-img">
+                        <img src="img/bakery/sour cream cake.jpg" name="26-img" width="100%" height="100%" alt="image company">
+                      </div>
                       <div class="content-product-card-content">
                         <div class="content-product-title">
-                          <h2 class="content-product-title-cell">Latte</h2>
-                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                          <h2 class="content-product-title-cell" name="26-title">Sour Cream Cake</h2>
+                          <h4 class="content-product-title-cell" name="26-price">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-quantity">
+                          <button value="26" onclick="quantityMin(this)">-</button>
+                          <input type="text" name="26-quantity" value="1" disabled>
+                          <button value="26" onclick="quantityAdd(this)">+</button>
+                        </div>
+                        <div class="content-product-cupsize container">
+                          <input type="radio" name="26-size" id="26-small" value="1Pc">
+                          <label for="26-small">1Pc</label>
+                          <input type="radio" name="26-size" id="26-medium" value="3Pc" style="display: none;" disabled>
+                          <label for="26-medium" style="display: none;">3Pc</label>
+                          <input type="radio" checked="checked" name="26-size" id="26-large" value="6Pc">
+                          <label for="26-large">6Pc</label>
                         </div>
                         <div class="content-product-box">
-                          <div class="container">
-                            <button>-</button>
-                            <label>1</label>
-                            <button>+</button>
-                          </div>
-                        </div>
-                        <div class="content-product-box">
-                          <div class="content-product-cupsize container">
-                            <input type="radio" name="cupsize" id="cupsize-small">
-                            <label for="cupsize-small">S</label>
-                            <input type="radio" name="cupsize" id="cupsize-medium">
-                            <label for="cupsize-medium">M</label>
-                            <input type="radio" name="cupsize" id="cupsize-large">
-                            <label for="cupsize-large">L</label>
-                          </div>
-                        </div>
-                        <div class="content-product-box">
-                          <a href="cart.html" class="content-product-button">Buy Now</a>
-                          <a href="cart.html" class="content-product-button">Add To Cart</a>
+                          <a href="detail.html" class="content-product-button">View Detail</a>
+                          <button value="26" id="addtocart" onclick="addToCart(this)" class="content-product-button">Add To Cart</button>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="content-product">
                     <div class="content-product-card">
-                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-img">
+                        <img src="img/bakery/sour cream cake.jpg" name="27-img" width="100%" height="100%" alt="image company">
+                      </div>
                       <div class="content-product-card-content">
                         <div class="content-product-title">
-                          <h2 class="content-product-title-cell">Latte</h2>
-                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                          <h2 class="content-product-title-cell" name="27-title">Sour Cream Cake</h2>
+                          <h4 class="content-product-title-cell" name="27-price">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-quantity">
+                          <button value="27" onclick="quantityMin(this)">-</button>
+                          <input type="text" name="27-quantity" value="1" disabled>
+                          <button value="27" onclick="quantityAdd(this)">+</button>
+                        </div>
+                        <div class="content-product-cupsize container">
+                          <input type="radio" name="27-size" id="27-small" value="1Pc">
+                          <label for="27-small">1Pc</label>
+                          <input type="radio" name="27-size" id="27-medium" value="3Pc" style="display: none;" disabled>
+                          <label for="27-medium" style="display: none;">3Pc</label>
+                          <input type="radio" checked="checked" name="27-size" id="27-large" value="6Pc">
+                          <label for="27-large">6Pc</label>
                         </div>
                         <div class="content-product-box">
-                          <div class="container">
-                            <button>-</button>
-                            <label>1</label>
-                            <button>+</button>
-                          </div>
-                        </div>
-                        <div class="content-product-box">
-                          <div class="content-product-cupsize container">
-                            <input type="radio" name="cupsize" id="cupsize-small">
-                            <label for="cupsize-small">S</label>
-                            <input type="radio" name="cupsize" id="cupsize-medium">
-                            <label for="cupsize-medium">M</label>
-                            <input type="radio" name="cupsize" id="cupsize-large">
-                            <label for="cupsize-large">L</label>
-                          </div>
-                        </div>
-                        <div class="content-product-box">
-                          <a href="cart.html" class="content-product-button">Buy Now</a>
-                          <a href="cart.html" class="content-product-button">Add To Cart</a>
+                          <a href="detail.html" class="content-product-button">View Detail</a>
+                          <button value="27" id="addtocart" onclick="addToCart(this)" class="content-product-button">Add To Cart</button>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="content-product">
                     <div class="content-product-card">
-                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-img">
+                        <img src="img/bakery/sour cream cake.jpg" name="28-img" width="100%" height="100%" alt="image company">
+                      </div>
                       <div class="content-product-card-content">
                         <div class="content-product-title">
-                          <h2 class="content-product-title-cell">Latte</h2>
-                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                          <h2 class="content-product-title-cell" name="28-title">Sour Cream Cake</h2>
+                          <h4 class="content-product-title-cell" name="28-price">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-quantity">
+                          <button value="28" onclick="quantityMin(this)">-</button>
+                          <input type="text" name="28-quantity" value="1" disabled>
+                          <button value="28" onclick="quantityAdd(this)">+</button>
+                        </div>
+                        <div class="content-product-cupsize container">
+                          <input type="radio" name="28-size" id="28-small" value="1Pc">
+                          <label for="28-small">1Pc</label>
+                          <input type="radio" name="28-size" id="28-medium" value="3Pc" style="display: none;" disabled>
+                          <label for="28-medium" style="display: none;">3Pc</label>
+                          <input type="radio" checked="checked" name="28-size" id="28-large" value="6Pc">
+                          <label for="28-large">6Pc</label>
                         </div>
                         <div class="content-product-box">
-                          <div class="container">
-                            <button>-</button>
-                            <label>1</label>
-                            <button>+</button>
-                          </div>
-                        </div>
-                        <div class="content-product-box">
-                          <div class="content-product-cupsize container">
-                            <input type="radio" name="cupsize" id="cupsize-small">
-                            <label for="cupsize-small">S</label>
-                            <input type="radio" name="cupsize" id="cupsize-medium">
-                            <label for="cupsize-medium">M</label>
-                            <input type="radio" name="cupsize" id="cupsize-large">
-                            <label for="cupsize-large">L</label>
-                          </div>
-                        </div>
-                        <div class="content-product-box">
-                          <a href="cart.html" class="content-product-button">Buy Now</a>
-                          <a href="cart.html" class="content-product-button">Add To Cart</a>
+                          <a href="detail.html" class="content-product-button">View Detail</a>
+                          <button value="28" id="addtocart" onclick="addToCart(this)" class="content-product-button">Add To Cart</button>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="content-product">
                     <div class="content-product-card">
-                      <img src="img/latte.jpg" width="100%" height="100%" alt="image company">
+                      <div class="content-product-card-img">
+                        <img src="img/bakery/sour cream cake.jpg" name="29-img" width="100%" height="100%" alt="image company">
+                      </div>
                       <div class="content-product-card-content">
                         <div class="content-product-title">
-                          <h2 class="content-product-title-cell">Latte</h2>
-                          <h4 class="content-product-title-cell">$ 3.25</h4>
+                          <h2 class="content-product-title-cell" name="29-title">Sour Cream Cake</h2>
+                          <h4 class="content-product-title-cell" name="29-price">$ 3.25</h4>
+                        </div>
+                        <div class="content-product-quantity">
+                          <button value="29" onclick="quantityMin(this)">-</button>
+                          <input type="text" name="29-quantity" value="1" disabled>
+                          <button value="29" onclick="quantityAdd(this)">+</button>
+                        </div>
+                        <div class="content-product-cupsize container">
+                          <input type="radio" name="29-size" id="29-small" value="1Pc">
+                          <label for="29-small">1Pc</label>
+                          <input type="radio" name="29-size" id="29-medium" value="3Pc" style="display: none;" disabled>
+                          <label for="29-medium" style="display: none;">3Pc</label>
+                          <input type="radio" checked="checked" name="29-size" id="29-large" value="6Pc">
+                          <label for="29-large">6Pc</label>
                         </div>
                         <div class="content-product-box">
-                          <div class="container">
-                            <button>-</button>
-                            <label>1</label>
-                            <button>+</button>
-                          </div>
-                        </div>
-                        <div class="content-product-box">
-                          <div class="content-product-cupsize container">
-                            <input type="radio" name="cupsize" id="cupsize-small">
-                            <label for="cupsize-small">S</label>
-                            <input type="radio" name="cupsize" id="cupsize-medium">
-                            <label for="cupsize-medium">M</label>
-                            <input type="radio" name="cupsize" id="cupsize-large">
-                            <label for="cupsize-large">L</label>
-                          </div>
-                        </div>
-                        <div class="content-product-box">
-                          <a href="cart.html" class="content-product-button">Buy Now</a>
-                          <a href="cart.html" class="content-product-button">Add To Cart</a>
+                          <a href="detail.html" class="content-product-button">View Detail</a>
+                          <button value="29" id="addtocart" onclick="addToCart(this)" class="content-product-button">Add To Cart</button>
                         </div>
                       </div>
                     </div>
