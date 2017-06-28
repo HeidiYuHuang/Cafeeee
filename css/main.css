@@ -607,7 +607,6 @@ div.content-submenu button.active {
   display: none;
   border-top: none;
   text-align: left;
-  background: #CDCDC0;
   -webkit-animation: fadeEffect 1s;
   animation: fadeEffect 1s;
 }
@@ -687,6 +686,7 @@ div.content-submenu button.active {
   padding: 0.5em;
 }
 
+/*each product card*/
 .content-product-card {
   background-color: white;
   margin: 0.5em;
@@ -710,17 +710,6 @@ div.content-submenu button.active {
   text-align: right;
 }
 
-.content-product-cupsize>label {
-  font-size: 1em;
-  font-weight: lighter;
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-top: 0.1em;
-  padding-bottom: 0.1em;
-  margin-left: 0.1em;
-  margin-right: 0.1em;
-}
-
 .content-product-box {
   margin-top: 1em;
   margin-bottom: 1em;
@@ -736,6 +725,53 @@ div.content-submenu button.active {
   margin-bottom: 0.2em;
 }
 
+.content-product-quantity {
+
+}
+
+.content-product-quantity>input {
+  border-style: none;
+  outline: none;
+  cursor: default;
+  text-align: center;
+  width: 2em;
+  font-size: 1.3em;
+  background-color: white;
+}
+
+.content-product-quantity>button:hover {
+  background-color: #626D71;
+  color: white;
+}
+
+.content-product-quantity>button:focus {
+  outline: none;
+}
+
+.content-product-cupsize>label {
+  font-size: 1em;
+  font-weight: lighter;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+  margin-left: 0.1em;
+  margin-right: 0.1em;
+  border-style: solid;
+  border-color: #626D71;
+  border-width: 1px;
+}
+
+input[type=radio] {
+  position: absolute;
+  visibility: hidden;
+  display: none;
+}
+
+input[type=radio]:checked {
+  color: white;
+  background: #626D71;
+}
 
 
 
