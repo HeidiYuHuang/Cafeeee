@@ -117,3 +117,8 @@ footer{
   left:0;
   bottom:0;
 }
+
+hr {
+    margin: auto;
+    width: 40%;
+}

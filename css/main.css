@@ -802,6 +802,69 @@ input[type=radio]:checked + label {
   outline: none;
 }
 
+/*comingsoon page*/
+.coming-content {
+  height: 33.5em;
+}
+
+.coming-bgimg {
+  background-image: url('../img/event2.jpg');
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
+  filter: 
+}
+
+.coming-middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.coming-middle>h1 {
+  color: white;
+  font-family: 'Catamaran';
+  font-weight: bolder;
+  font-size: 2.5em;
+}
+
+.coming-middle>p {
+  color: white;
+}
+
+.coming-overlay {
+    position: relative;
+    top: -60%;
+    background-color: rgba(0,0,0,0.6);
+    width: 100%;
+    height: 10em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
