@@ -10,44 +10,53 @@
 
   <body>
     <h1>Cafeeee Styleguide</h1>
-    <nav class="nav-main box nav-overall">
-      <a class="button-nav nav-main-item box-item" href="#interactive_elements">Interactive Elements</a>
-      <a class="button-nav nav-main-item box-item" href="#text_elements"> Text Elements</a>
-      <a class="button-nav nav-main-item box-item" href="#combined_elements">Combine Elements</a>
-      <a class="button-nav nav-main-item box-item" href="#sitemap_elements">Sitemap</a>
-      <a class="button-nav nav-main-item box-item" href="citations.html">Citations</a>
-    </nav>
+    <div class="container">
+      <nav class="nav-main box nav-overall">
+        <a class="#" href="#interactive_elements">Interactive Elements</a>
+        <a class="#" href="#text_elements"> Text Elements</a>
+        <a class="#" href="#color palette">Color Palette</a>
+        <a class="#" href="citations.html">Citations/Git repository</a>
+      </nav>
+    </div>
 
     <!-- INTERACTIVE ELEMENTS SECTION // -->
-    <section id="interactive_elements">
-     <h2> INTERACTIVE ELEMENTS</h2>
-      <!-- Default Button styling section -->
-      <section id="button">
-          <h3>Navigation Button</h3>
+    <div class="container">
+      <section id="interactive_elements">
+       <h2> INTERACTIVE ELEMENTS</h2>
+        <!-- Default Button styling section -->
+
+            <h3>Navigation Button</h3>
+            <h4>CSS selector:</h4>
+              <p>.header-nav-size</p>
+            <h4>Sample code:</h4>
+              <div class ="code">
+                <code>&lt;a href="#" class="button-nav"&gt;Default Button&lt;/a&gt;</code>
+              </div>
+            <h4>Rendered element:</h4>
+
+                  <div class="header-nav-main">
+                    <nav class="header-nav-style">
+                        <a class="header-nav-size" href="home.html">Home</a>
+                    </nav>
+                  </div>
+        </section>
+      </div>
+
+      <div class="container">
+        <section id="in-text-link">
+          <h3>In-text link</h3>
           <h4>CSS selector:</h4>
-            <p>.button-nav</p>
+            <p>.inline-text</p>
           <h4>Sample code:</h4>
             <div class ="code">
-              <code>&lt;a href="#" class="button-nav"&gt;Default Button&lt;/a&gt;</code>
+              <code>&lt;a href="#" class="inline-text"&gt;inline-text&lt;/a&gt;</code>
             </div>
           <h4>Rendered element:</h4>
-            <a class="button-nav" href="#">Navigation item</a>
-      </section>
+              <a href="#" class="inline-text">Browse</a>
+        </section>
+      </div>
 
-      <section id="in-text-link">
-        <h3>In-text link</h3>
-        <h4>CSS selector:</h4>
-          <p>.inline-text</p>
-        <h4>Sample code:</h4>
-          <div class ="code">
-            <code>&lt;a href="#" class="inline-text"&gt;inline-text&lt;/a&gt;</code>
-          </div>
-        <h4>Rendered element:</h4>
-            <a href="#" class="inline-text">Browse</a>
-      </section>
-
-
-
+    <div class="container">
       <section id="submit-button">
         <h3>Submit/Reset Buttons</h3>
         <h4>CSS selector:</h4>
@@ -56,46 +65,48 @@
           <h4>Sample code:</h4>
 
           <div class ="code">
-           <code>&lt;button type="submit" value="confirm" class="buttons"&gt;Confirm&lt;/a&gt;</code>
+           <code>&lt;button type="submit" class="confirm-nav"&gt;Confirm&lt;/a&gt;</code>
           </div>
 
          <h4>Rendered element:</h4>
-            <div class="code">
-                <button type="submit" value="confirm" class="buttons"> Confirm</button>
+            <div class="confirm-button">
+                <a href= "confirmation.html" class="confirm-nav">Confirm</a>
             </div>
+         </section>
+      </div>
 
-      </section>
-
-      <section id="text-input">
+    <div class="container">
+        <section id="text-input">
          <h3>Text Input Field</h3>
 
-              <h4>CSS selector:</h4>
-                <p>.form-content-text</p>
+         <h4>CSS selector:</h4>
+         <p>.paymentform</p>
 
-              <h4>Sample code:</h4>
-                <div class="code">
-                  <code>&lt;form class="form" name="form-content"&gt;<br>
+         <h4>Sample code:</h4>
+         <div class="code">
+          <code>&lt;form class="paymentform"&gt;<br>
 
-                    &lt;label class="label-form"&gt;Destination&lt;/label&gt;<br>
-                    &lt;input class="form-content-text" name="form-content-text" type="text" placeholder="Los Angeles"&gt;<br>
-                   &lt;/form&gt;
-                   </code>
-                </div>
+            &lt;label class="label"&gt;First Name&lt;/label&gt;<br>
+            &lt;input class="form-content-text" placeholder="Jack"&gt;<br>
+            &lt;/form&gt;
+          </code>
+        </div>
 
-              <h4>Rendered element</h4>
-                 <form class="form" name="form-content">
-                   <label class="label">Address:</label>
-                  <input class="form-content-text" name="form-content-text" type="text" placeholder=" Type your address"> 
-                </form> 
+        <h4>Rendered element</h4>
+        <form class="paymentform">
+          <label class="label">First Name:</label>
+          <input class="form-content-text" placeholder="Jack"> 
+        </form> 
 
 
       </section>
-    </section>
+    </div>
     <!-- // INTERACTIVE ELEMENTS SECTION -->
 
 
 
     <!-- TEXT ELEMENTS SECTION // -->
+    <div class="container">
     <section id="text_elements">
        <h2> TEXT ELEMENTS </h2>
 
@@ -135,9 +146,11 @@
 
                   </div>
       </section>
+      </section>
+    </div>
 
+  <div class="container">
       <section>
-
          <h3>Paragraphs</h3>
 
               <h4>CSS selector:</h4>
@@ -158,12 +171,15 @@
 
                 </div>
       </section>
+  </div>
 
+
+   <div class="container">
       <section>
         <h3>Bulleted Lists</h3>
 
-         <h4>CSS selector:</h4>
-                  <p>.list .bullet-list</p>
+            <h4>CSS selector:</h4>
+                <p>.list .bullet-list</p>
          
                 
                   <div class="code">
@@ -196,14 +212,14 @@
                   </ul>
                 </div>
       </section>
+    </div>
 
+    <div class="container">
       <section>
         <h3>Numbered Lists</h3>
 
             <h4>CSS selector:</h4>
                   <p>.list .numbered-list</p>
-         
-                
                   <div class="code">
                     <h4>Sample code:</h4>
                     <code>&lt;ol class="list numbered-list"&gt;<br>
@@ -234,50 +250,25 @@
                     </ol>
                 </div>
           </section>
-          
+        
   
     </section>
+  </div>
     <!-- // TEXT ELEMENTS SECTION -->
 
 
 
-    <!-- COMBINED ELEMENTS SECTION // -->
-    <section id="combined_elements">
-    <h2> COMBINED ELEMENTS</h2>
-
-            <section id="nav" >
-              <h3>Main Navigation</h3>
-                <nav class="nav-main box">
-                  <a class="button-nav nav-main-item box-item" href="#">Menu</a>
-                  <a class="button-nav nav-main-item box-item" href="#">Map</a>
-                  <a class="button-nav nav-main-item box-item" href="#">Events</a>
-                  <a class="button-nav nav-main-item box-item" href="#">About us</a>
-                </nav>
-            </section>
-
-            <section id="product" class="divided-section">
-              <h3>Product Listing</h3>
-                <div class="product-list box">
-                  <p class="box-item"> Latte</p>
-                  <p class="box-item"> Mocha</p>
-                  <p class="box-item"> Americano</p>
-                </div>
-
-            </section>
-
-    </section>
-    <!-- // COMBINED ELEMENTS SECTION -->
 
     <!-- WIREFRAMES SECTION//-->
-    <section id="sitemap_elements">
-          <h2> SITEMAP</h2>
-          <figure>
-            <img src="img/sitemap1.png" width="600" height="1000">
-          </figure> 
-            
+    <section id="color palette">
 
+        <div class="container">
+              <h2> Color palette</h2>
+              <figure>
+                <img src="img/color.png" width="600" height="1000">
+              </figure> 
+        </div>
     </section>
-
 
         <!--// WIREFRAMES SECTION -->
   </body>
