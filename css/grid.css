@@ -253,11 +253,22 @@
   width: 25%;
 }
 
+.contact-grid-col-1of2:{
+   width: 50%;
+}
+
+@media (max-width: 55em) {
+  .grid-col-1of2 {
+      width: 100%;
+    }
+}
+
 @media (max-width: 55em) {
   .grid-col-1of4 {
       width: 50%;
     }
 }
+
 
 @media (max-width: 40em) {
   .grid-col-1of4 {

@@ -2,155 +2,284 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
     <title>Cafeeee</title>
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link href="css/grid.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+    <script src="https://use.fontawesome.com/46831abb25.js"></script>
   </head>
-  <body class="frame">
-    <div class="whole-margin">
-      <!-- header -->
-      <div class="box">
-        <header>
-          <a href="#"></a>
-          <div class="rightbottons">
-            <a href="#">Account</a>
-            <a href="menu.html">Start Order</a>  
-          </div>   
-          <a href="home.html">
-            <div class="logo-top-margin">
-              <h1>
-                Cafeeee
-              </h1>
+  <body onload="widthChange()" onresize="widthChange()"> 
+    <!-- log in -->
+      <div id="login" class="account">
+        <form class="frame">
+          <div class="account-content account-box-animate">
+            <div class="account-closeicon">
+              <i onclick="closeLogin()" class="fa fa-times account-closeicon-color" aria-hidden="true"></i>
             </div>
-          </a>  
-          <div class="nav-top-margin">
-            <nav class="container">
-               <a class="button-nav grid-col-1of3" href="payment.html">Contact &amp; Payment</a>
-               <a class="button-nav grid-col-1of3" href="confirm.html"> Review Order</a>
-               <a class="button-nav grid-col-1of3" href="confirmation.html" >Place Order</a>
+            <div class="account-main">
+              <h2>Log In</h2>
+              <label><b>Username</b></label>
+              <input type="text" placeholder="Enter Username" name="username" required>
+              <label><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="password" required>
+              <button type="submit" onclick="checkEmpty()">Log In</button>
+              <input type="checkbox" checked="checked">Remember me
+              <span class="account-switch">Forgot <a href="#">password?</a></span>
+              <span class="account-switch">Don't have an account? <a onclick="closeLogin();openSignup()" href="#">Sign up here</a></span>
+              <a href="#" class="fa fa-facebook"></a>
+              <a href="#" class="fa fa-twitter"></a>
+              <a href="#" class="fa fa-weibo"></a>
+              <a href="#" class="fa fa-weixin"></a>
+            </div>
+          </div>
+        </form>
+      </div>
+    <!-- sign up -->
+      <div id="signup" class="account">
+        <form class="frame">
+          <div class="account-content account-box-animate">
+            <div class="account-closeicon">
+              <i onclick="closeSignup()" class="fa fa-times account-closeicon-color" aria-hidden="true"></i>
+            </div>
+            <div class="account-main">
+              <h2>Sign Up</h2>
+              <label><b>Email</b></label>
+              <input type="text" placeholder="Enter Email" name="email" required>
+              <label><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="password" required>
+              <label><b>Repeat Password</b></label>
+              <input type="password" placeholder="Repeat Password" name="repeat-password" required>
+              <input type="checkbox" checked="checked">Remember me
+              <p class="account-switch">By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+              <button type="submit">Sign Up</button>
+              <span class="account-switch">Have an account with us? <a onclick="closeSignup();openLogin()" href="#">Log in here</a></span>
+            </div>
+          </div>
+        </form>
+      </div>
+    <!-- header -->
+      <header>
+        <!-- sub navigation bar -->
+          <div id="header-subnav-dropdown">
+            <nav class="header-subnav-style">
+              <a class="header-subnav-size" href="home.html">Home</a>
+              <a class="header-subnav-size" href="menu.html">Menu</a>
+              <a class="header-subnav-size" href="about.html">Our Story</a>
+              <a class="header-subnav-size" href="contact.html">Contact Us</a>
             </nav>
           </div>
-        </header>
-      </div>
-      <!-- content -->
+        <!-- main header -->
+          <div class="header-style">
+            <div class="frame">
+              <!-- logo -->
+                <div class="header-logo">
+                  <a href="home.html">
+                    <h1>
+                      Cafeeee
+                    </h1>
+                  </a>
+                </div>
+              <!-- cart -->
+                <div class="header-cart-position">
+                  <a onclick="toggleCart()" href="#" class="header-cart-size">
+                    <div class="header-cart-inter-position">
+                      <i class="fa fa-shopping-cart header-cart-color" aria-hidden="true" ></i>
+                      <span class="header-cart-color">Cart</span>
+                    </div>
+                  </a>
+                  <!-- cart dropdown -->
+                    <div class="frame">
+                      <ul id="cart" class="cart-dropdown-box cart-dropdown-box-frame">
+                        <li class="cart-dropdown-card">
+                          <a href="payment.html" class="cart-dropdown-button">Check Out</a>
+                          <a href="cart.html" class="cart-dropdown-button">Edit</a>
+                        
+                          <div class="cart-dropdown-card-container">
+                            <p>Your cart is empty</p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                </div>
+              <!-- account -->
+                <!-- login & signup -->
+                  <div class="header-account-style">
+                    <!-- log in -->
+                      <a href="#" class="header-account-a header-account-text">
+                        <div class="header-account-inter-position">
+                          <span onclick="openLogin()" class="header-account-color">Log in</span>
+                        </div>
+                      </a>
+                    <!-- vertical line -->
+                      <span class="header-account-line header-account-text"></span>
+                    <!-- sign up -->
+                      <a href="#" class="header-account-a header-account-text">
+                        <div class="header-account-inter-position">
+                          <span onclick="openSignup()" class="header-account-color">Sign Up</span>
+                        </div>
+                      </a>
+                  </div>
+                <!-- icon -->
+                  <a onclick="openLogin()" href="#" class="header-accounticon-size">
+                    <div class="header-accounticon-inter-position">
+                      <i class="fa fa-user header-accounticon-color" aria-hidden="true" ></i>
+                      <span class="header-accounticon-color">Account</span>
+                    </div>
+                  </a>
+              <!-- search bar -->
+                <div class="header-searchbar">
+                  <input type="text" name="searchbar" class="header-searchbar-form" placeholder="Search this site">
+                  <a href="" class="header-searchbar-icon">
+                    <i class="fa fa-search header-searchbar-icon-style" aria-hidden="true"></i>
+                  </a>
+                </div>
+                <!-- icon -->
+                  <a href="#" class="header-searchicon-size">
+                    <div class="header-searchicon-inter-position">
+                      <i class="fa fa-search header-searchicon-color" aria-hidden="true" ></i>
+                    </div>
+                  </a>
+              <!-- navigation bar -->
+                <div class="header-nav-main">
+                  <nav class="header-nav-style">
+                      <a class="header-nav-size" href="home.html">Home</a>
+                      <a class="header-nav-size" href="menu.html">Menu</a>
+                      <a class="header-nav-size" href="about.html">Our Story</a>
+                      <a class="header-nav-size" href="contact.html">Contact Us</a>
+                  </nav>
+                  <!-- icon -->
+                    <a href="#" class="header-navicon-size" id="header-nav-icon" onclick="dropdownSubnav()">
+                      <div class="header-navicon-inter-position">
+                        <i class="fa fa-bars header-navicon-color" aria-hidden="true" ></i>
+                      </div>
+                    </a>
+                </div>
+            </div>
+          </div>
+      </header>
+    <!-- content -->
       <div class="content-top-margin">
-        <div class="box">
-          <h3>Tell us about youself!</h3>
-          <div>
-            <form class="form">
-                  <label class="label">First Name:</label>
-                  <input class="form-content-text" placeholder="Jack"> 
-            </form> 
-            <form class="form">
-                  <label class="label">Last Name:</label>
-                  <input class="form-content-text" placeholder="Black"> 
-            </form> 
-            <form class="form">
-                  <label class="label">Email Address:</label>
-                  <input class="form-content-text" placeholder="Jack@gmail.com"> 
-            </form> 
-            <form class="form">
-                  <label class="label">Phone Number:</label>
-                  <input class="form-content-text" placeholder="778-999-9999"> 
-            </form> 
-            <form class="form">
-                  <label class="label">Delivery Address:</label>
-                  <input class="form-content-text" placeholder=" Type your address"> 
-            </form> 
-          </div>
-          <div>
-            <p>Edit Address</p>
+        <div class="frame">
+          <div class="content-horizontal-margin">
+
+                
+                  <div class="form-1of2">
+                    <h2>Contact</h2>
+                      <div class="payment-content">
+                        <form class="paymentform">
+                              <label class="label">First Name:</label>
+                              <input class="form-content-text" placeholder="Jack"> 
+                        </form> 
+                        <form class="paymentform">
+                              <label class="label">Last Name:</label>
+                              <input class="form-content-text" placeholder="Black"> 
+                        </form> 
+                        <form class="paymentform">
+                              <label class="label">Email Address:</label>
+                              <input class="form-content-text" placeholder="Jack@gmail.com"> 
+                        </form> 
+                        <form class="paymentform">
+                              <label class="label">Phone Number:</label>
+                              <input class="form-content-text" placeholder="778-999-9999"> 
+                        </form> 
+                        <form class="paymentform">
+                              <label class="label">Delivery Address:</label>
+                              <input class="form-content-text" placeholder=" Type your address"> 
+                        </form> 
+                      </div>
+                    </div>
+
+                    
+                  <div class="form2-1of2">
+                    <h2>Payment</h2>
+                      <div class="payment-content">
+                        <form class="paymentform">
+                              <label class="label">Card number:</label>
+                              <input class="form-content-text" placeholder="5191 2301 8888 8888"> 
+                        </form> 
+
+                        <form class="paymentform">
+                              <label class="label">Holder Name:</label>
+                              <input class="form-content-text" placeholder="Jack Black"> 
+                        </form> 
+
+                        <form class="paymentform">
+                              <label class="label">Expire Date(MM/YY):</label>
+                              <input class="form-content-text" placeholder="06/19"> 
+                        </form> 
+
+                        <form class="paymentform">
+                              <label class="label">Secure Code:</label>
+                              <input class="form-content-text" placeholder="413"> 
+                        </form> 
+                      </div>
+
+                      <div class="payment-button">
+                        <a href= "confirm.html" class="confirm-nav">Confirm</a>
+                      </div>
+                  </div>
+              </div>
+            </div>
           </div>
 
-          <div>
-            <h4>Payment</h4>
-          </div>
-
-          <div>
-            <form class="form">
-                  <label class="label">Card number:</label>
-                  <input class="form-content-text" placeholder="5191 2301 8888 8888"> 
-            </form> 
-          </div>
-          <div>
-            <form class="form">
-                  <label class="label">Holder Name:</label>
-                  <input class="form-content-text" placeholder="Jack Black"> 
-            </form> 
-          </div>
-          <div>
-            <form class="form">
-                  <label class="label">Expire Date(MM/YY):</label>
-                  <input class="form-content-text" placeholder="06/19"> 
-            </form> 
-          </div>
-          <div>
-            <form class="form">
-                  <label class="label">Secure Code:</label>
-                  <input class="form-content-text" placeholder="413"> 
-            </form> 
-          </div>
-
-          <div class="button">
-            <a href= "confirm.html" class="confirm-nav">Confirm</a>
-          </div>
-
-
-      
-        </div>
-      </div>
-      <!-- footer -->
+    <!-- footer -->
       <div class="footer-top-margin">
         <div class="box">
           <footer>
-            <div class="container">
-              <div class="grid-col-1of4">
-                <div class="footer-col-margin">
-                  <ul>
-                    <li><a href="#">QUICK LINKS</a></li>
-                    <li><a href="#">My Account</a></li>
-                    <li><a href="#">Terms &amp; Conditions</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">FAQ</a></li>
-                 </ul>
-               </div>
-              </div>        
-              <div class="grid-col-1of4">
-                <div class="footer-col-margin">
-                  <ul>
-                    <li><a href="#">CONTACT US</a></li>
-                    <li><a href="#">Store Locator</a></li>
-                    <li><a href="#">Customer Care</a></li>
-                    <li><a href="#">Food Service</a></li>
-                    <li><a href="#">Working at Cafeeee</a></li>
-                  </ul>
+            <div class="frame">
+              <div class="container">
+                <div class="grid-col-1of4">
+                  <div class="footer-col-margin">
+                    <ul>
+                      <div class="footer-list-top-margin">
+                        <li><a href="coming.html">QUICK LINKS</a></li>
+                        <li><a onclick="openLogin()" style="cursor: pointer;">My Account</a></li>
+                        <li><a href="coming.html">Terms &amp; Conditions</a></li>
+                        <li><a href="coming.html">Privacy Policy</a></li>
+                        <li><a href="coming.html">FAQ</a></li>
+                      </div>
+                    </ul>
+                  </div>
+                </div>        
+                <div class="grid-col-1of4">
+                  <div class="footer-col-margin">
+                    <ul>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                    <li><a href="contact.html">Store Locator</a></li>
+                    <li><a href="coming.html">Customer Care</a></li>
+                    <li><a href="coming.html">Food Service</a></li>
+                    <li><a href="coming.html">Working at Cafeeee</a></li>
+                    </ul>
+                  </div>
+                </div>         
+                <div class="grid-col-1of4">
+                  <div class="footer-col-margin">
+                    <ul>
+                      <li><a href="coming.html">ONLINE COMMUNITY</a></li>
+                      <li><a href="coming.html">Twitter</a></li>
+                      <li><a href="coming.html">Facebook</a></li>
+                      <li><a href="coming.html">Instagram</a></li>
+                    </ul>  
+                  </div>
+                </div>          
+                <div class="grid-col-1of4">
+                  <div class="footer-col-margin">
+                    <ul>
+                      <li><a href="about.html">ABOUT US</a></li>
+                      <li><a href="coming.html">Our Heritage</a></li>
+                      <li><a href="about.html">Our Company</a></li>
+                      <li><a href="coming.html">Newsletter</a></li>
+                    </ul>  
+                  </div>     
                 </div>
-              </div>         
-              <div class="grid-col-1of4">
-                <div class="footer-col-margin">
-                  <ul>
-                    <li><a href="#">ONLINE COMMUNITY</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Instagram</a></li>
-                  </ul>  
-                </div>
-              </div>          
-              <div class="grid-col-1of4">
-                <div class="footer-col-margin">
-                  <ul>
-                    <li><a href="#">ABOUT US</a></li>
-                    <li><a href="#">Our Heritage</a></li>
-                    <li><a href="#">Our Company</a></li>
-                    <li><a href="#">Newsletter</a></li>
-                  </ul>       
-                </div>
-              </div>
+              </div> 
             </div>
           </footer>
         </div>
       </div>
-    </div>
+    <script src="js/behaviours.js"></script>
   </body>
 </html>

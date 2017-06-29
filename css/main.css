@@ -986,7 +986,7 @@ input[type=radio]:checked + label {
           flex: 1;
 }
 
-.menu-content-margin-left {
+.menu--margin-left {
   margin-left: 0.5em;
 }
 
@@ -1049,6 +1049,13 @@ input[type=radio]:checked + label {
   padding-left: 0.5em;
 }
 
+.checkout-summary{
+  display:inline-block;
+  margin: 0 auto;
+  padding-right: 22em;
+  text-align: left;
+
+}
 .confirm-nav {
   text-align: center;
   font-size: 1.2em;
@@ -1057,7 +1064,16 @@ input[type=radio]:checked + label {
   /*border-radius: 0.25em;*/
   width: 10em;
 }
+/* contact -------------------*/
+.contact-box{
+  display:inline-block;
+  margin-top:3em;
+}
 
+.contact-grid-col-1of2{
+  display:inline-block;
+  margin-top:2em;
+}
 
 /* product-list -------------------*/
 
@@ -1100,6 +1116,65 @@ text-align: center;
   margin-top: 1em;
 }
 
+/*detail----------*/
+.detail-content{
+  display: :inline-block;
+  margin-top: 2em;
+  margin-bottom:10em;
+}
+/*payment----------*/
+
+.paymentform{
+  font-size:0.8em;
+}
+.payment-content{
+  margin-top:1em;
+}
+.form-1of2{
+  display: block;
+  text-align:left;
+  margin-left: 2.5em;
+
+}
+
+.form2-1of2{
+  display: block;
+  text-align:left;
+  margin-left: 2.5em;
+  margin-top:2em;
+}
+
+.payment-button{
+  margin-top: 2em;
+  margin-bottom:10em;
+}
+
+/*confirm----------*/
+.confirm-content{
+  display:inline-block;
+
+}
+.confirm-10f2{
+  display:inline-block;
+  margin:4em;
+}
+
+.confirm-img{
+  display:flex;
+}
+
+/*confirmation---------*/
+.confirmation-horizontal-margin{
+  display: inline-block;
+  width: 100%;
+  margin-top: 3em;
+  margin-bottom: 15em;
+}
+
+.confirmation-content{
+  display:inline-block;
+  margin-top:5em;
+}
 /*later----------*/
 
 .nav-top-margin {
