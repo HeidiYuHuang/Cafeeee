@@ -277,6 +277,7 @@
 }
 
 .grid-col-3of4 {
+  padding-left: 2em;
   width: 75%;
 }
 

@@ -250,6 +250,13 @@ input:required:focus {
 }
 
 /*cart*/
+
+.cart-button{
+  display: block;
+  margin-left:4em;
+  margin-top:3em;
+}
+
 .header-cart-color {
   color: #626D71;
 }
@@ -326,6 +333,8 @@ input:required:focus {
 
   .header-accounticon-size:hover .header-accounticon-color{
     color: #B38867;
+
+
   }
 
 /*navigation bar*/
@@ -343,6 +352,7 @@ input:required:focus {
   float: left;
   font-size: 1.2em;
   position: relative;
+  
 }
 
 .header-nav-size:hover {
@@ -991,11 +1001,15 @@ input[type=radio]:checked + label {
 }
 
 .menudetail-content {
+/*  -webkit-flex: 1;
+          flex: 1;*/
+          display: inline;
   text-align: left;
 }
 
 .menudetail-padding-left {
-  padding-left: 1em;
+  margin-top: 2em;
+
 }
 
 .menudetail-quantity-margin-leftright {
@@ -1004,7 +1018,7 @@ input[type=radio]:checked + label {
 }
 
 .menudetail-nav-margin-top {
-  margin-top: 1em;
+  margin-top: 2em;
 }
 
 .menudetail-nav {
@@ -1051,8 +1065,9 @@ input[type=radio]:checked + label {
 
 .checkout-summary{
   display:inline-block;
-  margin: 0 auto;
-  padding-right: 22em;
+  margin-top: 4em;
+  margin-bottom: 12em;
+  padding-right: 20em;
   text-align: left;
 
 }
@@ -1104,7 +1119,7 @@ text-align: center;
 
 /*footer===========*/
 .footer-top-margin{
-  margin-top: 2em;
+  margin-top: 10em;
 }
 
 .footer-col-margin{
@@ -1127,32 +1142,32 @@ text-align: center;
 .paymentform{
   font-size:0.8em;
 }
-.payment-content{
-  margin-top:1em;
+
+
+.payment-box{
+  display:inline;
+  margin-top: 4em;
 }
+
 .form-1of2{
-  display: block;
+  display: inline-block;
   text-align:left;
-  margin-left: 2.5em;
+  margin-left: 4em;
+  margin-bottom: 15em;
+  margin-top:5em;
 
 }
 
-.form2-1of2{
-  display: block;
-  text-align:left;
-  margin-left: 2.5em;
-  margin-top:2em;
-}
 
 .payment-button{
-  margin-top: 2em;
-  margin-bottom:10em;
+  display: block;
+
 }
 
 /*confirm----------*/
 .confirm-content{
   display:inline-block;
-
+  margin-bottom: 10em;
 }
 .confirm-10f2{
   display:inline-block;
@@ -1160,7 +1175,17 @@ text-align: center;
 }
 
 .confirm-img{
-  display:flex;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.confirm-button{
+  display: block;
+  margin-left:4em;
+}
+
+.coffee-image{
+  margin-top: 5.75em;
 }
 
 /*confirmation---------*/
@@ -1176,6 +1201,9 @@ text-align: center;
   margin-top:5em;
 }
 /*later----------*/
+.coffee-cart{
+margin-top: 2.75em;
+}
 
 .nav-top-margin {
   margin-top: 1.5em;
